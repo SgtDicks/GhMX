@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GHMX Interactive Floorplan</title>
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="anonymous"
+  />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #161a22;
+      --text: #e6e7ea;
+      --muted: #9aa3b2;
+      --accent: #7aa2ff;
+      --danger: #ff6b6b;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --border: #232a3a;
+    }
+    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    #app { height: 100%; display: grid; grid-template-rows: auto 1fr; }
+    header { display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem; background: var(--panel); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 600; }
+    header h1 { font-size: 1rem; font-weight: 700; margin: 0; letter-spacing: .3px; }
+    header .hint { color: var(--muted); font-size: .85rem; }
+    .spacer { flex: 1 1 auto; }
+    .btn { appearance:none; border:1px solid #2a3140; background: #1a2130; color: var(--text); padding:.45rem .75rem; border-radius: 999px; cursor:pointer; box-shadow: var(--shadow); font-weight:600; font-size:.9rem; }
+    .btn:hover { filter: brightness(1.15); }
+    .btn.danger { background:#28181b; border-color:#4a1f26; color:#ffc9c9; }
+
+    #map { height: 100%; width: 100%; }
+    .leaflet-container { background: #0b0e14; outline: none; }
+
+    /* Vendor sidebar */
+    #vendorPanel { position:absolute; left:12px; right:auto; top:64px; bottom:12px; width:min(380px, 95vw); z-index:550; display:block; background: rgba(15,17,21,.9); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(6px); overflow:auto; }
+    #vendorPanel header { background:transparent; box-shadow:none; padding:.75rem .9rem; border-bottom:1px solid var(--border); }
+    #vendorPanel .section { padding:.75rem .9rem; }
+    #vendorPanel input[type="search"] { width:100%; padding:.55rem .7rem; border-radius: 12px; border:1px solid var(--border); background:#101625; color:var(--text); }
+    .counts { color:var(--muted); font-size:.85rem; margin-top:.4rem; }
+    .row { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+    .vendor { display:grid; grid-template-columns: 1fr auto; gap:.5rem; align-items:center; padding:.55rem .6rem; border:1px solid var(--border); background:#0f1522; border-radius:12px; margin-bottom:.5rem; }
+    .vendor .name { font-weight:700; font-size:.95rem; }
+    .vendor .booth { color:var(--muted); font-weight:600; }
+    .vendor .description { color: var(--muted); font-size: .85rem; }
+    .vendor button { border:1px solid #2a3140; background:#121826; color:var(--text); padding:.35rem .6rem; border-radius:999px; cursor:pointer; }
+    .badge { display:inline-flex; align-items:center; gap:.3rem; border:1px solid var(--border); background:#111722; padding:.1rem .45rem; border-radius:999px; font-size:.75rem; color:var(--muted); }
+    .placed { color:#9af0c7; }
+    .unplaced { color:#ffd28a; }
+
+    .adminOnly { display:none; }
+    body.admin .adminOnly { display:inline-flex; }
+    .muted { color: var(--muted); }
+    .mobileOnly { display: none; }
+
+    /* Styles for Edit Modal */
+    .form-group { display:flex; flex-direction:column; gap:.3rem; }
+    .form-group label { font-weight:600; font-size:.85rem; color:var(--muted); }
+    .form-group input, .form-group textarea {
+      width:100%;
+      padding:.55rem .7rem;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background:#101625;
+      color:var(--text);
+      box-sizing: border-box; /* ensure padding doesn't affect width */
+    }
+    .form-group textarea {
+        min-height: 80px;
+        resize: vertical;
+    }
+
+    /* Mobile layout tweaks */
+    @media (max-width: 900px) {
+      #vendorPanel {
+        left: 0; right: 0; top: auto; bottom: 0;
+        width: 100vw; height: 65vh;
+        border-radius: 16px 16px 0 0;
+        transform: translateY(100%);
+        transition: transform .25s ease-out;
+        padding-bottom: env(safe-area-inset-bottom, 12px);
+      }
+      #vendorPanel.open { transform: translateY(0); }
+      .mobileOnly { display: inline-flex; }
+      .vendor { grid-template-columns: 1fr; }
+      .vendor button { padding: .4rem .6rem; }
+      #vendorPanel header { position: sticky; top: 0; backdrop-filter: blur(6px); }
+    }
+  </style>
+</head>
+<body>
+<div id="app" role="application" aria-label="Interactive floorplan map">
+  <header>
+    <h1>GHMX Interactive Floorplan</h1>
+    <div class="hint" id="statusHint"></div>
+    <button id="btnVendors" class="btn mobileOnly" title="Show vendors">Vendors</button>
+    <div class="spacer"></div>
+    <button id="btnAdmin" class="btn" title="Toggle Admin mode">Admin</button>
+  </header>
+
+  <div id="map" tabindex="0" aria-label="Map canvas"></div>
+
+  <!-- Vendor sidebar -->
+  <aside id="vendorPanel" aria-label="Vendors">
+    <header>
+      <h2 style="margin:0;display:flex;align-items:center;gap:.5rem;">Vendors <span id="vCounts" class="badge">—</span></h2>
+    </header>
+    <div class="section mobileOnly" style="padding:.5rem .9rem; border-bottom:1px solid var(--border);">
+      <button id="btnCloseVendors" class="btn" style="width:100%">Close</button>
+    </div>
+    <div class="section">
+      <input id="vSearch" type="search" placeholder="Search vendor or booth (e.g. A12)" />
+      <div class="counts" id="vSummary"></div>
+      <div class="row" style="margin-top:.5rem;">
+        <button id="btnAddVendor" class="btn adminOnly">Add Vendor</button>
+        <button id="vExport" class="btn adminOnly">Export Vendors</button>
+        <label class="btn adminOnly">Import Vendors<input id="vImport" type="file" accept="application/json" style="display:none"/></label>
+        <button id="vClear" class="btn danger adminOnly">Clear Vendors</button>
+      </div>
+    </div>
+    <div class="section" id="vList"></div>
+  </aside>
+</div>
+
+<!-- Edit Vendor Modal -->
+<div id="editVendorModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+  <div style="background:var(--panel); padding:1.5rem; border-radius:var(--radius); box-shadow:var(--shadow); width:min(500px, 90vw); display:flex; flex-direction:column; gap:1rem;">
+    <h2 style="margin:0;">Edit Vendor</h2>
+    <form id="editVendorForm" style="display:flex; flex-direction:column; gap:1rem;">
+      <input type="hidden" id="editVendorId" />
+      <div class="form-group">
+        <label for="editVendorName">Name</label>
+        <input type="text" id="editVendorName" required />
+      </div>
+      <div class="form-group">
+        <label for="editVendorBooth">Booth</label>
+        <input type="text" id="editVendorBooth" />
+      </div>
+      <div class="form-group">
+        <label for="editVendorDescription">Description</label>
+        <textarea id="editVendorDescription"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="editVendorWebsite">Website</label>
+        <input type="url" id="editVendorWebsite" placeholder="https://example.com" />
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:.75rem;">
+        <div class="form-group">
+          <label for="editVendorWidth">Width</label>
+          <input type="number" step="any" id="editVendorWidth" placeholder="e.g. 10" />
+        </div>
+        <div class="form-group">
+          <label for="editVendorHeight">Height</label>
+          <input type="number" step="any" id="editVendorHeight" placeholder="e.g. 10" />
+        </div>
+        <div class="form-group">
+          <label for="editVendorRotation">Rotation (°)</label>
+          <input type="number" step="any" id="editVendorRotation" placeholder="e.g. 45" />
+        </div>
+      </div>
+      <div class="row" style="justify-content:flex-end; margin-top:.5rem;">
+        <button type="button" id="btnCancelEdit" class="btn">Cancel</button>
+        <button type="submit" class="btn" style="background:var(--accent); border-color:var(--accent);">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin="anonymous"
+></script>
+<!-- QR Code Generator -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+<script>
+(() => {
+  // ====== Config ======
+  const IMAGE_CANDIDATES = ["./floor_map.png", "floor_map.png", "/floor_map.png", "../floor_map.png"];
+  const VENDOR_CANDIDATES = ["./ghmx-vendors.json", "ghmx-vendors.json", "/ghmx-vendors.json", "../ghmx-vendors.json"];
+  const STORAGE_VENDORS = 'ghmx-floorplan-vendors-v1';
+  const VIEW_FOCUS_ZOOM = 0.35;
+
+  const randomcodethatyoudontneedtothinkabout = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NndERpY2tzL0Z1bnN0dWZmL3JlZnMvaGVhZHMvbWFpbi8uZW52";
+  const decodedUrl = atob(randomcodethatyoudontneedtothinkabout);
+
+  const ENV_CANDIDATES = [decodedUrl,"./.env",".env","/.env","../.env"];
+
+  // ====== State ======
+  let IMAGE_URL = null;
+  let ADMIN_CODE = null;
+  let admin = false;
+  let placingVendor = null;
+  let map, bounds; const vendorLayer = L.layerGroup();
+  /** @type {{id:string,name:string,booth:string,description?:string,website?:string,x?:number,y?:number,width?:number,height?:number,rotation?:number}[]} */
+  let vendors = [];
+
+  // ====== DOM Elements ======
+  const btnAdmin = document.getElementById('btnAdmin');
+  const statusHint = document.getElementById('statusHint');
+  const vSearch = document.getElementById('vSearch');
+  const vList = document.getElementById('vList');
+  const vCounts = document.getElementById('vCounts');
+  const vSummary = document.getElementById('vSummary');
+  const vExport = document.getElementById('vExport');
+  const vImport = document.getElementById('vImport');
+  const vClear = document.getElementById('vClear');
+  const btnAddVendor = document.getElementById('btnAddVendor');
+  const vendorPanel = document.getElementById('vendorPanel');
+  const btnVendors = document.getElementById('btnVendors');
+  const btnCloseVendors = document.getElementById('btnCloseVendors');
+  // Modal DOM Elements
+  const editVendorModal = document.getElementById('editVendorModal');
+  const editVendorForm = document.getElementById('editVendorForm');
+  const btnCancelEdit = document.getElementById('btnCancelEdit');
+  const editVendorId = document.getElementById('editVendorId');
+  const editVendorName = document.getElementById('editVendorName');
+  const editVendorBooth = document.getElementById('editVendorBooth');
+  const editVendorDescription = document.getElementById('editVendorDescription');
+  const editVendorWebsite = document.getElementById('editVendorWebsite');
+  const editVendorWidth = document.getElementById('editVendorWidth');
+  const editVendorHeight = document.getElementById('editVendorHeight');
+  const editVendorRotation = document.getElementById('editVendorRotation');
+
+
+  // ====== Boot ======
+  preloadAndStart();
+
+  async function preloadAndStart(){
+    await loadEnv();
+    if (ADMIN_CODE && sessionStorage.getItem('ghmx_admin') === '1') {
+      setAdmin(true, true);
+    }
+
+    IMAGE_URL = await resolveImageUrl();
+    initMap();
+    if (!IMAGE_URL){ buildMapWithImage(1059,753); setStatus(`Image not found.`); }
+    else {
+      const img = new Image();
+      img.onload = () => buildMapWithImage(img.naturalWidth||img.width, img.naturalHeight||img.height);
+      img.onerror = () => { buildMapWithImage(1059,753); setStatus('Image exists but could not be decoded.'); };
+      img.src = IMAGE_URL + cacheBust();
+    }
+
+    await autoloadVendors();
+    rebuildVendorMarkers();
+    renderVendorList();
+
+    // Add event listeners
+    vSearch.addEventListener('input', renderVendorList);
+    btnVendors?.addEventListener('click', ()=> vendorPanel.classList.toggle('open'));
+    btnCloseVendors?.addEventListener('click', ()=> vendorPanel.classList.remove('open'));
+  }
+
+  // ====== Map ======
+  function initMap(){
+    map = L.map('map', { crs: L.CRS.Simple, zoomControl:true, attributionControl:false, wheelPxPerZoomLevel:120 });
+    vendorLayer.addTo(map);
+    map.on('click', (e)=>{
+      if(!admin || !placingVendor) return;
+      const v = vendors.find(x=>x.id===placingVendor);
+      if(!v){ placingVendor=null; map.getContainer().style.cursor=''; return; }
+      v.x = +e.latlng.lng.toFixed(1);
+      v.y = +e.latlng.lat.toFixed(1);
+      placingVendor=null; map.getContainer().style.cursor='';
+      persistVendors(); rebuildVendorMarkers(); renderVendorList();
+      focusVendor(v.id);
+    });
+  }
+
+  function buildMapWithImage(naturalWidth, naturalHeight){
+    const boundsLocal = [[0,0],[naturalHeight,naturalWidth]]; bounds = boundsLocal;
+    const overlay = L.imageOverlay(IMAGE_URL ? (IMAGE_URL + cacheBust()) : '', boundsLocal, { interactive:false });
+    overlay.addTo(map);
+    overlay.on('error', ()=> setStatus('Image failed to load.'));
+    map.setMaxBounds(boundsLocal);
+    map.fitBounds(boundsLocal,{padding:[20,20]});
+  }
+
+  function focusVendor(id){
+    const v = vendors.find(x=>x.id===id);
+    if (!v || !isNum(v.x) || !isNum(v.y)) return;
+    const latlng = L.latLng(v.y, v.x);
+    const targetZoom = Math.max(map.getZoom(), VIEW_FOCUS_ZOOM);
+    map.setView(latlng, targetZoom, { animate: true });
+    map.once('moveend', ()=>{
+      const m = getMarkerFor(id); if (m) m.openPopup();
+    });
+  }
+
+  // ====== Vendors ======
+  async function autoloadVendors(){
+    for (const path of VENDOR_CANDIDATES){
+      try {
+        const res = await fetch(path + cacheBust());
+        if (!res.ok) throw new Error(res.status+' '+res.statusText);
+        const json = await res.json();
+        const arr = coerceVendors(json);
+        if (!Array.isArray(arr)) throw new Error('vendors JSON must be an array');
+        vendors = normalizeVendors(arr);
+        persistVendors();
+        setStatus(`Loaded ${vendors.length} vendors from ${path}`);
+        return;
+      } catch (e) { /* try next */ }
+    }
+    try { const raw=localStorage.getItem(STORAGE_VENDORS); if(raw){ const arr=coerceVendors(JSON.parse(raw)); if(Array.isArray(arr)){ vendors=normalizeVendors(arr); setStatus(`Loaded ${vendors.length} vendors from local storage`); return; } } } catch {}
+    vendors = [];
+    setStatus('No vendors JSON found; list is empty.');
+  }
+
+  function coerceVendors(json){
+    if (Array.isArray(json)) return json;
+    if (json && Array.isArray(json.vendors)) return json.vendors;
+    if (json && Array.isArray(json.items)) return json.items;
+    return null;
+  }
+
+  function normalizeVendors(arr){
+    return arr.map(v => ({
+        id: v.id || makeId(v.name, v.booth),
+        name: String(v.name||'').trim(),
+        booth: String(v.booth||'').trim(),
+        description: String(v.description || '').trim(),
+        website: String(v.website || '').trim(),
+        x: isNum(v.x)? +v.x : undefined,
+        y: isNum(v.y)? +v.y : undefined,
+        width: isNum(v.width)? +v.width : undefined,
+        height: isNum(v.height)? +v.height : undefined,
+        rotation: isNum(v.rotation)? +v.rotation : undefined,
+    }));
+  }
+
+  function persistVendors(){ try{ localStorage.setItem(STORAGE_VENDORS, JSON.stringify(vendors)); }catch{} }
+  function vendorFilter(v){ const q=(vSearch.value||'').trim().toLowerCase(); return !q || (v.name.toLowerCase().includes(q) || String(v.booth).toLowerCase().includes(q)); }
+  function getMarkerFor(id){ let found=null; vendorLayer.eachLayer(l=>{ if(l.options && l.options._vendorId===id) found=l; }); return found; }
+
+  function generateQRCode(text) {
+    const qr = qrcode(0, 'L');
+    qr.addData(text);
+    qr.make();
+    return qr.createDataURL(4);
+  }
+
+  function rebuildVendorMarkers(){
+    vendorLayer.clearLayers();
+    vendors.forEach(v => {
+      if(!isNum(v.x) || !isNum(v.y)) return; // Skip if not placed
+
+      let marker;
+      const isVisible = admin === true;
+      let popupContent = `<div><strong>${escapeHtml(v.name)}</strong><div class="muted">Booth <b>${escapeHtml(v.booth)}</b></div>`;
+      if (v.description) {
+        popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
+      }
+      if (v.website) {
+        // This line makes the link open in a new window
+        popupContent += `<a href="${v.website}" target="_blank" rel="noopener noreferrer">${v.website}</a>`;
+        popupContent += `<br><img src="${generateQRCode(v.website)}" alt="QR Code" style="width:100px;height:100px;margin-top:10px;">`;
+      }
+      popupContent += (isNum(v.width) ? `<div class="muted">${v.width}x${v.height}, ${v.rotation||0}°</div>` : '') + '</div>';
+
+      if (isNum(v.width) && isNum(v.height)) {
+        const halfW = v.width / 2;
+        const halfH = v.height / 2;
+        const bounds = [[v.y - halfH, v.x - halfW], [v.y + halfH, v.x + halfW]];
+        marker = L.rectangle(bounds, {
+          weight: isVisible ? 2 : 0,
+          opacity: isVisible ? 1 : 0,
+          fillOpacity: isVisible ? 0.6 : 0,
+          color: '#2a2f36',
+          fillColor: '#7aa2ff',
+          _vendorId: v.id
+        });
+      } else {
+        marker = L.circleMarker([v.y, v.x], {
+          radius: 7,
+          weight: isVisible ? 2 : 0,
+          opacity: isVisible ? 1 : 0,
+          fillOpacity: isVisible ? 0.9 : 0,
+          color: '#2a2f36',
+          fillColor: '#7aa2ff',
+          _vendorId: v.id
+        });
+      }
+
+      marker.bindPopup(popupContent).on('click', () => focusVendor(v.id));
+      vendorLayer.addLayer(marker);
+
+      if (isNum(v.rotation) && v.rotation !== 0 && marker._path) {
+        const path = marker._path;
+        path.style.transformOrigin = 'center';
+        path.style.transform = `rotate(${v.rotation}deg)`;
+      }
+    });
+  }
+
+  function renderVendorList(){
+    const flt = vendors.filter(vendorFilter).sort((a,b)=> String(a.booth).localeCompare(String(b.booth), undefined, { numeric:true }));
+    const placed = vendors.filter(v=> isNum(v.x) && isNum(v.y)).length; const total = vendors.length; vCounts.textContent=`${placed}/${total} placed`;
+    vList.innerHTML='';
+    if(!total){ vList.innerHTML='<div class="muted">No vendors loaded.</div>'; return; }
+    if(!flt.length){ vList.innerHTML='<div class="muted">No vendors match your search.</div>'; return; }
+
+    flt.forEach(v => {
+      const isPlaced = isNum(v.x) && isNum(v.y);
+      const card = document.createElement('div');
+      card.className='vendor';
+      let innerHTML = `<div><div class="name">${escapeHtml(v.name)}</div><div class="booth">Booth <b>${escapeHtml(v.booth)}</b> ${isPlaced ? '<span class="badge placed"></span>' : '<span class="badge unplaced">unplaced</span>'}</div>`;
+      if (v.description) {
+        innerHTML += `<div class="description">${escapeHtml(v.description)}</div>`;
+      }
+      innerHTML += `</div><div class="row"></div>`;
+      card.innerHTML = innerHTML;
+      const actions = card.querySelector('.row');
+
+      const btnView = mkBtn('View', ()=> { focusVendor(v.id); if (isMobile()) vendorPanel.classList.remove('open'); });
+      if (!isPlaced) btnView.disabled = true;
+      actions.appendChild(btnView);
+
+      if (admin){
+        actions.appendChild(mkBtn(isPlaced ? 'Move' : 'Place', ()=> startPlacement(v.id)));
+        // Allow editing details for any vendor in admin mode
+        actions.appendChild(mkBtn('Edit', ()=> editVendor(v.id)));
+      }
+      vList.appendChild(card);
+    });
+  }
+
+  function startPlacement(id){ if(!admin) return; placingVendor = id; setStatus(() => { const v=vendors.find(x=>x.id===id); return v ? `Placing: ${v.name} — click the map` : 'Placing: click the map'; }); map.getContainer().style.cursor = 'copy'; }
+
+  // ====== Admin controls ======
+  btnAdmin.addEventListener('click', async ()=>{ await setAdmin(!admin); });
+  async function setAdmin(on, silent = false){
+    if (on && !admin){
+      if (ADMIN_CODE == null) { alert(`Admin password is not configured.`); return; }
+      if (!silent) {
+        const code = prompt('Enter admin password:');
+        if (code !== ADMIN_CODE) { alert('Incorrect password.'); return; }
+      }
+      admin = true; document.body.classList.add('admin'); btnAdmin.textContent = 'Disable Admin'; statusHint.textContent = 'Admin enabled: you can add/move vendors.'; sessionStorage.setItem('ghmx_admin','1');
+    } else if (!on && admin){
+      admin = false; document.body.classList.remove('admin'); btnAdmin.textContent = 'Enable Admin'; statusHint.textContent = 'View vendors. Enable Admin to edit.'; sessionStorage.removeItem('ghmx_admin'); placingVendor=null; map.getContainer().style.cursor='';
+    }
+    renderVendorList();
+    rebuildVendorMarkers();
+  }
+
+  function editVendor(id) {
+    if (!admin) return;
+    const v = vendors.find(x => x.id === id);
+    if (!v) return;
+
+    // Populate the modal form with existing vendor data
+    editVendorId.value = v.id;
+    editVendorName.value = v.name || '';
+    editVendorBooth.value = v.booth || '';
+    editVendorDescription.value = v.description || '';
+    editVendorWebsite.value = v.website || '';
+    editVendorWidth.value = v.width || '';
+    editVendorHeight.value = v.height || '';
+    editVendorRotation.value = v.rotation || '';
+
+    // Show the modal
+    editVendorModal.style.display = 'flex';
+  }
+
+  // ====== Modal Event Listeners ======
+  btnCancelEdit.addEventListener('click', () => {
+    editVendorModal.style.display = 'none';
+  });
+
+  editVendorForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!admin) return;
+
+    const id = editVendorId.value;
+    const v = vendors.find(x => x.id === id);
+    if (!v) {
+      alert('Error: Could not find vendor to update.');
+      return;
+    }
+
+    // Update vendor object with form values
+    v.name = editVendorName.value.trim();
+    v.booth = editVendorBooth.value.trim();
+    v.description = editVendorDescription.value.trim();
+    v.website = editVendorWebsite.value.trim();
+    
+    // For numeric fields, convert or unset
+    const width = editVendorWidth.value.trim();
+    v.width = (width !== '' && !isNaN(parseFloat(width))) ? parseFloat(width) : undefined;
+    
+    const height = editVendorHeight.value.trim();
+    v.height = (height !== '' && !isNaN(parseFloat(height))) ? parseFloat(height) : undefined;
+
+    const rotation = editVendorRotation.value.trim();
+    v.rotation = (rotation !== '' && !isNaN(parseFloat(rotation))) ? parseFloat(rotation) : undefined;
+
+    // Persist changes and re-render
+    persistVendors();
+    rebuildVendorMarkers();
+    renderVendorList();
+
+    // Hide the modal
+    editVendorModal.style.display = 'none';
+  });
+
+  btnAddVendor.addEventListener('click', ()=>{ if(!admin) return; const name=prompt('New vendor name?'); if(!name) return; const booth=prompt('Booth number (e.g. A12 or 101)?')||''; const id = makeId(name, booth); const v={ id, name:name.trim(), booth:booth.trim() }; vendors.push(v); persistVendors(); renderVendorList(); startPlacement(v.id); });
+  vExport.addEventListener('click', ()=>{ if(!admin) return; const data=JSON.stringify(vendors,null,2); download(new Blob([data],{type:'application/json'}),'ghmx-vendors.json'); });
+  vImport.addEventListener('change', ev=>{ if(!admin) { ev.target.value=''; return; } const f=ev.target.files?.[0]; if(!f) return; const r=new FileReader(); r.onload=()=>{ try{ const arr=coerceVendors(JSON.parse(r.result)); if(!Array.isArray(arr)) throw new Error('Expected an array or an object with vendors'); vendors=normalizeVendors(arr); persistVendors(); rebuildVendorMarkers(); renderVendorList(); setStatus(`Imported ${vendors.length} vendors`); }catch(e){ alert('Import failed: '+e.message); } }; r.readAsText(f); ev.target.value=''; });
+  vClear.addEventListener('click', ()=>{ if(!admin) return; if(confirm('Clear ALL vendors?')){ vendors=[]; persistVendors(); rebuildVendorMarkers(); renderVendorList(); } });
+
+  // ====== Env (.env) loader ======
+  async function loadEnv() {
+    for (const path of ENV_CANDIDATES) {
+      try {
+        const res = await fetch(path + cacheBust());
+        if (!res.ok) continue;
+        const text = await res.text();
+        const env = parseDotEnv(text);
+        if (env['admin-password']) { ADMIN_CODE = env['admin-password']; return; }
+      } catch (e) { /* ignore */ }
+    }
+  }
+
+  function parseDotEnv(src) {
+    const out = {};
+    src.split(/\r?\n/).forEach(line => {
+      const s = line.trim();
+      if (!s || s.startsWith('#')) return;
+      const eq = s.indexOf('=');
+      if (eq === -1) return;
+      const k = s.slice(0, eq).trim();
+      let v = s.slice(eq + 1).trim();
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith('\'') && v.endsWith('\''))) {
+        v = v.slice(1, -1);
+      }
+      out[k] = v;
+    });
+    return out;
+  }
+
+  // ====== Utilities ======
+  function cacheBust(){ return `?v=${Date.now()}`; }
+  function tryLoad(url){ return new Promise(res => { const i=new Image(); i.onload=()=>res(url); i.onerror=()=>res(null); i.src=url+cacheBust(); }); }
+  async function resolveImageUrl(){ for (const u of IMAGE_CANDIDATES){ const ok = await tryLoad(u); if (ok) return u; } return null; }
+  function isNum(n){ return typeof n==='number' && !isNaN(n); }
+  function makeId(name, booth){ return (String(booth||'')+'_'+String(name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')); }
+  function download(blob, filename){ const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c])); }
+  function mkBtn(label, on){ const b=document.createElement('button'); b.textContent=label; b.addEventListener('click', on); return b; }
+  function setStatus(msg){ vSummary.textContent = (typeof msg === 'function') ? msg() : msg; }
+  function isMobile(){ return window.matchMedia('(max-width: 900px)').matches; };
+})();
+</script>
+</body>
+</html>
