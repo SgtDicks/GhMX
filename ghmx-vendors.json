@@ -1,0 +1,661 @@
+[
+  {
+    "id": "101_swordcraft-brisbane",
+    "name": "Swordcraft Brisbane",
+    "booth": "101",
+    "description": "Forge your own destiny. Tell your own story. \n\n​\n\nTo play, you will need to become a Swordcraft member.\n\nMembership options include new player, event or annual\n\n​\n\nYou are then ready to attend one of our games or events. \n\nGames or events will have an additional fee to play.",
+    "website": "https://www.swordcraft.com.au/brisbanelarp",
+    "x": 385,
+    "y": 470.6,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "102_adam-nichols",
+    "name": "Adam Nichols",
+    "booth": "102",
+    "description": "",
+    "website": "",
+    "x": 456.9,
+    "y": 473.6,
+    "width": 15,
+    "height": 15
+  },
+  {
+    "id": "103_tweed-valley-modellers",
+    "name": "Tweed Valley Modellers",
+    "booth": "103",
+    "description": "",
+    "website": "http://www.tweedvalleymodellers.com/",
+    "x": 473.6,
+    "y": 473.4,
+    "width": 15,
+    "height": 15
+  },
+  {
+    "id": "104_wayne-nichols",
+    "name": "Wayne Nichols",
+    "booth": "104",
+    "description": "",
+    "website": "",
+    "x": 456,
+    "y": 434.6,
+    "width": 15,
+    "height": 15
+  },
+  {
+    "id": "105_modelnerds-make-take",
+    "name": "Modelnerds Make & Take",
+    "booth": "105",
+    "description": "Offers a hands-on building experience for model enthusiasts.",
+    "website": "https://modelnerds.myshopify.com/",
+    "x": 473.5,
+    "y": 436.6,
+    "width": 15,
+    "height": 15
+  },
+  {
+    "id": "106_ipms-queensland",
+    "name": "IPMS Queensland",
+    "booth": "106",
+    "description": "The International Plastic Modellers' Society of Queensland, an organization for enthusiasts dedicated to building all types of plastic scale models.",
+    "website": "https://www.ipmsqld.org.au/",
+    "x": 695,
+    "y": 427.6,
+    "width": 30,
+    "height": 30
+  },
+  {
+    "id": "107_the-adventurer-s-guild",
+    "name": "The Adventurer's Guild",
+    "booth": "107",
+    "description": "A Dungeons and Dragons Playroom Experience and a provider of sealed Trading Card Games.",
+    "website": "https://www.theadventurersguild.com.au/",
+    "x": 744,
+    "y": 427.6,
+    "width": 25,
+    "height": 25
+  },
+  {
+    "id": "108_dungeons-dragons",
+    "name": "Dungeons & Dragons",
+    "booth": "108",
+    "description": "A classic tabletop role-playing game where players create their own characters and embark on adventures in a fantasy world.",
+    "website": "https://dnd.wizards.com/",
+    "x": 743.5,
+    "y": 488.6,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "109_brisbane-display-painters-guild",
+    "name": "Brisbane Display Painters Guild",
+    "booth": "109",
+    "description": "A community for those with a passion for miniature painting to share techniques, collaborate, and display their work.",
+    "website": "https://www.instagram.com/brisbanedisplaypaintersguild/",
+    "x": 848,
+    "y": 606.6,
+    "width": 50,
+    "height": 15
+  },
+  {
+    "id": "110_pokemon-tournament",
+    "name": "Pokemon Tournament",
+    "booth": "110",
+    "description": "An organized tournament allowing players to compete with their collections of Pokémon cards.",
+    "website": "https://www.pokemon.com/us/play-pokemon/",
+    "x": 839,
+    "y": 519.6,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "111_kheva",
+    "name": "kheva",
+    "booth": "111",
+    "description": "",
+    "website": "",
+    "x": 864,
+    "y": 481.6,
+    "width": 20,
+    "height": 20
+  },
+  {
+    "id": "112_pokidoll-collectables",
+    "name": "Pokidoll collectables",
+    "booth": "112",
+    "description": "Specializes in anime and pop culture collectibles, figures, and merchandise.",
+    "website": "https://pokidoll.com.au/",
+    "x": 831,
+    "y": 426.1,
+    "width": 40,
+    "height": 20
+  },
+  {
+    "id": "113_arcane-woods",
+    "name": "Arcane Woods",
+    "booth": "113",
+    "description": "Creators of electronic gaming tables designed to bring tabletop games to life with integrated technology.",
+    "website": "https://arcanewoods.au/",
+    "x": 872,
+    "y": 426.3,
+    "width": 40,
+    "height": 20
+  },
+  {
+    "id": "114_miniature-painting-zone",
+    "name": "Miniature Painting Zone",
+    "booth": "114",
+    "description": "A dedicated area for attendees to sit down and paint their own miniatures, with supplies often provided.",
+    "website": "",
+    "x": 935.5,
+    "y": 573.3,
+    "width": 50,
+    "height": 90
+  },
+  {
+    "id": "115_magic-the-gathering",
+    "name": "Magic the Gathering",
+    "booth": "115",
+    "description": "A collectible trading card game where players build decks and battle against each other as powerful wizards.",
+    "website": "https://magic.wizards.com/en",
+    "x": 954,
+    "y": 471.2,
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "116_ael",
+    "name": "AEL",
+    "booth": "116",
+    "description": "",
+    "website": "https://ael.org.au/",
+    "x": 964,
+    "y": 387.8,
+    "width": 70,
+    "height": 90
+  },
+  {
+    "id": "201_scale-model-comp",
+    "name": "Scale Model Comp",
+    "booth": "201",
+    "description": "",
+    "website": "",
+    "x": 295,
+    "y": 382.2
+  },
+  {
+    "id": "202_modelnerds",
+    "name": "Modelnerds",
+    "booth": "202",
+    "description": "A retailer of scale models, hobby tools, and accessories for the modelling community.",
+    "website": "https://modelnerds.myshopify.com/",
+    "x": 447,
+    "y": 355.2,
+    "width": 70,
+    "height": 50
+  },
+  {
+    "id": "203_australian-air-league",
+    "name": "Australian Air League",
+    "booth": "203",
+    "description": "A national organization for youth aged 8 to 18 with an interest in aviation, offering fun, adventure, and education.",
+    "website": "https://www.airleague.com.au/",
+    "x": 526,
+    "y": 364.2,
+    "width": 20,
+    "height": 20
+  },
+  {
+    "id": "204_sweet-and-sour",
+    "name": "Sweet and Sour",
+    "booth": "204",
+    "description": "",
+    "website": "https://www.sweetandsour.com.au/",
+    "x": 549.3,
+    "y": 366.8,
+    "width": 20,
+    "height": 20
+  },
+  {
+    "id": "205_collectors-hub-aus-pty-ltd",
+    "name": "Collectors Hub Aus PTY LTD",
+    "booth": "205",
+    "description": "Dedicated to enhancing the collector's experience by providing high-quality protective supplies and accessories.",
+    "website": "https://www.collectorshub.com.au/",
+    "x": 534,
+    "y": 341.2,
+    "width": 50,
+    "height": 30
+  },
+  {
+    "id": "206_gundam-make-take",
+    "name": "Gundam Make & Take",
+    "booth": "206",
+    "description": "A hands-on workshop where attendees can build their own Gundam plastic models (Gunpla).",
+    "website": "",
+    "x": 596.5,
+    "y": 335,
+    "width": 30,
+    "height": 80
+  },
+  {
+    "id": "207_zombster",
+    "name": "Zombster",
+    "booth": "207",
+    "description": "A premier Brisbane store for Anime and Manga, also offering GunPla Model Kits, apparel, and figures.",
+    "website": "https://shop.zombster.com.au/",
+    "x": 647.3,
+    "y": 334.3,
+    "width": 70,
+    "height": 90
+  },
+  {
+    "id": "208_trigahex",
+    "name": "Trigahex",
+    "booth": "208",
+    "description": "Designers of modular, interlocking terrain and accessories for tabletop wargaming and RPGs.",
+    "website": "https://www.trigahex.com/",
+    "x": 726,
+    "y": 363.2,
+    "width": 20,
+    "height": 20
+  },
+  {
+    "id": "209_deploymats",
+    "name": "Deploymats",
+    "booth": "209",
+    "description": "Creators of high-quality neoprene gaming mats with various themes for tabletop wargames.",
+    "website": "https://www.etsy.com/shop/Deploymats",
+    "x": 751,
+    "y": 364.2,
+    "width": 20,
+    "height": 20
+  },
+  {
+    "id": "210_misfits-united",
+    "name": "Misfits United",
+    "booth": "210",
+    "description": "",
+    "website": "https://www.facebook.com/misfits.4020",
+    "x": 737,
+    "y": 339.2,
+    "width": 50,
+    "height": 20
+  },
+  {
+    "id": "211_3d-build-masters",
+    "name": "3D Build Masters",
+    "booth": "211",
+    "description": "",
+    "website": "https://www.3dprintmasters.com.au/",
+    "x": 838.8,
+    "y": 352.3,
+    "width": 100,
+    "height": 45
+  },
+  {
+    "id": "301_105th-armoury",
+    "name": "105th Armoury",
+    "booth": "301",
+    "description": "Supplies a wide range of model kits, hobby items, 3D printed miniatures, and collectibles.",
+    "website": "https://105tharmoury.com.au/",
+    "x": 433,
+    "y": 277.5,
+    "width": 100,
+    "height": 45
+  },
+  {
+    "id": "302_learn-to-play-warhammer",
+    "name": "Learn to Play Warhammer",
+    "booth": "302",
+    "description": "Introductory sessions for newcomers to learn the rules and gameplay of the Warhammer tabletop games.",
+    "website": "https://warhammer.com/",
+    "x": 535.8,
+    "y": 278.3,
+    "width": 45,
+    "height": 45
+  },
+  {
+    "id": "303_dungeon-labs",
+    "name": "Dungeon Labs",
+    "booth": "303",
+    "description": "A Sydney-based retailer that specializes in custom-printed miniatures for tabletop games.",
+    "website": "https://dungeonlabs.com.au/",
+    "x": 877.5,
+    "y": 290.1
+  },
+  {
+    "id": "304_bricks-beyond",
+    "name": "Bricks & Beyond",
+    "booth": "304",
+    "description": "",
+    "website": "",
+    "x": 974.5,
+    "y": 309.8,
+    "width": 100,
+    "height": 45
+  },
+  {
+    "id": "401_ausgel-international-pty-ltd-t-a-ausdice",
+    "name": "Ausgel International Pty Ltd T/A Ausdice",
+    "booth": "401",
+    "description": "A leading supplier of dice for a variety of tabletop games and RPGs.",
+    "website": "https://www.ausdice.com.au/",
+    "x": 383.5,
+    "y": 215.5
+  },
+  {
+    "id": "402_orange-pop-vinyls",
+    "name": "Orange pop vinyls",
+    "booth": "402",
+    "description": "A family-run business for collectors of Pop! Vinyl figures, helping them find the missing pieces for their collections.",
+    "website": "http://www.orangepopvinyls.com/",
+    "x": 384,
+    "y": 193.1
+  },
+  {
+    "id": "403_dragonfire-resin-and-gaming",
+    "name": "Dragonfire Resin and Gaming",
+    "booth": "403",
+    "description": "A passion-driven company that creates handcrafted resin accessories to enhance the tabletop gaming experience.",
+    "website": "https://www.dragonfireresingaming.com/",
+    "x": 453,
+    "y": 213.6
+  },
+  {
+    "id": "404_yasashii-kyojin-studio",
+    "name": "Yasashii Kyojin Studio",
+    "booth": "404",
+    "description": "Designs and creates high-quality 3D printed miniatures for tabletop games, dioramas, and displays.",
+    "website": "https://yasashiikyojinstudio.com/",
+    "x": 477.5,
+    "y": 213.6
+  },
+  {
+    "id": "405_gundam-express-australia",
+    "name": "Gundam Express Australia",
+    "booth": "405",
+    "description": "A passionate provider of Gunpla (Gundam plastic models) to enthusiasts across Australia and New Zealand.",
+    "website": "https://www.gundamexpressaustralia.com.au/",
+    "x": 461,
+    "y": 192.6
+  },
+  {
+    "id": "406_modeller-s-warehouse",
+    "name": "Modeller's Warehouse",
+    "booth": "406",
+    "description": "Australia's largest supplier of all scenery and landscaping products for model railways, dioramas and wargaming.",
+    "website": "https://www.modellerswarehouse.com.au/",
+    "x": 545.5,
+    "y": 220.1
+  },
+  {
+    "id": "407_gunpla-brisbane-build-group",
+    "name": "Gunpla Brisbane Build Group",
+    "booth": "407",
+    "description": "A local community group for enthusiasts of building Gundam plastic models (Gunpla) to meet, share tips, and showcase their work.",
+    "website": "https://www.facebook.com/groups/gunplabrisbane/",
+    "x": 632.5,
+    "y": 239.6
+  },
+  {
+    "id": "408_next-level-paintball",
+    "name": "Next Level Paintball",
+    "booth": "408",
+    "description": "Offers an adrenaline-fueled paintball experience in a variety of world-class, themed scenarios.",
+    "website": "https://www.nextlevelpaintball.com.au/centre/brisbane/",
+    "x": 663,
+    "y": 251.6
+  },
+  {
+    "id": "409_cosplay-market-convention",
+    "name": "Cosplay Market Convention",
+    "booth": "409",
+    "description": "A locally grown event run by cosplayers, for cosplayers, promoting the sale of second-hand costumes and materials.",
+    "website": "https://cosplaymarketcon.com.au/",
+    "x": 662.5,
+    "y": 228.1
+  },
+  {
+    "id": "410_achilles-forge-and-designs-knightlighteffects",
+    "name": "Achilles Forge and Designs × Knightlighteffects",
+    "booth": "410",
+    "description": "A collaboration creating props, cosplay armor, and custom lighting effects for costumes and displays.",
+    "website": "https://www.instagram.com/achilles_forge_and_designs",
+    "x": 895,
+    "y": 248.6
+  },
+  {
+    "id": "411_bris-bricks",
+    "name": "Bris Bricks",
+    "booth": "411",
+    "description": "A recognized LEGO User Group that focuses on community engagement and bringing the joy of LEGO to all ages through events and displays.",
+    "website": "https://brisbricks.org/",
+    "x": 943,
+    "y": 235.1
+  },
+  {
+    "id": "501_brisbane-metro-1-14-rc-truck-construction-club",
+    "name": "Brisbane Metro 1/14 RC Truck & Construction Club",
+    "booth": "501",
+    "description": "",
+    "website": "",
+    "x": 364.5,
+    "y": 135.1
+  },
+  {
+    "id": "502_info-comp-registration",
+    "name": "Info & Comp Registration",
+    "booth": "502",
+    "description": "",
+    "website": ""
+  },
+  {
+    "id": "503_cosplay-studio",
+    "name": "Cosplay Studio",
+    "booth": "503",
+    "description": "",
+    "website": "",
+    "x": 492,
+    "y": 147
+  },
+  {
+    "id": "A01_spaced-out",
+    "name": "Spaced Out",
+    "booth": "A01",
+    "description": "",
+    "website": "",
+    "x": 726.5,
+    "y": 296.1
+  },
+  {
+    "id": "A02_lady-chain-tattoos",
+    "name": "Lady Chain Tattoos",
+    "booth": "A02",
+    "description": "Tattoo artist showcasing their flash designs and taking bookings.",
+    "website": "",
+    "x": 753,
+    "y": 295.6
+  },
+  {
+    "id": "A03_noodlesdrawz",
+    "name": "Noodlesdrawz",
+    "booth": "A03",
+    "description": "Independent artist selling prints, stickers, and other merchandise featuring their unique illustrations.",
+    "website": "",
+    "x": 770,
+    "y": 296.1
+  },
+  {
+    "id": "A04_dragonfly-relics",
+    "name": "Dragonfly Relics",
+    "booth": "A04",
+    "description": "Creator of handcrafted jewelry and accessories, often with fantasy and nature themes.",
+    "website": "",
+    "x": 785,
+    "y": 296.6
+  },
+  {
+    "id": "A05_phoenixcreative-3d",
+    "name": "PhoenixCreative 3D",
+    "booth": "A05",
+    "description": "Specializes in 3D printed models, props, and custom creations.",
+    "website": "",
+    "x": 808.5,
+    "y": 297.1
+  },
+  {
+    "id": "A06_this-kawaii-life",
+    "name": "This Kawaii Life",
+    "booth": "A06",
+    "description": "Vendor of 'kawaii' (cute) style accessories, stationery, and apparel inspired by Japanese pop culture.",
+    "website": "",
+    "x": 735.5,
+    "y": 279.1
+  },
+  {
+    "id": "A07_corrupted-quill",
+    "name": "Corrupted Quill",
+    "booth": "A07",
+    "description": "Artist specializing in dark fantasy and gothic illustrations, offering prints and original artwork.",
+    "website": "",
+    "x": 768.5,
+    "y": 279.1
+  },
+  {
+    "id": "A08_haunts-n-dice",
+    "name": "Haunts n Dice",
+    "booth": "A08",
+    "description": "Creator of handcrafted resin dice sets and other accessories for tabletop RPGs.",
+    "website": "",
+    "x": 785.5,
+    "y": 280.6
+  },
+  {
+    "id": "A09_nyxberyl-thlurp",
+    "name": "nyxberyl & thlurp",
+    "booth": "A09",
+    "description": "A collaboration between two artists showcasing and selling their individual art prints, charms, and merchandise.",
+    "website": "",
+    "x": 802.5,
+    "y": 278.6
+  },
+  {
+    "id": "A10_the-twilight-grove",
+    "name": "The Twilight Grove",
+    "booth": "A10",
+    "description": "Vendor of fantasy-themed crafts, jewelry, and magical accessories.",
+    "website": "",
+    "x": 819,
+    "y": 278.6
+  },
+  {
+    "id": "A11_pirate-dragon",
+    "name": "Pirate-Dragon",
+    "booth": "A11",
+    "description": "Artist offering a variety of merchandise, including prints and accessories, featuring their distinctive character art.",
+    "website": "",
+    "x": 728,
+    "y": 241.1
+  },
+  {
+    "id": "A12_me-myself-monster",
+    "name": "Me, Myself & Monster",
+    "booth": "A12",
+    "description": "Creator of unique monster-themed plush toys, art, and accessories.",
+    "website": "",
+    "x": 752,
+    "y": 240.1
+  },
+  {
+    "id": "A13_lee0z-art",
+    "name": "Lee0z Art",
+    "booth": "A13",
+    "description": "Illustrator selling fan art and original character prints, stickers, and keychains.",
+    "website": "",
+    "x": 768.5,
+    "y": 241.1
+  },
+  {
+    "id": "A14_kellberry-art",
+    "name": "Kellberry Art",
+    "booth": "A14",
+    "description": "Artist offering colorful and cute illustrations on a variety of products like prints and charms.",
+    "website": "",
+    "x": 784.5,
+    "y": 240.6
+  },
+  {
+    "id": "A15_blacksapphiredragon",
+    "name": "Blacksapphiredragon",
+    "booth": "A15",
+    "description": "Artist specializing in fantasy creatures, particularly dragons, selling prints and original works.",
+    "website": "",
+    "x": 801,
+    "y": 240.6
+  },
+  {
+    "id": "A16_cherise-creations",
+    "name": "Cherise Creations",
+    "booth": "A16",
+    "description": "Handmade crafts, jewelry, and accessories from an independent creator.",
+    "website": "",
+    "x": 817.5,
+    "y": 241.6
+  },
+  {
+    "id": "A17_chonkyfriend",
+    "name": "Chonkyfriend",
+    "booth": "A17",
+    "description": "Artist creating cute and 'chonky' animal-themed stickers, pins, and other merchandise.",
+    "website": "",
+    "x": 719.5,
+    "y": 224.1
+  },
+  {
+    "id": "A18_sketcherface-mikkibii",
+    "name": "Sketcherface & Mikkibii",
+    "booth": "A18",
+    "description": "A collaborative booth featuring two artists and their respective works, including prints and comics.",
+    "website": "",
+    "x": 735.5,
+    "y": 223.6
+  },
+  {
+    "id": "A19_artofnakoo",
+    "name": "Artofnakoo",
+    "booth": "A19",
+    "description": "Independent artist selling prints, comics, and merchandise of their original characters and fan art.",
+    "website": "",
+    "x": 753,
+    "y": 224.1
+  },
+  {
+    "id": "A20_jared-prestwidge-comic-book-writer",
+    "name": "Jared Prestwidge - Comic Book Writer",
+    "booth": "A20",
+    "description": "A local comic book writer showcasing, selling, and signing his published works.",
+    "website": "",
+    "x": 768.5,
+    "y": 224.1
+  },
+  {
+    "id": "A21_raecreates",
+    "name": "RAEcreates",
+    "booth": "A21",
+    "description": "Artist and creator of handmade goods, often featuring pop culture and anime-inspired designs.",
+    "website": "",
+    "x": 784.5,
+    "y": 225.1
+  },
+  {
+    "id": "A22_roy-the-art",
+    "name": "Roy The Art",
+    "booth": "A22",
+    "description": "Illustrator and artist offering a selection of their work as prints, stickers, and other products.",
+    "website": "",
+    "x": 808.5,
+    "y": 224.1
+  }
+]
