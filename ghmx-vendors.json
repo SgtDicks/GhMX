@@ -3,10 +3,10 @@
     "id": "00_stage-central",
     "name": "Stage Central",
     "booth": "00",
-    "x": 524.4,
-    "y": 495,
     "description": "",
     "website": "",
+    "x": 524.4,
+    "y": 495,
     "width": 75,
     "height": 75
   },
@@ -14,11 +14,398 @@
     "id": "00_scale-model-competition",
     "name": "Scale Model Competition",
     "booth": "00",
-    "x": 219,
-    "y": 383.5,
     "description": "",
     "website": "",
+    "x": 219,
+    "y": 383.5,
     "width": 50,
     "height": 50
+  },
+  {
+    "id": "00_art-of-nakoo",
+    "name": "Art Of Nakoo",
+    "booth": "",
+    "description": "",
+    "website": ""
+  },
+  {
+    "id": "_chonkyfriend",
+    "name": "Chonkyfriend",
+    "booth": ""
+  },
+  {
+    "id": "_confetti-carousel",
+    "name": "Confetti Carousel",
+    "booth": ""
+  },
+  {
+    "id": "_moon-rock-accessories-club",
+    "name": "Moon Rock Accessories Club",
+    "booth": ""
+  },
+  {
+    "id": "_pendragon-s-pen",
+    "name": "Pendragon's Pen",
+    "booth": ""
+  },
+  {
+    "id": "_comet-companions",
+    "name": "Comet Companions",
+    "booth": ""
+  },
+  {
+    "id": "_shadowrealmco",
+    "name": "ShadowRealmCo",
+    "booth": ""
+  },
+  {
+    "id": "_kanchhi",
+    "name": "Kanchhi",
+    "booth": ""
+  },
+  {
+    "id": "_blehcado",
+    "name": "Blehcado",
+    "booth": ""
+  },
+  {
+    "id": "_fatal-encounters",
+    "name": "Fatal Encounters",
+    "booth": ""
+  },
+  {
+    "id": "_dragonfly-relics",
+    "name": "Dragonfly Relics",
+    "booth": ""
+  },
+  {
+    "id": "_pirate-dragon",
+    "name": "Pirate-Dragon",
+    "booth": ""
+  },
+  {
+    "id": "_mapleforge",
+    "name": "Mapleforge",
+    "booth": ""
+  },
+  {
+    "id": "_lishylu",
+    "name": "Lishylu",
+    "booth": ""
+  },
+  {
+    "id": "_lilith-s-illustration",
+    "name": "Lilith's Illustration",
+    "booth": ""
+  },
+  {
+    "id": "_the-stitched-scroll",
+    "name": "The Stitched Scroll",
+    "booth": ""
+  },
+  {
+    "id": "_abfabkreations-the-very-sweary-yarn-faerie",
+    "name": "AbFabKreations & The Very Sweary Yarn Faerie",
+    "booth": ""
+  },
+  {
+    "id": "_brisbane-rc-mini-and-micro-buggy-racing",
+    "name": "Brisbane RC Mini and Micro Buggy Racing",
+    "booth": ""
+  },
+  {
+    "id": "_seq-beyblade",
+    "name": "SEQ Beyblade",
+    "booth": ""
+  },
+  {
+    "id": "_gunpla-brisbane-build-group",
+    "name": "Gunpla Brisbane Build Group",
+    "booth": ""
+  },
+  {
+    "id": "_brisbane-display-painters-guild",
+    "name": "Brisbane Display Painters Guild",
+    "booth": ""
+  },
+  {
+    "id": "_brisbane-miniature-enthusiasts-association-inc-bmea",
+    "name": "Brisbane Miniature Enthusiasts Association Inc. (BMEA)",
+    "booth": ""
+  },
+  {
+    "id": "_ipms-qld",
+    "name": "IPMS QLD",
+    "booth": ""
+  },
+  {
+    "id": "_riverside-scale-modellers",
+    "name": "Riverside Scale Modellers",
+    "booth": ""
+  },
+  {
+    "id": "_diagon-alley-display",
+    "name": "Diagon Alley Display",
+    "booth": ""
+  },
+  {
+    "id": "_australian-air-league",
+    "name": "Australian Air League",
+    "booth": ""
+  },
+  {
+    "id": "_tweed-head-modellers",
+    "name": "Tweed Head Modellers",
+    "booth": ""
+  },
+  {
+    "id": "_swordcraft",
+    "name": "Swordcraft",
+    "booth": ""
+  },
+  {
+    "id": "_bris-bricks",
+    "name": "Bris Bricks",
+    "booth": ""
+  },
+  {
+    "id": "_garage-gamers-tabletop-wargaming",
+    "name": "Garage Gamers Tabletop Wargaming",
+    "booth": ""
+  },
+  {
+    "id": "_40k-tutorials",
+    "name": "40K Tutorials",
+    "booth": ""
+  },
+  {
+    "id": "_gerry-anderson-model-expo-by-jim-millet",
+    "name": "Gerry Anderson Model Expo by Jim Millet",
+    "booth": ""
+  },
+  {
+    "id": "_medieval-battle-arena",
+    "name": "Medieval Battle Arena",
+    "booth": ""
+  },
+  {
+    "id": "_ael",
+    "name": "AEL",
+    "booth": ""
+  },
+  {
+    "id": "_makr-gallery",
+    "name": "MakR Gallery",
+    "booth": ""
+  },
+  {
+    "id": "_d-d",
+    "name": "D&D",
+    "booth": ""
+  },
+  {
+    "id": "_trading-card-zone",
+    "name": "Trading Card Zone",
+    "booth": ""
+  },
+  {
+    "id": "_magic-the-gathering",
+    "name": "Magic The Gathering",
+    "booth": ""
+  },
+  {
+    "id": "_just-support",
+    "name": "Just Support",
+    "booth": ""
+  },
+  {
+    "id": "_cosplay-studio",
+    "name": "Cosplay Studio",
+    "booth": ""
+  },
+  {
+    "id": "_miniature-painting-workshop",
+    "name": "Miniature Painting Workshop",
+    "booth": ""
+  },
+  {
+    "id": "_cosplay-stage",
+    "name": "Cosplay Stage",
+    "booth": ""
+  },
+  {
+    "id": "_brick-pit",
+    "name": "Brick Pit",
+    "booth": ""
+  },
+  {
+    "id": "_info-desk",
+    "name": "Info Desk",
+    "booth": ""
+  },
+  {
+    "id": "_rc-zone",
+    "name": "RC Zone",
+    "booth": ""
+  },
+  {
+    "id": "_misfits-united",
+    "name": "Misfits United",
+    "booth": ""
+  },
+  {
+    "id": "_wendy1305au",
+    "name": "Wendy1305AU",
+    "booth": ""
+  },
+  {
+    "id": "_nerdvana",
+    "name": "Nerdvana",
+    "booth": ""
+  },
+  {
+    "id": "_traders-galaxy",
+    "name": "Traders Galaxy",
+    "booth": ""
+  },
+  {
+    "id": "_neural-forge",
+    "name": "Neural Forge",
+    "booth": ""
+  },
+  {
+    "id": "_cardboard-monster",
+    "name": "Cardboard Monster",
+    "booth": ""
+  },
+  {
+    "id": "_mjl-anime",
+    "name": "MJL Anime",
+    "booth": ""
+  },
+  {
+    "id": "_kiza-collective",
+    "name": "Kiza Collective",
+    "booth": ""
+  },
+  {
+    "id": "_talisman-sabre-terrain",
+    "name": "Talisman Sabre Terrain",
+    "booth": ""
+  },
+  {
+    "id": "_manscale-models",
+    "name": "Manscale Models",
+    "booth": ""
+  },
+  {
+    "id": "_brisbane-tolkien-fellowship",
+    "name": "Brisbane Tolkien Fellowship",
+    "booth": ""
+  },
+  {
+    "id": "_dragonfire-creations",
+    "name": "Dragonfire Creations",
+    "booth": ""
+  },
+  {
+    "id": "_yasashii-kyojin-studio",
+    "name": "Yasashii Kyojin Studio",
+    "booth": ""
+  },
+  {
+    "id": "_ausdice",
+    "name": "Ausdice",
+    "booth": ""
+  },
+  {
+    "id": "_pokidoll-collectables",
+    "name": "Pokidoll Collectables",
+    "booth": ""
+  },
+  {
+    "id": "_www-edenhunter-com-au",
+    "name": "WWW.EDENHUNTER.COM.AU",
+    "booth": ""
+  },
+  {
+    "id": "_great-ball-collectibles",
+    "name": "Great Ball Collectibles",
+    "booth": ""
+  },
+  {
+    "id": "_vault-games",
+    "name": "Vault Games",
+    "booth": ""
+  },
+  {
+    "id": "_tcg-express",
+    "name": "TCG Express",
+    "booth": ""
+  },
+  {
+    "id": "_gundam-express-australia",
+    "name": "Gundam Express Australia",
+    "booth": ""
+  },
+  {
+    "id": "_105th-armoury-hobby-shop",
+    "name": "105th Armoury Hobby Shop",
+    "booth": ""
+  },
+  {
+    "id": "_model-nerds",
+    "name": "Model Nerds",
+    "booth": ""
+  },
+  {
+    "id": "_zompster",
+    "name": "Zompster",
+    "booth": ""
+  },
+  {
+    "id": "_free-model-kit-building",
+    "name": "Free Model Kit Building",
+    "booth": ""
+  },
+  {
+    "id": "_gunpla-free-model-workshop",
+    "name": "Gunpla Free Model Workshop",
+    "booth": ""
+  },
+  {
+    "id": "_bcw",
+    "name": "BCW",
+    "booth": ""
+  },
+  {
+    "id": "_beyond-bricks",
+    "name": "Beyond Bricks",
+    "booth": ""
+  },
+  {
+    "id": "_adam-nichols",
+    "name": "Adam Nichols",
+    "booth": ""
+  },
+  {
+    "id": "_wayne-nichols",
+    "name": "Wayne Nichols",
+    "booth": ""
+  },
+  {
+    "id": "_ty-hansen",
+    "name": "Ty Hansen",
+    "booth": ""
+  },
+  {
+    "id": "_david-zuppini",
+    "name": "David Zuppini",
+    "booth": ""
+  },
+  {
+    "id": "_chris-becker",
+    "name": "Chris Becker",
+    "booth": ""
   }
 ]
