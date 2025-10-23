@@ -1,0 +1,110 @@
+[
+  {
+    "day": "Saturday",
+    "events": [
+      {
+        "time": "10:30 AM - 11:10 AM",
+        "title": "Budget-Friendly Cosplaying 101",
+        "stage": "Carcali",
+        "description": "Learn the secrets of creating incredible cosplay on a budget with Carcali. Tips for sourcing materials, reusing items, and keeping your creativity high while costs stay low.",
+        "image": ""
+      },
+      {
+        "time": "11:20 AM - 12:10 PM",
+        "title": "4 Months With A 3D Printer: Practical Hyperfixation",
+        "stage": "John Worthington",
+        "description": "A deep dive into the journey of 3D printing as a passionate hobby—exploring the challenges, learning curve, and exciting potential of personal fabrication.",
+        "image": ""
+      },
+      {
+        "time": "12:20 PM - 1:00 PM",
+        "title": "Pious Dawn Fan Film",
+        "stage": "Achilles Forge and Designs × Knightlighteffects",
+        "description": "Behind-the-scenes insights into the making of the Pious Dawn fan film, including prop design, cinematography, and collaborative storytelling in the Warhammer universe.",
+        "image": ""
+      },
+      {
+        "time": "1:10 PM - 1:50 PM",
+        "title": "Model Kit Speed Building",
+        "stage": "GhMX",
+        "description": "Watch skilled builders assemble detailed model kits against the clock. A fun and educational competition showcasing different building techniques and precision under pressure.",
+        "image": ""
+      },
+      {
+        "time": "2:00 PM - 2:40 PM",
+        "title": "Introduction to Figure Painting",
+        "stage": "Mark Ventham",
+        "description": "An introduction to the art of miniature and figure painting, focusing on layering, shading, and techniques to bring your models to life.",
+        "image": ""
+      },
+      {
+        "time": "2:50 PM - 3:30 PM",
+        "title": "\"Spaced Out\" Original Comic Book Publication",
+        "stage": "Dave Zuppini",
+        "description": "Join comic creator Dave Zuppini for an exclusive look at the creation of 'Spaced Out', an independent comic celebrating creative storytelling and artistic independence.",
+        "image": ""
+      },
+      {
+        "time": "3:40 PM - 4:20 PM",
+        "title": "Beyond the Hobby: How Pastimes Empower Self-Discovery",
+        "stage": "memoirsofbeardedcosplayer",
+        "description": "A heartfelt session exploring how creative hobbies like cosplay and modeling help build confidence, foster connection, and support personal growth.",
+        "image": ""
+      }
+    ]
+  },
+  {
+    "day": "Sunday",
+    "events": [
+      {
+        "time": "10:30 AM - 11:10 AM",
+        "title": "Crazy Engineering of Zerebin Cosplay",
+        "stage": "Zerebin",
+        "description": "A look into the inventive craftsmanship of Zerebin Cosplay—exploring engineering tricks, materials, and the artistry behind their most complex builds.",
+        "image": ""
+      },
+      {
+        "time": "11:20 AM - 12:20 PM",
+        "title": "Thanks",
+        "stage": "Brisbane Metro 1/14 RC Truck & Construction Club",
+        "description": "Join the Brisbane Metro RC community for an interactive demonstration of scale model trucks and construction vehicles in action.",
+        "image": ""
+      },
+      {
+        "time": "12:30 PM - 1:00 PM",
+        "title": "Categories A - K & Sponsor Show Stopper Award Announcements",
+        "stage": "GhMX",
+        "description": "The first round of category awards and sponsor prizes for outstanding modelers and creators at GHMX Expo.",
+        "image": ""
+      },
+      {
+        "time": "1:10 PM - 1:50 PM",
+        "title": "Creating Comic and Gaming Worlds in a Galaxy Far, Far Away",
+        "stage": "Adam & Wayne Nichols",
+        "description": "A creative discussion with Adam and Wayne Nichols about crafting narrative universes that bridge gaming, comics, and pop culture.",
+        "image": ""
+      },
+      {
+        "time": "2:00 PM - 2:30 PM",
+        "title": "Categories L - Z Award Announcements",
+        "stage": "GhMX",
+        "description": "The concluding segment of the GHMX awards ceremony, featuring the final category winners and special recognitions.",
+        "image": ""
+      },
+      {
+        "time": "2:30 PM - 3:20 PM",
+        "title": "Get Sprued! Model Kit Trivia",
+        "stage": "GhMX",
+        "description": "Test your modeling knowledge with a fun and fast-paced trivia challenge. Expect laughs, learning, and prizes for the sharpest hobby minds.",
+        "image": ""
+      },
+      {
+        "time": "3:30 PM - 4:00 PM",
+        "title": "Major Award Ceremony",
+        "stage": "GhMX",
+        "description": "Celebrate the grand finale of GHMX with the major awards presentation, honoring creativity, craftsmanship, and community spirit.",
+        "image": ""
+      }
+    ]
+  }
+]
