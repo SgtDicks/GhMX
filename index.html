@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GHMX Expo</title>
+<style>
+:root {
+  --bg: #0f1115;
+  --panel: #161a22;
+  --text: #e6e7ea;
+  --accent: #ff005c;
+  --font: "Inter", "Roboto", sans-serif;
+}
+body {margin:0;background:var(--bg);color:var(--text);font-family:var(--font);height:100vh;display:flex;flex-direction:column;}
+header {background:var(--panel);text-align:center;padding:0.6em 0.5em;position:sticky;top:0;z-index:100;}
+h1{font-size:1.2rem;margin:0.2em 0;color:var(--accent);}
+nav{display:flex;justify-content:center;gap:1em;margin-top:0.3em;}
+button{background:none;border:none;color:var(--text);font-size:1rem;padding:0.3em 0.5em;border-bottom:2px solid transparent;cursor:pointer;}
+button.active{border-bottom-color:var(--accent);}
+main{flex-grow:1;display:flex;flex-direction:column;position:relative;overflow:hidden;}
+iframe, #scheduleSection {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    background: var(--bg);
+    min-height: 0; /* Allows flex-grow to work properly */
+}
+.hidden{display:none;}
+#scheduleSection{overflow-y:auto;padding-bottom:3em;}
+.event{padding:1em;border-bottom:1px solid #222;cursor:pointer;transition:background 0.2s;}
+.event:hover{background:#1b1f29;}
+.event-time{color:var(--accent);font-weight:bold;}
+.event-title{margin-top:0.3em;}
+.event-stage{font-size:0.85rem;color:#aaa;}
+/* Updated .day styles */
+.day{
+    padding: 0.8em 1em;
+    font-weight: bold;
+    background: var(--panel); /* Keep the panel background */
+    border-top: 1px solid #222;
+    color: #4CAF50; /* Changed color - you can pick another */
+    font-size: 1.4rem; /* Increased font size */
+    text-align: center; /* Center text if desired */
+}
+#detailView{position:absolute;top:0;left:100%;width:100%;height:100%;background:var(--bg);display:flex;flex-direction:column;transition:left 0.3s ease-in-out;z-index:200;overflow-y:auto;}
+#detailView.active{left:0;}
+#detailImage{width:100%;max-height:40vh;object-fit:cover;}
+#detailContent{padding:1em;}
+#backBtn{background:var(--accent);color:white;border:none;padding:0.6em 1em;margin:1em;border-radius:4px;align-self:flex-start;cursor:pointer;}
+#editModal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:500; align-items:center; justify-content:center;}
+#addModal {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:500; align-items:center; justify-content:center;} /* New Add Modal */
+#editForm, #addForm { /* Apply styles to both forms */
+    background:var(--panel);
+    padding:1.5em;
+    border-radius:10px;
+    width:min(500px, 90vw);
+    display:flex;
+    flex-direction:column;
+    gap:1em;
+}
+#editForm input, #editForm textarea, #addForm input, #addForm textarea { /* Apply styles to inputs/textarea in both forms */
+    background:#101625;
+    color:var(--text);
+    border:1px solid #333;
+    border-radius:6px;
+    padding:.5em;
+}
+#editForm button, #addForm button { /* Apply styles to buttons in both forms */
+    background:var(--accent);
+    border:none;
+    padding:.6em;
+    color:#fff;
+    border-radius:6px;
+    cursor:pointer;
+}
+.adminControls{display:flex;gap:.5em;justify-content:center;margin:1em;}
+.adminOnly{display:none;}
+body.admin .adminOnly{display:inline-flex;}
+/* Style for the import label button */
+label.btn { cursor: pointer; }
+label.btn input[type="file"] { display: none; } /* Ensure file input is hidden */
+</style>
+</head>
+<body>
+<header>
+  <h1>GHMX Expo</h1>
+  <nav>
+    <button id="mapBtn" class="active">Map</button>
+    <button id="scheduleBtn">Schedule</button>
+  </nav>
+</header>
+<main>
+  <iframe id="mapFrame" src="map.html" allowfullscreen title="GHMX Interactive Floorplan"></iframe>
+  <section id="scheduleSection" class="hidden">
+    <div id="loading" style="text-align:center;padding:1em;">Loading schedule...</div>
+    <div class="adminControls adminOnly">
+      <button id="addEventBtn">Add Event</button>
+      <button id="exportScheduleBtn">Export</button>
+      <label class="btn" for="importScheduleInput">Import</label> <!-- Linked label correctly -->
+      <input id="importScheduleInput" type="file" accept="application/json" />
+    </div>
+  </section>
+  <section id="detailView">
+    <button id="backBtn">← Back</button>
+    <img id="detailImage" src="" alt="Event Image" />
+    <div id="detailContent"></div>
+  </section>
+</main>
+<div id="editModal">
+  <form id="editForm">
+    <h2>Edit Event</h2>
+    <input type="text" id="editTitle" placeholder="Event Title" required />
+    <input type="text" id="editTime" placeholder="Time" required />
+    <input type="text" id="editStage" placeholder="Stage" />
+    <textarea id="editDescription" placeholder="Description"></textarea>
+    <input type="url" id="editImage" placeholder="Image URL (optional)" />
+    <div style="display:flex;gap:.5em;justify-content:flex-end;">
+      <button type="button" id="cancelEdit">Cancel</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>
+<!-- New Add Event Modal -->
+<div id="addModal">
+  <form id="addForm">
+    <h2>Add New Event</h2>
+    <select id="addDaySelect" required> <!-- Dropdown for day selection -->
+        <!-- Options will be populated dynamically -->
+    </select>
+    <input type="text" id="addTitle" placeholder="Event Title" required />
+    <input type="text" id="addTime" placeholder="Time" required />
+    <input type="text" id="addStage" placeholder="Stage" />
+    <textarea id="addDescription" placeholder="Description"></textarea>
+    <input type="url" id="addImage" placeholder="Image URL (optional)" />
+    <div style="display:flex;gap:.5em;justify-content:flex-end;">
+      <button type="button" id="cancelAdd">Cancel</button>
+      <button type="submit">Add Event</button>
+    </div>
+  </form>
+</div>
+<script>
+let admin = false;
+let ADMIN_CODE = null;
+let currentData = [];
+let editingIndex = null;
+
+// The encoded URL string
+const randomcodethatyoudontneedtothinkabout = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NndERpY2tzL0Z1bnN0dWZmL3JlZnMvaGVhZHMvbWFpbi8uZW52";
+const decodedUrl = atob(randomcodethatyoudontneedtothinkabout);
+const ENV_CANDIDATES = [decodedUrl, "./.env", ".env", "/.env", "../.env"];
+
+async function loadEnv() {
+    for (const path of ENV_CANDIDATES) {
+        try {
+            const res = await fetch(path + '?v=' + Date.now());
+            if (!res.ok) continue;
+            const text = await res.text();
+            const env = parseDotEnv(text);
+            if (env['admin-password']) {
+                ADMIN_CODE = env['admin-password'];
+                return;
+            }
+        } catch (e) {
+            // Silently ignore errors and try next path
+        }
+    }
+}
+
+function parseDotEnv(src) {
+    const out = {};
+    src.split(/\r?\n/).forEach(line => {
+        const s = line.trim();
+        if (!s || s.startsWith('#')) return;
+        const eq = s.indexOf('=');
+        if (eq === -1) return;
+        const k = s.slice(0, eq).trim();
+        let v = s.slice(eq + 1).trim();
+        if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
+            v = v.slice(1, -1);
+        }
+        out[k] = v;
+    });
+    return out;
+}
+
+// Cache DOM elements
+const mapBtn = document.getElementById('mapBtn');
+const scheduleBtn = document.getElementById('scheduleBtn');
+const mapFrame = document.getElementById('mapFrame');
+const scheduleSection = document.getElementById('scheduleSection');
+const loading = document.getElementById('loading');
+const detailView = document.getElementById('detailView');
+const detailImage = document.getElementById('detailImage');
+const detailContent = document.getElementById('detailContent');
+const backBtn = document.getElementById('backBtn');
+const editModal = document.getElementById('editModal');
+const addModal = document.getElementById('addModal'); // New Add Modal
+const editForm = document.getElementById('editForm');
+const addForm = document.getElementById('addForm'); // New Add Form
+const cancelEdit = document.getElementById('cancelEdit');
+const cancelAdd = document.getElementById('cancelAdd'); // New Cancel Add Button
+const editTitle = document.getElementById('editTitle');
+const editTime = document.getElementById('editTime');
+const editStage = document.getElementById('editStage');
+const editDescription = document.getElementById('editDescription');
+const editImage = document.getElementById('editImage');
+const addEventBtn = document.getElementById('addEventBtn');
+const addDaySelect = document.getElementById('addDaySelect'); // New Day Select
+const addTitle = document.getElementById('addTitle');
+const addTime = document.getElementById('addTime');
+const addStage = document.getElementById('addStage');
+const addDescription = document.getElementById('addDescription');
+const addImage = document.getElementById('addImage');
+const exportScheduleBtn = document.getElementById('exportScheduleBtn');
+const importScheduleInput = document.getElementById('importScheduleInput');
+
+// Navigation logic
+mapBtn.onclick = () => {
+    mapBtn.classList.add('active');
+    scheduleBtn.classList.remove('active');
+    mapFrame.classList.remove('hidden');
+    scheduleSection.classList.add('hidden');
+};
+
+scheduleBtn.onclick = () => {
+    scheduleBtn.classList.add('active');
+    mapBtn.classList.remove('active');
+    mapFrame.classList.add('hidden');
+    scheduleSection.classList.remove('hidden');
+};
+
+// Schedule loading paths
+const paths = [
+    "schedule.json",
+    "./schedule.json",
+    "/schedule.json",
+    "../schedule.json",
+    "https://raw.githubusercontent.com/SgtDicks/GhMX/refs/heads/main/schedule.json"
+];
+
+function tryFetch(p) {
+    if (!p.length) {
+        loading.textContent = 'Schedule not available.';
+        return;
+    }
+    const path = p.shift();
+    fetch(path)
+        .then(r => {
+            if (!r.ok) throw new Error();
+            return r.json();
+        })
+        .then(data => renderSchedule(data))
+        .catch(() => tryFetch(p));
+}
+
+tryFetch([...paths]);
+
+function renderSchedule(data) {
+    currentData = data;
+    loading.remove();
+    let html = '';
+    data.forEach((day, dayIndex) => {
+        html += `<div class='day'>${day.day}</div>`;
+        day.events.forEach((e, i) => {
+            html += `<div class='event' data-day='${dayIndex}' data-index='${i}' data-title='${e.title}' data-desc='${e.description || ''}' data-img='${e.image || ''}'>
+                        <div class='event-time'>${e.time}</div>
+                        <div class='event-title'>${e.title}</div>
+                        <div class='event-stage'>${e.stage}</div>
+                        ${admin ? `<button class='editBtn' style='margin-top:0.5em;'>Edit</button>` : ''}
+                     </div>`;
+        });
+    });
+    scheduleSection.innerHTML = html + scheduleSection.innerHTML.replace(html, '');
+
+    document.querySelectorAll('.event').forEach(ev => {
+        ev.addEventListener('click', e => {
+            if (e.target.classList.contains('editBtn')) return;
+            openDetail(ev.dataset);
+        });
+    });
+
+    if (admin) {
+        document.querySelectorAll('.editBtn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.stopPropagation();
+                const parent = e.target.closest('.event');
+                openEdit(parent.dataset);
+            });
+        });
+    }
+}
+
+function openDetail(d) {
+    detailImage.src = d.img || '';
+    detailImage.style.display = d.img ? 'block' : 'none';
+    detailContent.innerHTML = `<h2>${d.title}</h2><p>${d.desc}</p>`;
+    detailView.classList.add('active');
+}
+
+backBtn.onclick = () => {
+    detailView.classList.remove('active');
+};
+
+async function enableAdmin() {
+    if (!ADMIN_CODE) await loadEnv();
+    if (!ADMIN_CODE) {
+        alert('Admin password not configured');
+        return;
+    }
+    const entered = prompt('Enter admin password:');
+    if (entered === ADMIN_CODE) {
+        admin = true;
+        document.body.classList.add('admin');
+        renderSchedule(currentData);
+    } else {
+        alert('Incorrect password');
+    }
+}
+
+window.addEventListener('keydown', e => {
+    if (e.key === 'a' && e.ctrlKey) {
+        e.preventDefault();
+        enableAdmin();
+    }
+});
+
+function openEdit(d) {
+    editModal.style.display = 'flex';
+    editingIndex = { day: parseInt(d.day), index: parseInt(d.index) };
+    const e = currentData[d.day].events[d.index];
+    editTitle.value = e.title;
+    editTime.value = e.time;
+    editStage.value = e.stage;
+    editDescription.value = e.description || '';
+    editImage.value = e.image || '';
+}
+
+editForm.addEventListener('submit', ev => {
+    ev.preventDefault();
+    if (editingIndex === null) return;
+
+    const e = currentData[editingIndex.day].events[editingIndex.index];
+    e.title = editTitle.value.trim();
+    e.time = editTime.value.trim();
+    e.stage = editStage.value.trim();
+    e.description = editDescription.value.trim();
+    e.image = editImage.value.trim();
+
+    editModal.style.display = 'none';
+    editingIndex = null;
+    renderSchedule(currentData);
+});
+
+cancelEdit.onclick = () => {
+    editModal.style.display = 'none';
+    editingIndex = null;
+};
+
+// --- Add Event Logic ---
+function populateDaySelect() {
+    addDaySelect.innerHTML = ''; // Clear existing options
+    currentData.forEach((day, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = day.day; // Display the day name
+        addDaySelect.appendChild(option);
+    });
+}
+
+addEventBtn.onclick = () => {
+    if (currentData.length === 0) {
+        alert('No days available to add an event.');
+        return;
+    }
+    populateDaySelect(); // Populate the dropdown before showing the modal
+    addModal.style.display = 'flex';
+};
+
+addForm.addEventListener('submit', ev => {
+    ev.preventDefault();
+    const dayIndex = parseInt(addDaySelect.value);
+    const title = addTitle.value.trim();
+    const time = addTime.value.trim();
+    const stage = addStage.value.trim();
+    const description = addDescription.value.trim();
+    const image = addImage.value.trim(); // Can be empty string
+
+    if (title && time) { // Basic validation
+        const newEvent = { title, time, stage, description, image };
+        currentData[dayIndex].events.push(newEvent);
+        renderSchedule(currentData);
+        addModal.style.display = 'none';
+        // Clear the form after submission
+        addForm.reset();
+    } else {
+        alert('Title and Time are required.');
+    }
+});
+
+cancelAdd.onclick = () => {
+    addModal.style.display = 'none';
+    addForm.reset(); // Clear the form if cancelled
+};
+
+// --- Import Logic ---
+exportScheduleBtn.onclick = () => {
+    const blob = new Blob([JSON.stringify(currentData, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'schedule.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+};
+
+importScheduleInput.addEventListener('change', ev => {
+    const file = ev.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+        try {
+            const data = JSON.parse(reader.result);
+            // Basic validation: check if data has the expected structure
+            if (Array.isArray(data) && data.every(day => Array.isArray(day.events))) {
+                 currentData = data;
+                 renderSchedule(data);
+                 alert('Schedule imported successfully!'); // Notify user
+            } else {
+                 alert('Import failed: Invalid file structure.');
+            }
+        } catch (e) {
+            alert('Import failed: ' + e.message);
+        }
+        // Reset the input so the same file can be selected again if needed
+        importScheduleInput.value = '';
+    };
+    reader.readAsText(file);
+});
+</script>
+</body>
+</html>
