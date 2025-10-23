@@ -67,12 +67,9 @@
       border:1px solid var(--border);
       background:#101625;
       color:var(--text);
-      box-sizing: border-box; /* ensure padding doesn't affect width */
+      box-sizing: border-box;
     }
-    .form-group textarea {
-        min-height: 80px;
-        resize: vertical;
-    }
+    .form-group textarea { min-height: 80px; resize: vertical; }
 
     /* Mobile layout tweaks */
     @media (max-width: 900px) {
@@ -99,7 +96,7 @@
     <div class="hint" id="statusHint"></div>
     <button id="btnVendors" class="btn mobileOnly" title="Show vendors">Vendors</button>
     <div class="spacer"></div>
-    <button id="btnAdmin" class="btn" title="Toggle Admin mode">Admin</button>
+    <!-- Admin button removed from public view -->
   </header>
 
   <div id="map" tabindex="0" aria-label="Map canvas"></div>
@@ -118,7 +115,10 @@
       <div class="row" style="margin-top:.5rem;">
         <button id="btnAddVendor" class="btn adminOnly">Add Vendor</button>
         <button id="vExport" class="btn adminOnly">Export Vendors</button>
-        <label class="btn adminOnly">Import Vendors<input id="vImport" type="file" accept="application/json" style="display:none"/></label>
+		<button id="btnExitAdmin" class="btn danger adminOnly">Exit Admin Mode</button>
+        <label class="btn adminOnly">Import Vendors
+          <input id="vImport" type="file" accept="application/json" style="display:none"/>
+        </label>
         <button id="vClear" class="btn danger adminOnly">Clear Vendors</button>
       </div>
     </div>
@@ -186,10 +186,10 @@
   const STORAGE_VENDORS = 'ghmx-floorplan-vendors-v1';
   const VIEW_FOCUS_ZOOM = 0.35;
 
+  // Hidden remote .env URL (Base64) + candidates
   const randomcodethatyoudontneedtothinkabout = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NndERpY2tzL0Z1bnN0dWZmL3JlZnMvaGVhZHMvbWFpbi8uZW52";
   const decodedUrl = atob(randomcodethatyoudontneedtothinkabout);
-
-  const ENV_CANDIDATES = [decodedUrl,"./.env",".env","/.env","../.env"];
+  const ENV_CANDIDATES = [decodedUrl, "./.env", ".env", "/.env", "../.env"];
 
   // ====== State ======
   let IMAGE_URL = null;
@@ -201,7 +201,6 @@
   let vendors = [];
 
   // ====== DOM Elements ======
-  const btnAdmin = document.getElementById('btnAdmin');
   const statusHint = document.getElementById('statusHint');
   const vSearch = document.getElementById('vSearch');
   const vList = document.getElementById('vList');
@@ -227,15 +226,17 @@
   const editVendorHeight = document.getElementById('editVendorHeight');
   const editVendorRotation = document.getElementById('editVendorRotation');
 
-
   // ====== Boot ======
   preloadAndStart();
 
   async function preloadAndStart(){
     await loadEnv();
-    if (ADMIN_CODE && sessionStorage.getItem('ghmx_admin') === '1') {
+    // Admin via #admin hash with password
+    if (sessionStorage.getItem('ghmx_admin') === '1') {
       setAdmin(true, true);
     }
+    window.addEventListener('hashchange', checkAdminHash);
+    await checkAdminHash();
 
     IMAGE_URL = await resolveImageUrl();
     initMap();
@@ -251,10 +252,37 @@
     rebuildVendorMarkers();
     renderVendorList();
 
-    // Add event listeners
+    // Events
     vSearch.addEventListener('input', renderVendorList);
     btnVendors?.addEventListener('click', ()=> vendorPanel.classList.toggle('open'));
     btnCloseVendors?.addEventListener('click', ()=> vendorPanel.classList.remove('open'));
+  }
+
+  // ====== Admin via hash/password ======
+  async function checkAdminHash(){
+    if (window.location.hash === '#admin' && !admin) {
+      if (!ADMIN_CODE) await loadEnv();
+      if (!ADMIN_CODE) { alert('Admin password not configured.'); return; }
+      const stored = sessionStorage.getItem('ghmx_admin');
+      if (stored === '1') { setAdmin(true, true); return; }
+      const entered = prompt('Enter admin password:');
+      if (entered === ADMIN_CODE) setAdmin(true);
+      else alert('Incorrect password.');
+    }
+  }
+
+  async function setAdmin(on, silent = false){
+    if (on && !admin){
+      admin = true; document.body.classList.add('admin');
+      statusHint.textContent = 'Admin enabled: you can add/move vendors.';
+      sessionStorage.setItem('ghmx_admin','1');
+    } else if (!on && admin){
+      admin = false; document.body.classList.remove('admin');
+      statusHint.textContent = 'View vendors. Enable Admin to edit.';
+      sessionStorage.removeItem('ghmx_admin'); placingVendor=null; if(map) map.getContainer().style.cursor='';
+    }
+    renderVendorList();
+    rebuildVendorMarkers();
   }
 
   // ====== Map ======
@@ -288,9 +316,7 @@
     const latlng = L.latLng(v.y, v.x);
     const targetZoom = Math.max(map.getZoom(), VIEW_FOCUS_ZOOM);
     map.setView(latlng, targetZoom, { animate: true });
-    map.once('moveend', ()=>{
-      const m = getMarkerFor(id); if (m) m.openPopup();
-    });
+    map.once('moveend', ()=>{ const m = getMarkerFor(id); if (m) m.openPopup(); });
   }
 
   // ====== Vendors ======
@@ -304,7 +330,7 @@
         if (!Array.isArray(arr)) throw new Error('vendors JSON must be an array');
         vendors = normalizeVendors(arr);
         persistVendors();
-        setStatus(`Loaded ${vendors.length} vendors from ${path}`);
+        setStatus(`${vendors.length} vendors`);
         return;
       } catch (e) { /* try next */ }
     }
@@ -322,16 +348,16 @@
 
   function normalizeVendors(arr){
     return arr.map(v => ({
-        id: v.id || makeId(v.name, v.booth),
-        name: String(v.name||'').trim(),
-        booth: String(v.booth||'').trim(),
-        description: String(v.description || '').trim(),
-        website: String(v.website || '').trim(),
-        x: isNum(v.x)? +v.x : undefined,
-        y: isNum(v.y)? +v.y : undefined,
-        width: isNum(v.width)? +v.width : undefined,
-        height: isNum(v.height)? +v.height : undefined,
-        rotation: isNum(v.rotation)? +v.rotation : undefined,
+      id: v.id || makeId(v.name, v.booth),
+      name: String(v.name||'').trim(),
+      booth: String(v.booth||'').trim(),
+      description: String(v.description || '').trim(),
+      website: String(v.website || '').trim(),
+      x: isNum(v.x)? +v.x : undefined,
+      y: isNum(v.y)? +v.y : undefined,
+      width: isNum(v.width)? +v.width : undefined,
+      height: isNum(v.height)? +v.height : undefined,
+      rotation: isNum(v.rotation)? +v.rotation : undefined,
     }));
   }
 
@@ -354,11 +380,8 @@
       let marker;
       const isVisible = admin === true;
       let popupContent = `<div><strong>${escapeHtml(v.name)}</strong><div class="muted">Booth <b>${escapeHtml(v.booth)}</b></div>`;
-      if (v.description) {
-        popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
-      }
+      if (v.description) popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
       if (v.website) {
-        // This line makes the link open in a new window
         popupContent += `<a href="${v.website}" target="_blank" rel="noopener noreferrer">${v.website}</a>`;
         popupContent += `<br><img src="${generateQRCode(v.website)}" alt="QR Code" style="width:100px;height:100px;margin-top:10px;">`;
       }
@@ -401,7 +424,7 @@
 
   function renderVendorList(){
     const flt = vendors.filter(vendorFilter).sort((a,b)=> String(a.booth).localeCompare(String(b.booth), undefined, { numeric:true }));
-    const placed = vendors.filter(v=> isNum(v.x) && isNum(v.y)).length; const total = vendors.length; vCounts.textContent=`${placed}/${total} placed`;
+    const placed = vendors.filter(v=> isNum(v.x) && isNum(v.y)).length; const total = vendors.length;;
     vList.innerHTML='';
     if(!total){ vList.innerHTML='<div class="muted">No vendors loaded.</div>'; return; }
     if(!flt.length){ vList.innerHTML='<div class="muted">No vendors match your search.</div>'; return; }
@@ -411,9 +434,7 @@
       const card = document.createElement('div');
       card.className='vendor';
       let innerHTML = `<div><div class="name">${escapeHtml(v.name)}</div><div class="booth">Booth <b>${escapeHtml(v.booth)}</b> ${isPlaced ? '<span class="badge placed"></span>' : '<span class="badge unplaced">unplaced</span>'}</div>`;
-      if (v.description) {
-        innerHTML += `<div class="description">${escapeHtml(v.description)}</div>`;
-      }
+      if (v.description) innerHTML += `<div class="description">${escapeHtml(v.description)}</div>`;
       innerHTML += `</div><div class="row"></div>`;
       card.innerHTML = innerHTML;
       const actions = card.querySelector('.row');
@@ -424,52 +445,37 @@
 
       if (admin){
         actions.appendChild(mkBtn(isPlaced ? 'Move' : 'Place', ()=> startPlacement(v.id)));
-        // Allow editing details for any vendor in admin mode
         actions.appendChild(mkBtn('Edit', ()=> editVendor(v.id)));
       }
       vList.appendChild(card);
     });
   }
 
-  function startPlacement(id){ if(!admin) return; placingVendor = id; setStatus(() => { const v=vendors.find(x=>x.id===id); return v ? `Placing: ${v.name} — click the map` : 'Placing: click the map'; }); map.getContainer().style.cursor = 'copy'; }
-
-  // ====== Admin controls ======
-  btnAdmin.addEventListener('click', async ()=>{ await setAdmin(!admin); });
-  async function setAdmin(on, silent = false){
-    if (on && !admin){
-      if (ADMIN_CODE == null) { alert(`Admin password is not configured.`); return; }
-      if (!silent) {
-        const code = prompt('Enter admin password:');
-        if (code !== ADMIN_CODE) { alert('Incorrect password.'); return; }
-      }
-      admin = true; document.body.classList.add('admin'); btnAdmin.textContent = 'Disable Admin'; statusHint.textContent = 'Admin enabled: you can add/move vendors.'; sessionStorage.setItem('ghmx_admin','1');
-    } else if (!on && admin){
-      admin = false; document.body.classList.remove('admin'); btnAdmin.textContent = 'Enable Admin'; statusHint.textContent = 'View vendors. Enable Admin to edit.'; sessionStorage.removeItem('ghmx_admin'); placingVendor=null; map.getContainer().style.cursor='';
-    }
-    renderVendorList();
-    rebuildVendorMarkers();
+  function startPlacement(id){
+    if(!admin) return;
+    placingVendor = id;
+    setStatus(() => { const v=vendors.find(x=>x.id===id); return v ? `Placing: ${v.name} — click the map` : 'Placing: click the map'; });
+    map.getContainer().style.cursor = 'copy';
   }
 
+  // ====== Modal / Edit Handlers ======
   function editVendor(id) {
     if (!admin) return;
     const v = vendors.find(x => x.id === id);
     if (!v) return;
 
-    // Populate the modal form with existing vendor data
-    editVendorId.value = v.id;
+    editVendorId.value = v.id || '';
     editVendorName.value = v.name || '';
     editVendorBooth.value = v.booth || '';
     editVendorDescription.value = v.description || '';
     editVendorWebsite.value = v.website || '';
-    editVendorWidth.value = v.width || '';
-    editVendorHeight.value = v.height || '';
-    editVendorRotation.value = v.rotation || '';
+    editVendorWidth.value = isNum(v.width) ? v.width : '';
+    editVendorHeight.value = isNum(v.height) ? v.height : '';
+    editVendorRotation.value = isNum(v.rotation) ? v.rotation : '';
 
-    // Show the modal
     editVendorModal.style.display = 'flex';
   }
 
-  // ====== Modal Event Listeners ======
   btnCancelEdit.addEventListener('click', () => {
     editVendorModal.style.display = 'none';
   });
@@ -480,40 +486,74 @@
 
     const id = editVendorId.value;
     const v = vendors.find(x => x.id === id);
-    if (!v) {
-      alert('Error: Could not find vendor to update.');
-      return;
-    }
+    if (!v) { alert('Error: Could not find vendor to update.'); return; }
 
-    // Update vendor object with form values
     v.name = editVendorName.value.trim();
     v.booth = editVendorBooth.value.trim();
     v.description = editVendorDescription.value.trim();
     v.website = editVendorWebsite.value.trim();
-    
-    // For numeric fields, convert or unset
+
     const width = editVendorWidth.value.trim();
     v.width = (width !== '' && !isNaN(parseFloat(width))) ? parseFloat(width) : undefined;
-    
+
     const height = editVendorHeight.value.trim();
     v.height = (height !== '' && !isNaN(parseFloat(height))) ? parseFloat(height) : undefined;
 
     const rotation = editVendorRotation.value.trim();
     v.rotation = (rotation !== '' && !isNaN(parseFloat(rotation))) ? parseFloat(rotation) : undefined;
 
-    // Persist changes and re-render
     persistVendors();
     rebuildVendorMarkers();
     renderVendorList();
-
-    // Hide the modal
     editVendorModal.style.display = 'none';
   });
 
-  btnAddVendor.addEventListener('click', ()=>{ if(!admin) return; const name=prompt('New vendor name?'); if(!name) return; const booth=prompt('Booth number (e.g. A12 or 101)?')||''; const id = makeId(name, booth); const v={ id, name:name.trim(), booth:booth.trim() }; vendors.push(v); persistVendors(); renderVendorList(); startPlacement(v.id); });
-  vExport.addEventListener('click', ()=>{ if(!admin) return; const data=JSON.stringify(vendors,null,2); download(new Blob([data],{type:'application/json'}),'ghmx-vendors.json'); });
-  vImport.addEventListener('change', ev=>{ if(!admin) { ev.target.value=''; return; } const f=ev.target.files?.[0]; if(!f) return; const r=new FileReader(); r.onload=()=>{ try{ const arr=coerceVendors(JSON.parse(r.result)); if(!Array.isArray(arr)) throw new Error('Expected an array or an object with vendors'); vendors=normalizeVendors(arr); persistVendors(); rebuildVendorMarkers(); renderVendorList(); setStatus(`Imported ${vendors.length} vendors`); }catch(e){ alert('Import failed: '+e.message); } }; r.readAsText(f); ev.target.value=''; });
-  vClear.addEventListener('click', ()=>{ if(!admin) return; if(confirm('Clear ALL vendors?')){ vendors=[]; persistVendors(); rebuildVendorMarkers(); renderVendorList(); } });
+  // ====== Admin toolbar actions ======
+  btnAddVendor.addEventListener('click', ()=>{
+    if(!admin) return;
+    const name=prompt('New vendor name?'); if(!name) return;
+    const booth=prompt('Booth number (e.g. A12 or 101)?')||'';
+    const id = makeId(name, booth);
+    const v={ id, name:name.trim(), booth:booth.trim() };
+    vendors.push(v); persistVendors(); renderVendorList(); startPlacement(v.id);
+  });
+  // ====== Exit Admin Mode Button ======
+  const btnExitAdmin = document.getElementById('btnExitAdmin');
+  btnExitAdmin.addEventListener('click', () => {
+    if (!admin) return;
+    if (confirm('Exit Admin Mode?')) {
+    setAdmin(false);
+    window.location.hash = ''; // remove #admin from URL
+    }
+  });
+  vExport.addEventListener('click', ()=>{
+    if(!admin) return;
+    const data=JSON.stringify(vendors,null,2);
+    download(new Blob([data],{type:'application/json'}),'ghmx-vendors.json');
+  });
+
+  vImport.addEventListener('change', ev=>{
+    if(!admin) { ev.target.value=''; return; }
+    const f=ev.target.files?.[0]; if(!f) return;
+    const r=new FileReader();
+    r.onload=()=>{
+      try{
+        const arr=coerceVendors(JSON.parse(r.result));
+        if(!Array.isArray(arr)) throw new Error('Expected an array or an object with vendors');
+        vendors=normalizeVendors(arr);
+        persistVendors(); rebuildVendorMarkers(); renderVendorList();
+        setStatus(`Imported ${vendors.length} vendors`);
+      }catch(e){ alert('Import failed: '+e.message); }
+    };
+    r.readAsText(f); ev.target.value='';
+  });
+
+  vClear.addEventListener('click', ()=>{
+    if(!admin) return;
+    if(confirm('Clear ALL vendors?')){
+      vendors=[]; persistVendors(); rebuildVendorMarkers(); renderVendorList();
+    }
+  });
 
   // ====== Env (.env) loader ======
   async function loadEnv() {
@@ -537,9 +577,7 @@
       if (eq === -1) return;
       const k = s.slice(0, eq).trim();
       let v = s.slice(eq + 1).trim();
-      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith('\'') && v.endsWith('\''))) {
-        v = v.slice(1, -1);
-      }
+      if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith('\'') && v.endsWith('\''))) v = v.slice(1, -1);
       out[k] = v;
     });
     return out;
