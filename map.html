@@ -242,7 +242,7 @@
     initMap();
 	if (!IMAGE_URL){
  	 // ✅ Correct fallback to actual image size
-  	buildMapWithImage(1578,1118);
+  	buildMapWithImage(1118,1578);
   	setStatus(`Image not found.`);
 	} else {
   	const img = new Image();
@@ -252,7 +252,7 @@
   	);
   	img.onerror = () => {
     // ✅ Correct fallback if decode fails
-    buildMapWithImage(1578,1118);
+    buildMapWithImage(1118,1578);
     setStatus('Image exists but could not be decoded.');
   };
   img.src = IMAGE_URL + cacheBust();
