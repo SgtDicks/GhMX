@@ -240,7 +240,7 @@
 
     IMAGE_URL = await resolveImageUrl();
     initMap();
-    if (!IMAGE_URL){ buildMapWithImage(1059,753); setStatus(`Image not found.`); }
+    if (!IMAGE_URL){ buildMapWithImage(1118,1578); setStatus(`Image not found.`); }
     else {
       const img = new Image();
       img.onload = () => buildMapWithImage(img.naturalWidth||img.width, img.naturalHeight||img.height);
