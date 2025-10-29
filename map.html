@@ -240,13 +240,23 @@
 
     IMAGE_URL = await resolveImageUrl();
     initMap();
-    if (!IMAGE_URL){ buildMapWithImage(1118,1578); setStatus(`Image not found.`); }
-    else {
-      const img = new Image();
-      img.onload = () => buildMapWithImage(img.naturalWidth||img.width, img.naturalHeight||img.height);
-      img.onerror = () => { buildMapWithImage(1059,753); setStatus('Image exists but could not be decoded.'); };
-      img.src = IMAGE_URL + cacheBust();
-    }
+	if (!IMAGE_URL){
+ 	 // ✅ Correct fallback to actual image size
+  	buildMapWithImage(1578,1118);
+  	setStatus(`Image not found.`);
+	} else {
+  	const img = new Image();
+  	img.onload = () => buildMapWithImage(
+    img.naturalHeight || img.height,
+    img.naturalWidth || img.width
+  	);
+  	img.onerror = () => {
+    // ✅ Correct fallback if decode fails
+    buildMapWithImage(1578,1118);
+    setStatus('Image exists but could not be decoded.');
+  };
+  img.src = IMAGE_URL + cacheBust();
+}
 
     await autoloadVendors();
     rebuildVendorMarkers();
