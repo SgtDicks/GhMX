@@ -307,7 +307,7 @@
     overlay.addTo(map);
     overlay.on('error', ()=> setStatus('Image failed to load.'));
     map.setMaxBounds(boundsLocal);
-    map.fitBounds(boundsLocal,{padding:[100,100]});
+    map.fitBounds(boundsLocal,{padding:[100,100], maxZoom: -1});
   }
 
   function focusVendor(id){
