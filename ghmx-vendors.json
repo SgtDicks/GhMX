@@ -5,8 +5,8 @@
     "booth": "00",
     "description": "",
     "website": "",
-    "x": 524.4,
-    "y": 495,
+    "x": 907,
+    "y": 773,
     "width": 75,
     "height": 75
   },
@@ -16,8 +16,8 @@
     "booth": "00",
     "description": "",
     "website": "",
-    "x": 219,
-    "y": 383.5,
+    "x": 247,
+    "y": 552,
     "width": 50,
     "height": 50
   },
@@ -171,9 +171,13 @@
   {
     "id": "_brisbane-miniature-enthusiasts-association-inc-bmea",
     "name": "Brisbane Miniature Enthusiasts Association Inc. (BMEA)",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "212",
+    "description": "BMEA is a non-profit group of people of all ages.\nWe share interests in scale doll house building, scale models, dioramas and anything miniature related. We meet as a club on a monthly basis in Everton Park to share ideas and skills, attend workshops, and create together.",
+    "website": "https://www.bmeainc.com.au/",
+    "x": 1467,
+    "y": 301,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_ipms-qld",
@@ -189,9 +193,13 @@
   {
     "id": "_riverside-scale-modellers",
     "name": "Riverside Scale Modellers",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "205",
+    "description": "Based in Bullimba RSMC is a scale model group open to all that are interested in model building and community",
+    "website": "https://www.facebook.com/groups/riversideSMC/",
+    "x": 608,
+    "y": 192,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_diagon-alley-display",
@@ -207,9 +215,13 @@
   {
     "id": "_australian-air-league",
     "name": "Australian Air League",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "302",
+    "description": "The Australian Air League is a youth group for girls and boys aged 8 years and older with a passion for flying.",
+    "website": "https://www.airleague.com.au/",
+    "x": 408,
+    "y": 425,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_tweed-head-modellers",
@@ -234,10 +246,14 @@
   },
   {
     "id": "_garage-gamers-tabletop-wargaming",
-    "name": "Garage Gamers Tabletop Wargaming",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "name": "Garage Gamers",
+    "booth": "307",
+    "description": "Step onto a tabletop battlefield and bring history to life! Historical miniature wargaming lets you move tiny soldiers across hills, rivers, and villages, recreating real battles with strategy, drama, and artistry.",
+    "website": "",
+    "x": 886,
+    "y": 423,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_40k-tutorials",
@@ -363,9 +379,13 @@
   {
     "id": "_misfits-united",
     "name": "Misfits United",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "206",
+    "description": "Misfits United is a gaming and pop-culture social enterprise, incorporated as part of the Redcliffe Area Youth Space. We are a Youth Service dedicated to working with marginalised and disadvantaged young people with a strong focus on social inclusion.\nOur store is unique in that it is worked and run by young people for young people.",
+    "website": "https://redcliffeyouthspace.org",
+    "x": 777,
+    "y": 190,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_wendy1305au",
@@ -388,16 +408,24 @@
   {
     "id": "_traders-galaxy",
     "name": "Traders Galaxy",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "304",
+    "description": "Traders Galaxy produces its own tabletop miniatures and games in Qld.",
+    "website": "https://www.tradersgalaxy.com.au",
+    "x": 466,
+    "y": 364,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_neural-forge",
     "name": "Neural Forge",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "310",
+    "description": "Neural Forge produces unique strategy games for all levels of gamer. Each set is made in house with high quality materials and is designed to look great on your table even when not in use.",
+    "website": "https://neuralforge.com.au",
+    "x": 1277,
+    "y": 348,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_cardboard-monster",
@@ -409,37 +437,57 @@
   {
     "id": "_mjl-anime",
     "name": "MJL Anime",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "303",
+    "description": "We are a Brisbane based retailer. We provide delicious anime & manga-inspired merchandise to satisfy all your otaku needs. Awesome items such as Figures from small to large scale, Zoids Model Kits, Trading Cards, Danmei and some rare collectibles that have been specially imported from overseas can be found. Make sure to come and say hi~",
+    "website": "https://www.mjlanime.com.au",
+    "x": 465,
+    "y": 422,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_kiza-collective",
     "name": "Kiza Collective",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "308",
+    "description": "A family business that focuses on 1990s-2000s generation toys Mainly Selling rare 1st Edition Beyblade, 1st Edition English and Japanese Pokémon cards, Yu-Gi-oh Cards, 1st Generation Digimon Device, original 1990s Star Wars action figures, Crush Gears And more.",
+    "website": "https://kizacollective.myshopify.com/",
+    "x": 918,
+    "y": 365,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_talisman-sabre-terrain",
     "name": "Talisman Sabre Terrain",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "209",
+    "description": "We provide a highly detailed and immersive 3D printable hex terrain system compatible with Dungeons & Dragons, Gloomhaven, Frosthaven etc. Our terrain is OpenLOCK and magnet compatible. We can provide printed and painted terrain sets for customers or you can purchase the digital files to print your own.",
+    "website": "https://www.talismansabreterrain.com",
+    "x": 921,
+    "y": 243,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_manscale-models",
     "name": "Manscale Models",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "309",
+    "description": "High quality scale model tools and accessories based in Upper Caboolture.",
+    "website": "https://www.manscalemodels.com.au",
+    "x": 1092,
+    "y": 351,
+    "width": 150,
+    "height": 50
   },
   {
     "id": "_brisbane-tolkien-fellowship",
     "name": "Brisbane Tolkien Fellowship",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "211",
+    "description": "Tolkien/Hobbit/Lord of the Rings Fan Club",
+    "website": "https://www.facebook.com/BrisbaneTolkienFellowship",
+    "x": 1302,
+    "y": 294,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_dragonfire-creations",
@@ -462,9 +510,13 @@
   {
     "id": "_ausdice",
     "name": "Ausdice",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "306",
+    "description": "Our mission at Ausdice is to enrich tabletop gaming adventures by providing dice and accessories that inspire creativity, enhance gameplay and foster memorable moments among players of all ages and interests.",
+    "website": "https://www.ausdice.com.au/",
+    "x": 864,
+    "y": 366,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_pokidoll-collectables",
@@ -515,9 +567,13 @@
   {
     "id": "_105th-armoury-hobby-shop",
     "name": "105th Armoury Hobby Shop",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "305",
+    "description": "105th Armoury Hobby Shop, A place for Collectibles, Model Kits, Gaming and modeling supplies",
+    "website": "https://105tharmoury.com.au/",
+    "x": 658,
+    "y": 400,
+    "width": 220,
+    "height": 115
   },
   {
     "id": "_model-nerds",
@@ -556,10 +612,14 @@
   },
   {
     "id": "_beyond-bricks",
-    "name": "Beyond Bricks",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "name": "Bricks & Beyond",
+    "booth": "207",
+    "description": "Retro kits, hard to find gems and spares parts",
+    "website": "",
+    "x": 780,
+    "y": 245,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_adam-nichols",
@@ -628,5 +688,60 @@
     "website": "https://www.facebook.com/Cosplayrepairguild",
     "width": 100,
     "height": 100
+  },
+  {
+    "id": "210_doctor-who-photo-area",
+    "name": "Doctor Who Photo Area",
+    "booth": "210",
+    "x": 1092,
+    "y": 292,
+    "description": "Get a photo with the iconic TARDIS from Doctor Who",
+    "website": "https://www.facebook.com/HireaTardis.AU/",
+    "width": 150,
+    "height": 50
+  },
+  {
+    "id": "213_achilles-forge-and-designs",
+    "name": "Achilles Forge and Designs",
+    "booth": "213",
+    "x": 1612,
+    "y": 301,
+    "description": "",
+    "website": "",
+    "width": 100,
+    "height": 50
+  },
+  {
+    "id": "214_old-school-cosplay",
+    "name": "Old School Cosplay",
+    "booth": "214",
+    "x": 1725,
+    "y": 302,
+    "description": "",
+    "website": "",
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "_dragons-gauntlet",
+    "name": "Dragons Gauntlet",
+    "booth": "301",
+    "description": "",
+    "website": "https://www.dragonsgauntlet.com",
+    "width": 50,
+    "height": 50,
+    "x": 410,
+    "y": 365
+  },
+  {
+    "id": "311_mischa-s-miniature-bazaar",
+    "name": "Mischa’s Miniature Bazaar",
+    "booth": "311",
+    "x": 1332,
+    "y": 350,
+    "description": "Get your scale model builds photographed by GhMX's official model photographer!",
+    "website": "",
+    "width": 50,
+    "height": 50
   }
 ]
