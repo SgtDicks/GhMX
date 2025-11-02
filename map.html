@@ -240,11 +240,11 @@
 
     IMAGE_URL = await resolveImageUrl();
     initMap();
-    if (!IMAGE_URL){ buildMapWithImage(1059,753); setStatus(`Image not found.`); }
+    if (!IMAGE_URL){ buildMapWithImage(2500,2500); setStatus(`Image not found.`); }
     else {
       const img = new Image();
       img.onload = () => buildMapWithImage(img.naturalWidth||img.width, img.naturalHeight||img.height);
-      img.onerror = () => { buildMapWithImage(1059,753); setStatus('Image exists but could not be decoded.'); };
+      img.onerror = () => { buildMapWithImage(2500,2500); setStatus('Image exists but could not be decoded.'); };
       img.src = IMAGE_URL + cacheBust();
     }
 
@@ -307,7 +307,7 @@
     overlay.addTo(map);
     overlay.on('error', ()=> setStatus('Image failed to load.'));
     map.setMaxBounds(boundsLocal);
-    map.fitBounds(boundsLocal,{padding:[20,20]});
+    map.fitBounds(boundsLocal,{padding:[100,100]});
   }
 
   function focusVendor(id){
@@ -383,7 +383,7 @@
       if (v.description) popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
       if (v.website) {
         popupContent += `<a href="${v.website}" target="_blank" rel="noopener noreferrer">${v.website}</a>`;
-        popupContent += `<br><img src="${generateQRCode(v.website)}" alt="QR Code" style="width:100px;height:100px;margin-top:10px;">`;
+        popupContent += `<br><img src="${generateQRCode(v.website)}" alt="QR Code" style="width:200px;height:200px;margin-top:10px;">`;
       }
       popupContent += (isNum(v.width) ? `<div class="muted">${v.width}x${v.height}, ${v.rotation||0}°</div>` : '') + '</div>';
 
