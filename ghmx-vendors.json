@@ -31,381 +31,602 @@
   {
     "id": "_chonkyfriend",
     "name": "Chonkyfriend",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_confetti-carousel",
     "name": "Confetti Carousel",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_moon-rock-accessories-club",
     "name": "Moon Rock Accessories Club",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_pendragon-s-pen",
     "name": "Pendragon's Pen",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_comet-companions",
     "name": "Comet Companions",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_shadowrealmco",
     "name": "ShadowRealmCo",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_kanchhi",
     "name": "Kanchhi",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_blehcado",
     "name": "Blehcado",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_fatal-encounters",
     "name": "Fatal Encounters",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_dragonfly-relics",
     "name": "Dragonfly Relics",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_pirate-dragon",
     "name": "Pirate-Dragon",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_mapleforge",
     "name": "Mapleforge",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_lishylu",
     "name": "Lishylu",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_lilith-s-illustration",
     "name": "Lilith's Illustration",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_the-stitched-scroll",
     "name": "The Stitched Scroll",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_abfabkreations-the-very-sweary-yarn-faerie",
     "name": "AbFabKreations & The Very Sweary Yarn Faerie",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_brisbane-rc-mini-and-micro-buggy-racing",
     "name": "Brisbane RC Mini and Micro Buggy Racing",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_seq-beyblade",
     "name": "SEQ Beyblade",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_gunpla-brisbane-build-group",
     "name": "Gunpla Brisbane Build Group",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_brisbane-display-painters-guild",
     "name": "Brisbane Display Painters Guild",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_brisbane-miniature-enthusiasts-association-inc-bmea",
     "name": "Brisbane Miniature Enthusiasts Association Inc. (BMEA)",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_ipms-qld",
     "name": "IPMS QLD",
-    "booth": ""
+    "booth": "201",
+    "description": "IPMS Queensland is a group of like minded modelling enthusiasts who like to meet, share and discuss all things scale modelling!",
+    "website": "https://ipmsqld.org.au/",
+    "x": 432,
+    "y": 191,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_riverside-scale-modellers",
     "name": "Riverside Scale Modellers",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_diagon-alley-display",
-    "name": "Diagon Alley Display",
-    "booth": ""
+    "name": "Diagon Alley",
+    "booth": "104",
+    "description": "A stunning scale version of the iconic Diagon Alley from Harry Potter",
+    "website": "",
+    "x": 667,
+    "y": 90,
+    "width": 120,
+    "height": 35
   },
   {
     "id": "_australian-air-league",
     "name": "Australian Air League",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_tweed-head-modellers",
     "name": "Tweed Head Modellers",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_swordcraft",
     "name": "Swordcraft",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_bris-bricks",
     "name": "Bris Bricks",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_garage-gamers-tabletop-wargaming",
     "name": "Garage Gamers Tabletop Wargaming",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_40k-tutorials",
     "name": "40K Tutorials",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_gerry-anderson-model-expo-by-jim-millet",
     "name": "Gerry Anderson Model Expo by Jim Millet",
-    "booth": ""
+    "booth": "102",
+    "description": "See iconic models from the worlds of Thunderbirds, Captain Scarlet, and more — all built by professional model maker Jim Millet!",
+    "website": "",
+    "x": 402,
+    "y": 67,
+    "width": 100,
+    "height": 100
   },
   {
     "id": "_medieval-battle-arena",
     "name": "Medieval Battle Arena",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_ael",
     "name": "AEL",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_makr-gallery",
     "name": "MakR Gallery",
-    "booth": ""
+    "booth": "102",
+    "description": "A showcase of non-competition work and builds from the community including all creative mediums.",
+    "website": "",
+    "x": 518,
+    "y": 74,
+    "width": 100,
+    "height": 100
   },
   {
     "id": "_d-d",
     "name": "D&D",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_trading-card-zone",
     "name": "Trading Card Zone",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_magic-the-gathering",
     "name": "Magic The Gathering",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_just-support",
     "name": "Just Support",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_cosplay-studio",
     "name": "Cosplay Studio",
-    "booth": ""
+    "booth": "106",
+    "description": "Includes Cosplay X Registration, Cosplay Repair, Photo Area & Change Room",
+    "website": "",
+    "x": 1272,
+    "y": 159,
+    "width": 100,
+    "height": 100
   },
   {
     "id": "_miniature-painting-workshop",
     "name": "Miniature Painting Workshop",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_cosplay-stage",
     "name": "Cosplay Stage",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_brick-pit",
-    "name": "Brick Pit",
-    "booth": ""
+    "name": "Brick Pit & Exhibitor Lounge",
+    "booth": "105",
+    "description": "A free & open area to let your imagination go wild with Lego bricks",
+    "website": "",
+    "x": 965,
+    "y": 66,
+    "width": 100,
+    "height": 100
   },
   {
     "id": "_info-desk",
     "name": "Info Desk",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_rc-zone",
     "name": "RC Zone",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_misfits-united",
     "name": "Misfits United",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_wendy1305au",
     "name": "Wendy1305AU",
-    "booth": ""
+    "booth": "203",
+    "description": "3D Printed book themed items along with Dice towers, dice, critters and fidgets.",
+    "website": "https://linktr.ee/wendy1305au",
+    "x": 462,
+    "y": 246,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_nerdvana",
     "name": "Nerdvana",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_traders-galaxy",
     "name": "Traders Galaxy",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_neural-forge",
     "name": "Neural Forge",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_cardboard-monster",
     "name": "Cardboard Monster",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_mjl-anime",
     "name": "MJL Anime",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_kiza-collective",
     "name": "Kiza Collective",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_talisman-sabre-terrain",
     "name": "Talisman Sabre Terrain",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_manscale-models",
     "name": "Manscale Models",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_brisbane-tolkien-fellowship",
     "name": "Brisbane Tolkien Fellowship",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_dragonfire-creations",
     "name": "Dragonfire Creations",
-    "booth": ""
+    "booth": "202",
+    "description": "Dragonfire Creations is where craftsmanship meets imagination. We proudly design and produce our own line of dragons, dice towers, jewellery, and resin works — while also showcasing exceptional designs from other skilled creators. Whether handmade or carefully curated, each piece is crafted to inspire your next great adventure.",
+    "website": "https://linktr.ee/dragonfireresingaming",
+    "x": 406,
+    "y": 244,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_yasashii-kyojin-studio",
     "name": "Yasashii Kyojin Studio",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_ausdice",
     "name": "Ausdice",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_pokidoll-collectables",
     "name": "Pokidoll Collectables",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_www-edenhunter-com-au",
     "name": "WWW.EDENHUNTER.COM.AU",
-    "booth": ""
+    "booth": "204",
+    "description": "The place to be for the largest variety of Htsune Miku & Anime figures. \nStop by and try your luck at our ICHIBAN KUJI wall where you could win a statue worth $200+ for only $20! Every ticket wins a prize (prizes vary per set) so you wont go away empty handed. \nWe will also have some Gundams and Trading cards as well so make sure to check out what hidden gems you'll find.",
+    "website": "https://www.edenhunter.com.au",
+    "x": 608,
+    "y": 249,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_great-ball-collectibles",
     "name": "Great Ball Collectibles",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_vault-games",
     "name": "Vault Games",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_tcg-express",
     "name": "TCG Express",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_gundam-express-australia",
     "name": "Gundam Express Australia",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_105th-armoury-hobby-shop",
     "name": "105th Armoury Hobby Shop",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_model-nerds",
     "name": "Model Nerds",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_zompster",
     "name": "Zompster",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_free-model-kit-building",
     "name": "Free Model Kit Building",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_gunpla-free-model-workshop",
     "name": "Gunpla Free Model Workshop",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_bcw",
     "name": "BCW",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_beyond-bricks",
     "name": "Beyond Bricks",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_adam-nichols",
     "name": "Adam Nichols",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_wayne-nichols",
     "name": "Wayne Nichols",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_ty-hansen",
     "name": "Ty Hansen",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_david-zuppini",
     "name": "David Zuppini",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
   },
   {
     "id": "_chris-becker",
     "name": "Chris Becker",
-    "booth": ""
+    "booth": "",
+    "description": "",
+    "website": ""
+  },
+  {
+    "id": "101_info-desk",
+    "name": "Info Desk",
+    "booth": "101",
+    "x": 311,
+    "y": 80,
+    "description": "Info Booth & First Aid. Redeem prizes & enter the Ultimate \nChristmas Hamper raffle. Buy yourself an exclusive GhMX show \npin!",
+    "website": "",
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "106_geofftography-cosplay-photo-booth",
+    "name": "Geofftography Cosplay Photo Booth",
+    "booth": "106",
+    "x": 1371,
+    "y": 153,
+    "description": "Official Cosplay Photographer",
+    "website": "",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "id": "106_cosplay-repair-guild",
+    "name": "Cosplay Repair Guild",
+    "booth": "106",
+    "x": 1463,
+    "y": 138,
+    "description": "The Cosplay Repair Guild is an alliance of caring and fun cosplayers who wish to provide top notch and professional repair service to any and all in need at GhMX.",
+    "website": "https://www.facebook.com/Cosplayrepairguild",
+    "width": 100,
+    "height": 100
   }
 ]
