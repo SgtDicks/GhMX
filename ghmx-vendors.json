@@ -7,19 +7,19 @@
     "website": "",
     "x": 907,
     "y": 773,
-    "width": 75,
-    "height": 75
+    "width": 200,
+    "height": 200
   },
   {
     "id": "00_scale-model-competition",
-    "name": "Scale Model Competition",
-    "booth": "00",
-    "description": "",
+    "name": "SMS Scale Model Competition",
+    "booth": "401",
+    "description": "Proudly presented by SMS Paint, see the best scale model builds Queensland has to offer at the Scale Model Build Competition & Expo. Don't forget to vote for your favourite entry. Admire and take photos but please don't touch.",
     "website": "",
     "x": 247,
     "y": 552,
-    "width": 50,
-    "height": 50
+    "width": 200,
+    "height": 200
   },
   {
     "id": "00_art-of-nakoo",
@@ -143,9 +143,13 @@
   {
     "id": "_brisbane-rc-mini-and-micro-buggy-racing",
     "name": "Brisbane RC Mini and Micro Buggy Racing",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "413",
+    "description": "Casual racing social outings for Micro and Mini scale (1:28-18) Scale Offroard RC Cars. We welcome everyone to come on down to our indoor carpet track at Salisbury for relaxed afternoon of racing.",
+    "website": "https://www.facebook.com/groups/bneminibuggies",
+    "x": 1887,
+    "y": 740,
+    "width": 150,
+    "height": 50
   },
   {
     "id": "_seq-beyblade",
@@ -157,16 +161,24 @@
   {
     "id": "_gunpla-brisbane-build-group",
     "name": "Gunpla Brisbane Build Group",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "506",
+    "description": "Representing Brisbane's Gunpla building community, Gunpla Brisbane Build Group meets regularly for social building and welcomes new members, online discussion and in person build meets.",
+    "website": "https://www.facebook.com/groups/gunplabrisbanebuildgroup/",
+    "x": 681,
+    "y": 706,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_brisbane-display-painters-guild",
     "name": "Brisbane Display Painters Guild",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "409",
+    "description": "Brisbane Branch of Australian Display Painting Guilds. Community group focused on improving miniature painting, especially with a focus to paint for display purposes.",
+    "website": "https://www.instagram.com/brisbanedisplaypaintersguild/?hl=en",
+    "x": 1442,
+    "y": 546,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_brisbane-miniature-enthusiasts-association-inc-bmea",
@@ -225,24 +237,36 @@
   },
   {
     "id": "_tweed-head-modellers",
-    "name": "Tweed Head Modellers",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "name": "Tweed Valley Modellers",
+    "booth": "404",
+    "description": "Tweed Valley Modellers - scale modelling club that spans multiple genres of modelling",
+    "website": "",
+    "x": 835,
+    "y": 595,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_swordcraft",
     "name": "Swordcraft",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "312",
+    "description": "Swordcraft Brisbane is a LARP (Live Action Roleplay) community playing every Friday night in Brisbane Queensland, and is a chapter of Swordcraft Ltd, Australia’s largest Not For Profit Live Action Roleplay & Battlegame.",
+    "website": "https://www.swordcraft.com.au/",
+    "x": 1883,
+    "y": 381,
+    "width": 150,
+    "height": 150
   },
   {
     "id": "_bris-bricks",
     "name": "Bris Bricks",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "501",
+    "description": "Check out the latest creations from the build masters at BrisBricks",
+    "website": "",
+    "x": 471,
+    "y": 865,
+    "width": 200,
+    "height": 200
   },
   {
     "id": "_garage-gamers-tabletop-wargaming",
@@ -308,9 +332,13 @@
   {
     "id": "_trading-card-zone",
     "name": "Trading Card Zone",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "509",
+    "description": "Enter the Trading Card Zone by Vault Games If you've ever wanted to learn Magic: the Gathering, Star Wars: Unlimited, Disney's Lorcana, or the new Riftbound: League of Legends Card Game, or you just have a deck with you, this is THE zone for you. Join the crew from Vault Games as they take you through the ins and outs of these games at one of the demo tables or join in the fun with casual Commander, Twin Suns, Pack Rush, Preconstructed Deck Battles, or on-demand Sealed and Draft across the whole two days of GhMX. Score Prize Tickets for participating in events, and even more for winning,",
+    "website": "https://vaultgames.com.au/",
+    "x": 1312,
+    "y": 965,
+    "width": 100,
+    "height": 100
   },
   {
     "id": "_magic-the-gathering",
@@ -342,7 +370,11 @@
     "name": "Miniature Painting Workshop",
     "booth": "",
     "description": "",
-    "website": ""
+    "website": "",
+    "x": 1296,
+    "y": 525,
+    "width": 100,
+    "height": 190
   },
   {
     "id": "_cosplay-stage",
@@ -372,9 +404,13 @@
   {
     "id": "_rc-zone",
     "name": "RC Zone",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "413",
+    "description": "Get hands on with RC helicopters, planes, an indoor buggy racing track and fully usable construction equipment in the GhMX sandpit!",
+    "website": "",
+    "x": 1890,
+    "y": 686,
+    "width": 150,
+    "height": 50
   },
   {
     "id": "_misfits-united",
@@ -539,23 +575,35 @@
   {
     "id": "_great-ball-collectibles",
     "name": "Great Ball Collectibles",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "403",
+    "description": "We specialise in Pokemon TCG as an authorised retailer and have a wide selection of singles for collectors of all budgets.",
+    "website": "https://greatball.com.au",
+    "x": 834,
+    "y": 538,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_vault-games",
     "name": "Vault Games",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "508",
+    "description": "Unlock the Vault! Vault Games is the store that has all your tabletop gaming needs, from board games and miniatures to role-playing and trading card games. Boasting an extensive library of games, you can be sure the Vault team will help you discover new games and also give you an opportunity to pick up anything you've ordered online.\n\nFind us at 62 Queen St Brisbane City and 730 Sandgate Rd Clayfield!",
+    "website": "https://vaultgames.com.au/",
+    "x": 1187,
+    "y": 728,
+    "width": 100,
+    "height": 50
   },
   {
     "id": "_tcg-express",
     "name": "TCG Express",
     "booth": "",
     "description": "",
-    "website": ""
+    "website": "",
+    "x": 919,
+    "y": 562,
+    "width": 50,
+    "height": 100
   },
   {
     "id": "_gundam-express-australia",
@@ -578,16 +626,24 @@
   {
     "id": "_model-nerds",
     "name": "Model Nerds",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "402",
+    "description": "Modelnerds specialise in selling pre loved model kits, decals, accessories. We buy collections.",
+    "website": "https://modelnerds.myshopify.com/",
+    "x": 631,
+    "y": 565,
+    "width": 170,
+    "height": 115
   },
   {
     "id": "_zompster",
-    "name": "Zompster",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "name": "Zombster",
+    "booth": "407",
+    "description": "A great manga and Japanese model kit store, with a large physical store located in Oxley.",
+    "website": "http://www.zombster.com.au",
+    "x": 1154,
+    "y": 519,
+    "width": 170,
+    "height": 170
   },
   {
     "id": "_free-model-kit-building",
@@ -624,30 +680,46 @@
   {
     "id": "_adam-nichols",
     "name": "Adam Nichols",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "503",
+    "description": "Meet comic guest artists and designer Adam Nichols famous for his work on Fruit Ninja, Warhammer Star Wars: The Force Unleashed, Clonewars: The Republic Heroes and more.",
+    "website": "",
+    "x": 660,
+    "y": 849,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_wayne-nichols",
     "name": "Wayne Nichols",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "booth": "502",
+    "description": "Meet comic guest artists Wayne Nichols famous for Marvel Comics, IDW Publishing, Dark Horse Comics and more!",
+    "website": "",
+    "x": 659,
+    "y": 769,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_ty-hansen",
-    "name": "Ty Hansen",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "name": "Millennium Exile - Ty Hansen",
+    "booth": "505",
+    "description": "Meet graphic novelists and model builder Ty Hansen, writer and illustrator of \"Millennium Exile\" as well as an award winning Gundam model builder.",
+    "website": "",
+    "x": 702,
+    "y": 770,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_david-zuppini",
-    "name": "David Zuppini",
-    "booth": "",
-    "description": "",
-    "website": ""
+    "name": "David Zuppini - Spaced Out",
+    "booth": "504",
+    "description": "Meet comic artists David Zuppini, writer of the independant and hillarious parody comic series \"Spaced Out\"",
+    "website": "",
+    "x": 698,
+    "y": 849,
+    "width": 50,
+    "height": 50
   },
   {
     "id": "_chris-becker",
@@ -742,6 +814,94 @@
     "description": "Get your scale model builds photographed by GhMX's official model photographer!",
     "website": "",
     "width": 50,
+    "height": 50
+  },
+  {
+    "id": "406_gundam-workshop",
+    "name": "Gundam Workshop",
+    "booth": "406",
+    "x": 1040,
+    "y": 527,
+    "description": "",
+    "website": "",
+    "width": 50,
+    "height": 170
+  },
+  {
+    "id": "410_yks-miniatures",
+    "name": "YKS Miniatures",
+    "booth": "410",
+    "x": 1445,
+    "y": 603,
+    "description": "",
+    "website": "",
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "411_australian-esports-league",
+    "name": "Australian Esports League",
+    "booth": "411",
+    "x": 1577,
+    "y": 573,
+    "description": "",
+    "website": "",
+    "width": 200,
+    "height": 100
+  },
+  {
+    "id": "412_lan-legacy-lounge",
+    "name": "LAN Legacy Lounge",
+    "booth": "412",
+    "x": 1739,
+    "y": 579,
+    "description": "",
+    "website": "",
+    "width": 50,
+    "height": 100
+  },
+  {
+    "id": "413_brisbane-metro-1-14-rc-truck-construction-club",
+    "name": "Brisbane Metro 1/14 RC Truck & Construction Club",
+    "booth": "413",
+    "x": 1889,
+    "y": 632,
+    "description": "Enthusiasts dedicated to all things RC Trucks and Trailers, RC Construction Machines and anything else large and radio controlled! Always happy to speak with attendees and tell you the ins and outs of anything radio contolled with lots of wheels!",
+    "website": "https://www.facebook.com/groups/1532784216750503",
+    "width": 150,
+    "height": 50
+  },
+  {
+    "id": "413_rcheli-au",
+    "name": "rcheli.au",
+    "booth": "413",
+    "description": "Take flight with Radio Controlled Helicopters! Discover the thrill of flying, maintaining and mastering these versatile machines that can be flown almost anywhere. Passionate enthusiasts will be at GHMX to share with you the boundless challenges of aeromodelling whilst being part of a vibrant community while elevating your passion for STEM and aviation. Come and have a try of their world class simulator completely free and also enter the draw to win your own RC Heli!",
+    "website": "https://rcheli.au/",
+    "width": 150,
+    "height": 50,
+    "x": 1888,
+    "y": 577
+  },
+  {
+    "id": "413_mad4heli",
+    "name": "Mad4Heli",
+    "booth": "413",
+    "description": "",
+    "website": "",
+    "width": 150,
+    "height": 50,
+    "x": 1890,
+    "y": 524
+  },
+  {
+    "id": "509_dungeons-dragons",
+    "name": "Dungeons & Dragons",
+    "booth": "508",
+    "x": 1309,
+    "y": 729,
+    "description": "If Dungeons & Dragons is your thing, or you want to see what it's all about, join our team of players and dungeon masters from The Adventure's Guild to teach you the basics and run short matches all weekend.",
+    "website": "",
+    "width": 100,
     "height": 50
   }
 ]
