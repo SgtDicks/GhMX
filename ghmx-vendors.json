@@ -22,125 +22,6 @@
     "height": 200
   },
   {
-    "id": "00_art-of-nakoo",
-    "name": "Art Of Nakoo",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_chonkyfriend",
-    "name": "Chonkyfriend",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_confetti-carousel",
-    "name": "Confetti Carousel",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_moon-rock-accessories-club",
-    "name": "Moon Rock Accessories Club",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_pendragon-s-pen",
-    "name": "Pendragon's Pen",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_comet-companions",
-    "name": "Comet Companions",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_shadowrealmco",
-    "name": "ShadowRealmCo",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_kanchhi",
-    "name": "Kanchhi",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_blehcado",
-    "name": "Blehcado",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_fatal-encounters",
-    "name": "Fatal Encounters",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_dragonfly-relics",
-    "name": "Dragonfly Relics",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_pirate-dragon",
-    "name": "Pirate-Dragon",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_mapleforge",
-    "name": "Mapleforge",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_lishylu",
-    "name": "Lishylu",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_lilith-s-illustration",
-    "name": "Lilith's Illustration",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_the-stitched-scroll",
-    "name": "The Stitched Scroll",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_abfabkreations-the-very-sweary-yarn-faerie",
-    "name": "AbFabKreations & The Very Sweary Yarn Faerie",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_brisbane-rc-mini-and-micro-buggy-racing",
     "name": "Brisbane RC Mini and Micro Buggy Racing",
     "booth": "413",
@@ -150,13 +31,6 @@
     "y": 740,
     "width": 150,
     "height": 50
-  },
-  {
-    "id": "_seq-beyblade",
-    "name": "SEQ Beyblade",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_gunpla-brisbane-build-group",
@@ -280,13 +154,6 @@
     "height": 50
   },
   {
-    "id": "_40k-tutorials",
-    "name": "40K Tutorials",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_gerry-anderson-model-expo-by-jim-millet",
     "name": "Gerry Anderson Model Expo by Jim Millet",
     "booth": "102",
@@ -296,20 +163,6 @@
     "y": 67,
     "width": 100,
     "height": 100
-  },
-  {
-    "id": "_medieval-battle-arena",
-    "name": "Medieval Battle Arena",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_ael",
-    "name": "AEL",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_makr-gallery",
@@ -323,13 +176,6 @@
     "height": 100
   },
   {
-    "id": "_d-d",
-    "name": "D&D",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_trading-card-zone",
     "name": "Trading Card Zone",
     "booth": "509",
@@ -339,20 +185,6 @@
     "y": 965,
     "width": 100,
     "height": 100
-  },
-  {
-    "id": "_magic-the-gathering",
-    "name": "Magic The Gathering",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_just-support",
-    "name": "Just Support",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_cosplay-studio",
@@ -377,13 +209,6 @@
     "height": 190
   },
   {
-    "id": "_cosplay-stage",
-    "name": "Cosplay Stage",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_brick-pit",
     "name": "Brick Pit & Exhibitor Lounge",
     "booth": "105",
@@ -393,13 +218,6 @@
     "y": 66,
     "width": 100,
     "height": 100
-  },
-  {
-    "id": "_info-desk",
-    "name": "Info Desk",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_rc-zone",
@@ -435,13 +253,6 @@
     "height": 50
   },
   {
-    "id": "_nerdvana",
-    "name": "Nerdvana",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_traders-galaxy",
     "name": "Traders Galaxy",
     "booth": "304",
@@ -462,13 +273,6 @@
     "y": 348,
     "width": 50,
     "height": 50
-  },
-  {
-    "id": "_cardboard-monster",
-    "name": "Cardboard Monster",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_mjl-anime",
@@ -537,13 +341,6 @@
     "height": 50
   },
   {
-    "id": "_yasashii-kyojin-studio",
-    "name": "Yasashii Kyojin Studio",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_ausdice",
     "name": "Ausdice",
     "booth": "306",
@@ -553,13 +350,6 @@
     "y": 366,
     "width": 50,
     "height": 50
-  },
-  {
-    "id": "_pokidoll-collectables",
-    "name": "Pokidoll Collectables",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_www-edenhunter-com-au",
@@ -606,13 +396,6 @@
     "height": 100
   },
   {
-    "id": "_gundam-express-australia",
-    "name": "Gundam Express Australia",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
     "id": "_105th-armoury-hobby-shop",
     "name": "105th Armoury Hobby Shop",
     "booth": "305",
@@ -644,27 +427,6 @@
     "y": 519,
     "width": 170,
     "height": 170
-  },
-  {
-    "id": "_free-model-kit-building",
-    "name": "Free Model Kit Building",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_gunpla-free-model-workshop",
-    "name": "Gunpla Free Model Workshop",
-    "booth": "",
-    "description": "",
-    "website": ""
-  },
-  {
-    "id": "_bcw",
-    "name": "BCW",
-    "booth": "",
-    "description": "",
-    "website": ""
   },
   {
     "id": "_beyond-bricks",
