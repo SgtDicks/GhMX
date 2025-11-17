@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food & Drinks</title>
+
+<style>
+:root {
+  --bg: #0f1115;
+  --panel: #161a22;
+  --text: #e6e7ea;
+  --accent: #ff005c;
+  --font: "Inter", "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  padding: 1em;
+}
+
+/* Header */
+h1 {
+  color: var(--accent);
+  text-align: center;
+}
+
+/* Vendor list styles */
+#vendorList {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.vendor {
+  background: var(--panel);
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.vendor:hover {
+  background: #1d2535;
+}
+
+.vendor-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* PDF Viewer Container */
+#viewerContainer {
+  display: none; 
+  flex-direction: column;
+  height: 85vh;
+}
+
+#pdfHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5em;
+}
+
+#backBtn {
+  background: var(--accent);
+  color: white;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#downloadBtn {
+  background: #4CAF50;
+  color: white;
+  padding: .5em 1em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#pdfViewer {
+  flex-grow: 1;
+  width: 100%;
+  border: none;
+  background: #000;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Food & Drinks</h1>
+
+<!-- Vendor list -->
+<div id="vendorList">
+  <div class="vendor" data-pdf="food/mr-pulled.pdf"><div class="vendor-title">Mr Pulled</div></div>
+  <div class="vendor" data-pdf="food/tea-365.pdf"><div class="vendor-title">Tea 365</div></div>
+  <div class="vendor" data-pdf="food/that-chicken-chick.pdf"><div class="vendor-title">That Chicken Chick</div></div>
+  <div class="vendor" data-pdf="food/chef-365.pdf"><div class="vendor-title">Chef 365</div></div>
+  <div class="vendor" data-pdf="food/gimme-donuts.pdf"><div class="vendor-title">Gimme Donuts</div></div>
+</div>
+
+<!-- PDF Viewer -->
+<div id="viewerContainer">
+  <div id="pdfHeader">
+    <button id="backBtn">← Back</button>
+    <button id="downloadBtn">Download PDF</button>
+  </div>
+
+  <!-- PDF embed (iPhone will auto open “Download PDF” instead) -->
+  <embed id="pdfViewer" type="application/pdf">
+</div>
+
+<script>
+const vendorList = document.getElementById("vendorList");
+const viewerContainer = document.getElementById("viewerContainer");
+const pdfViewer = document.getElementById("pdfViewer");
+const downloadBtn = document.getElementById("downloadBtn");
+const backBtn = document.getElementById("backBtn");
+
+document.querySelectorAll(".vendor").forEach(v => {
+  v.addEventListener("click", () => {
+    const pdf = v.dataset.pdf;
+
+    // Show PDF viewer, hide vendor list
+    vendorList.style.display = "none";
+    viewerContainer.style.display = "flex";
+
+    // Load PDF
+    pdfViewer.src = pdf;
+    downloadBtn.onclick = () => window.location.href = pdf;
+  });
+});
+
+backBtn.onclick = () => {
+  // Show vendor list again
+  viewerContainer.style.display = "none";
+  vendorList.style.display = "block";
+
+  // Unload PDF for performance
+  pdfViewer.src = "";
+};
+</script>
+
+</body>
+</html>

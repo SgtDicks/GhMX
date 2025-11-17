@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GHMX Interactive Floorplan</title>
   <!-- Leaflet CSS -->
   <link
@@ -176,8 +176,6 @@
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin="anonymous"
 ></script>
-<!-- QR Code Generator -->
-<script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
 <script>
 (() => {
   // ====== Config ======
@@ -301,26 +299,14 @@
     });
   }
 
-function buildMapWithImage(naturalWidth, naturalHeight){
-  const boundsLocal = [[0,0],[naturalHeight,naturalWidth]];
-  bounds = boundsLocal;
-
-  const overlay = L.imageOverlay(
-    IMAGE_URL ? (IMAGE_URL + cacheBust()) : '', 
-    boundsLocal, 
-    { interactive:false }
-  ).addTo(map);
-
-  overlay.on('error', ()=> setStatus('Image failed to load.'));
-
-  map.setMaxBounds(boundsLocal);
-  map.setMinZoom(-2);  // allow zooming out on mobile
-  map.setMaxZoom(2);
-
-  map.fitBounds(boundsLocal, { padding:[0,0] });
-  map.setZoom(map.getBoundsZoom(boundsLocal, true));  // normalize zoom level
-  map.panTo([naturalHeight / 2, naturalWidth / 2]);
-}
+  function buildMapWithImage(naturalWidth, naturalHeight){
+    const boundsLocal = [[0,0],[naturalHeight,naturalWidth]]; bounds = boundsLocal;
+    const overlay = L.imageOverlay(IMAGE_URL ? (IMAGE_URL + cacheBust()) : '', boundsLocal, { interactive:false });
+    overlay.addTo(map);
+    overlay.on('error', ()=> setStatus('Image failed to load.'));
+    map.setMaxBounds(boundsLocal);
+    map.fitBounds(boundsLocal,{padding:[100,100]});
+  }
 
   function focusVendor(id){
     const v = vendors.find(x=>x.id===id);
@@ -377,13 +363,6 @@ function buildMapWithImage(naturalWidth, naturalHeight){
   function vendorFilter(v){ const q=(vSearch.value||'').trim().toLowerCase(); return !q || (v.name.toLowerCase().includes(q) || String(v.booth).toLowerCase().includes(q)); }
   function getMarkerFor(id){ let found=null; vendorLayer.eachLayer(l=>{ if(l.options && l.options._vendorId===id) found=l; }); return found; }
 
-  function generateQRCode(text) {
-    const qr = qrcode(0, 'L');
-    qr.addData(text);
-    qr.make();
-    return qr.createDataURL(4);
-  }
-
   function rebuildVendorMarkers(){
     vendorLayer.clearLayers();
     vendors.forEach(v => {
@@ -395,9 +374,7 @@ function buildMapWithImage(naturalWidth, naturalHeight){
       if (v.description) popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
       if (v.website) {
         popupContent += `<a href="${v.website}" target="_blank" rel="noopener noreferrer">${v.website}</a>`;
-        popupContent += `<br><img src="${generateQRCode(v.website)}" alt="QR Code" style="width:200px;height:200px;margin-top:10px;">`;
       }
-      popupContent += (isNum(v.width) ? `<div class="muted">${v.width}x${v.height}, ${v.rotation||0}°</div>` : '') + '</div>';
 
       if (isNum(v.width) && isNum(v.height)) {
         const halfW = v.width / 2;
