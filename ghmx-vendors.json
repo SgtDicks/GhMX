@@ -649,12 +649,12 @@
     "height": 280
   },
   {
-    "id": "410a_junoo-keebs",
-    "name": "junoo.keebs",
+    "id": "410a_TCG_Hunters",
+    "name": "TCG Hunters",
     "booth": "410a",
     "x": 1650,
     "y": 687,
-    "description": "",
+    "description": "Trading cards, soft toys and figures",
     "website": "",
     "width": 50,
     "height": 50
@@ -667,6 +667,17 @@
     "y": 805,
     "description": "Delta Phase Games is a small indie game studio based in Brisbane, Australia, run by Eris Alar & Josh Huf.\n\nWe firmly believe play is an essential part of life, and want to help more people have fun making memories with their friends and family.",
     "website": "https://www.deltaphasegames.com",
+    "width": 50,
+    "height": 50
+  },
+  {
+    "id": "310_mistysminimon",
+    "name": "Misty’s Minimon",
+    "booth": "310",
+    "x": 751,
+    "y": 805,
+    "description": "",
+    "website": "",
     "width": 50,
     "height": 50
   },
