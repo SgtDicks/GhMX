@@ -22,13 +22,11 @@ body {
   padding: 1em;
 }
 
-/* Header */
 h1 {
   color: var(--accent);
   text-align: center;
 }
 
-/* Vendor list styles */
 #vendorList {
   max-width: 700px;
   margin: 0 auto;
@@ -53,14 +51,14 @@ h1 {
   color: var(--accent);
 }
 
-/* PDF Viewer Container */
+/* Viewer */
 #viewerContainer {
-  display: none; 
+  display: none;
   flex-direction: column;
   height: 85vh;
 }
 
-#pdfHeader {
+#headerBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,11 +85,11 @@ h1 {
   cursor: pointer;
 }
 
-#pdfViewer {
+/* Image viewer */
+#imageViewer {
   flex-grow: 1;
   width: 100%;
-  border: none;
-  background: #000;
+  object-fit: contain;
 }
 </style>
 </head>
@@ -100,54 +98,46 @@ h1 {
 
 <h1>Food & Drinks</h1>
 
-<!-- Vendor list -->
 <div id="vendorList">
-  <div class="vendor" data-pdf="food/mr-pulled.pdf"><div class="vendor-title">Mr Pulled</div></div>
-  <div class="vendor" data-pdf="food/tea-365.pdf"><div class="vendor-title">Tea 365</div></div>
-  <div class="vendor" data-pdf="food/that-chicken-chick.pdf"><div class="vendor-title">That Chicken Chick</div></div>
-  <div class="vendor" data-pdf="food/chef-365.pdf"><div class="vendor-title">Chef 365</div></div>
-  <div class="vendor" data-pdf="food/gimme-donuts.pdf"><div class="vendor-title">Gimme Donuts</div></div>
+  <div class="vendor" data-img="food/mr-pulled.jpg"><div class="vendor-title">Mr Pulled</div></div>
+  <div class="vendor" data-img="food/tea-365.jpg"><div class="vendor-title">Tea 365</div></div>
+  <div class="vendor" data-img="food/that-chicken-chick.jpg"><div class="vendor-title">That Chicken Chick</div></div>
+  <div class="vendor" data-img="food/chef-365.jpg"><div class="vendor-title">Chef 365</div></div>
+  <div class="vendor" data-img="food/gimme-donuts.jpg"><div class="vendor-title">Gimme Donuts</div></div>
 </div>
 
-<!-- PDF Viewer -->
 <div id="viewerContainer">
-  <div id="pdfHeader">
+  <div id="headerBar">
     <button id="backBtn">← Back</button>
-    <button id="downloadBtn">Download PDF</button>
+    <button id="downloadBtn">Download</button>
   </div>
 
-  <!-- PDF embed (iPhone will auto open “Download PDF” instead) -->
-  <embed id="pdfViewer" type="application/pdf">
+  <img id="imageViewer" src="">
 </div>
 
 <script>
 const vendorList = document.getElementById("vendorList");
 const viewerContainer = document.getElementById("viewerContainer");
-const pdfViewer = document.getElementById("pdfViewer");
+const imageViewer = document.getElementById("imageViewer");
 const downloadBtn = document.getElementById("downloadBtn");
 const backBtn = document.getElementById("backBtn");
 
 document.querySelectorAll(".vendor").forEach(v => {
   v.addEventListener("click", () => {
-    const pdf = v.dataset.pdf;
+    const img = v.dataset.img;
 
-    // Show PDF viewer, hide vendor list
     vendorList.style.display = "none";
     viewerContainer.style.display = "flex";
 
-    // Load PDF
-    pdfViewer.src = pdf;
-    downloadBtn.onclick = () => window.location.href = pdf;
+    imageViewer.src = img;
+    downloadBtn.onclick = () => window.location.href = img;
   });
 });
 
 backBtn.onclick = () => {
-  // Show vendor list again
   viewerContainer.style.display = "none";
   vendorList.style.display = "block";
-
-  // Unload PDF for performance
-  pdfViewer.src = "";
+  imageViewer.src = "";
 };
 </script>
 
