@@ -42,12 +42,7 @@
       top: 0;
       z-index: 600;
     }
-    header h1 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0;
-      letter-spacing: .3px;
-    }
+    header h1 { font-size: 1rem; font-weight: 700; margin: 0; letter-spacing: .3px; }
     header .hint { color: var(--muted); font-size: .85rem; }
     .spacer { flex: 1 1 auto; }
     .btn {
@@ -172,7 +167,7 @@
       #vendorPanel header { position: sticky; top: 0; backdrop-filter: blur(6px); }
     }
 
-    /* ===== IFRAME VIEWER (still present, but no longer used by links) ===== */
+    /* ===== IFRAME VIEWER (BACK BUTTON ONLY) ===== */
     #iframeViewer {
       position: fixed;
       inset: 0;
@@ -208,7 +203,6 @@
     <div class="hint" id="statusHint"></div>
     <button id="btnVendors" class="btn mobileOnly" title="Show vendors">Vendors</button>
     <div class="spacer"></div>
-    <!-- Admin button removed from public view -->
   </header>
 
   <div id="map" tabindex="0" aria-label="Map canvas"></div>
@@ -276,7 +270,7 @@
           <input type="number" step="any" id="editVendorRotation" placeholder="e.g. 45" />
         </div>
       </div>
-      <div class="row" style="justify-content:flex-end; margin-top:.5rem;">
+      <div class="row" style="justify-content:flex-end; margin-top:.5rem%;">
         <button type="button" id="btnCancelEdit" class="btn">Cancel</button>
         <button type="submit" class="btn" style="background:var(--accent); border-color:var(--accent);">Save Changes</button>
       </div>
@@ -284,7 +278,7 @@
   </div>
 </div>
 
-<!-- IFRAME WEBSITE VIEWER (no longer used by links but left in place) -->
+<!-- IFRAME WEBSITE VIEWER -->
 <div id="iframeViewer">
   <div class="topbar">
     <button id="iframeBackBtn" class="btn">← Back</button>
@@ -304,7 +298,7 @@
   const IMAGE_CANDIDATES = ["./floor_map.png", "floor_map.png", "/floor_map.png", "../floor_map.png","https://raw.githubusercontent.com/SgtDicks/GhMX/refs/heads/main/floor_map.png"];
   const VENDOR_CANDIDATES = ["./ghmx-vendors.json", "ghmx-vendors.json", "/ghmx-vendors.json", "../ghmx-vendors.json","https://raw.githubusercontent.com/SgtDicks/GhMX/refs/heads/main/ghmx-vendors.json"];
   const STORAGE_VENDORS = 'ghmx-floorplan-vendors-v1';
-  const VIEW_FOCUS_ZOOM = 0.35;
+  const VIEW_FOCUS_ZOOM = 0.30;
 
   // Hidden remote .env URL (Base64) + candidates
   const randomcodethatyoudontneedtothinkabout = "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL1NndERpY2tzL0Z1bnN0dWZmL3JlZnMvaGVhZHMvbWFpbi8uZW52";
@@ -346,22 +340,47 @@
   const editVendorHeight = document.getElementById('editVendorHeight');
   const editVendorRotation = document.getElementById('editVendorRotation');
 
-  // Iframe viewer DOM (still present but no longer used by links)
+  // Iframe viewer DOM
   const iframeViewer = document.getElementById('iframeViewer');
   const iframeWindow = document.getElementById('iframeWindow');
   const iframeBackBtn = document.getElementById('iframeBackBtn');
 
-  // Expose iframe opener globally (unused by links now, but kept for minimal change)
+  // Expose iframe opener globally so inline onclick can use it
   window.openIframe = function(url) {
     if (!url) return;
     iframeWindow.src = url;
     iframeViewer.style.display = 'flex';
   };
+
   function closeIframe() {
     iframeWindow.src = '';
     iframeViewer.style.display = 'none';
   }
+
   iframeBackBtn.addEventListener('click', closeIframe);
+
+  // ===== Clipboard helpers (Copy Link) =====
+  window.copyVendorLink = function(encodedUrl) {
+    const url = decodeURIComponent(encodedUrl);
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url)
+        .then(() => alert("Link copied to clipboard:\n" + url))
+        .catch(() => fallbackCopy(url));
+    } else {
+      fallbackCopy(url);
+    }
+  };
+
+  function fallbackCopy(text) {
+    const temp = document.createElement("textarea");
+    temp.value = text;
+    document.body.appendChild(temp);
+    temp.select();
+    try { document.execCommand("copy"); } catch(e) {}
+    document.body.removeChild(temp);
+    alert("Link copied to clipboard:\n" + text);
+  }
 
   // ====== Boot ======
   preloadAndStart();
@@ -424,16 +443,30 @@
 
   // ====== Map ======
   function initMap(){
-    map = L.map('map', { crs: L.CRS.Simple, zoomControl:true, attributionControl:false, wheelPxPerZoomLevel:120 });
+    map = L.map('map', {
+      crs: L.CRS.Simple,
+      zoomControl: true,
+      attributionControl: false,
+      wheelPxPerZoomLevel: 120
+    });
+
     vendorLayer.addTo(map);
+
     map.on('click', (e)=>{
       if(!admin || !placingVendor) return;
       const v = vendors.find(x=>x.id===placingVendor);
-      if(!v){ placingVendor=null; map.getContainer().style.cursor=''; return; }
+      if(!v){
+        placingVendor=null;
+        map.getContainer().style.cursor='';
+        return;
+      }
       v.x = +e.latlng.lng.toFixed(1);
       v.y = +e.latlng.lat.toFixed(1);
-      placingVendor=null; map.getContainer().style.cursor='';
-      persistVendors(); rebuildVendorMarkers(); renderVendorList();
+      placingVendor=null;
+      map.getContainer().style.cursor='';
+      persistVendors();
+      rebuildVendorMarkers();
+      renderVendorList();
       focusVendor(v.id);
     });
   }
@@ -509,8 +542,17 @@
   }
 
   function persistVendors(){ try{ localStorage.setItem(STORAGE_VENDORS, JSON.stringify(vendors)); }catch{} }
-  function vendorFilter(v){ const q=(vSearch.value||'').trim().toLowerCase(); return !q || (v.name.toLowerCase().includes(q) || String(v.booth).toLowerCase().includes(q)); }
-  function getMarkerFor(id){ let found=null; vendorLayer.eachLayer(l=>{ if(l.options && l.options._vendorId===id) found=l; }); return found; }
+  function vendorFilter(v){
+    const q=(vSearch.value||'').trim().toLowerCase();
+    return !q || (v.name.toLowerCase().includes(q) || String(v.booth).toLowerCase().includes(q));
+  }
+  function getMarkerFor(id){
+    let found=null;
+    vendorLayer.eachLayer(l=>{
+      if(l.options && l.options._vendorId===id) found=l;
+    });
+    return found;
+  }
 
   function rebuildVendorMarkers(){
     vendorLayer.clearLayers();
@@ -522,13 +564,25 @@
       let popupContent = `<div><strong>${escapeHtml(v.name)}</strong><div class="muted">Booth <b>${escapeHtml(v.booth)}</b></div>`;
       if (v.description) popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
       if (v.website) {
-        // ✅ OPEN IN EXTERNAL BROWSER (KODULAR) USING _system
         const encodedUrl = encodeURIComponent(v.website);
         popupContent += `
-          <a href="#"
-             onclick="window.open(decodeURIComponent('${encodedUrl}'), '_system'); return false;">
+        <div style="margin-top:6px; display:flex; flex-direction:column; gap:6px;">
+          <a href="#" onclick="openIframe(decodeURIComponent('${encodedUrl}')); return false;">
             ${escapeHtml(v.website)}
-          </a>`;
+          </a>
+          <button style="
+            padding:4px 8px;
+            border-radius:8px;
+            border:1px solid #2a3140;
+            background:#121826;
+            color:#e6e7ea;
+            cursor:pointer;
+            width:fit-content;
+            font-size:0.8rem;
+          " onclick="copyVendorLink('${encodedUrl}')">
+            Copy Link
+          </button>
+        </div>`;
       }
       popupContent += `</div>`;
 
@@ -568,8 +622,11 @@
   }
 
   function renderVendorList(){
-    const flt = vendors.filter(vendorFilter).sort((a,b)=> String(a.booth).localeCompare(String(b.booth), undefined, { numeric:true }));
-    const placed = vendors.filter(v=> isNum(v.x) && isNum(v.y)).length; const total = vendors.length;;
+    const flt = vendors
+      .filter(vendorFilter)
+      .sort((a,b)=> String(a.booth).localeCompare(String(b.booth), undefined, { numeric:true }));
+    const placed = vendors.filter(v=> isNum(v.x) && isNum(v.y)).length;
+    const total = vendors.length;
     vList.innerHTML='';
     if(!total){ vList.innerHTML='<div class="muted">No vendors loaded.</div>'; return; }
     if(!flt.length){ vList.innerHTML='<div class="muted">No vendors match your search.</div>'; return; }
@@ -602,7 +659,10 @@
   function startPlacement(id){
     if(!admin) return;
     placingVendor = id;
-    setStatus(() => { const v=vendors.find(x=>x.id===id); return v ? `Placing: ${v.name} — click the map` : 'Placing: click the map'; });
+    setStatus(() => {
+      const v=vendors.find(x=>x.id===id);
+      return v ? `Placing: ${v.name} — click the map` : 'Placing: click the map';
+    });
     map.getContainer().style.cursor = 'copy';
   }
 
@@ -665,7 +725,7 @@
     const v={ id, name:name.trim(), booth:booth.trim() };
     vendors.push(v); persistVendors(); renderVendorList(); startPlacement(v.id);
   });
-  // ====== Exit Admin Mode Button ======
+
   const btnExitAdmin = document.getElementById('btnExitAdmin');
   btnExitAdmin.addEventListener('click', () => {
     if (!admin) return;
@@ -674,6 +734,7 @@
       window.location.hash = ''; // remove #admin from URL
     }
   });
+
   vExport.addEventListener('click', ()=>{
     if(!admin) return;
     const data=JSON.stringify(vendors,null,2);
@@ -733,14 +794,46 @@
 
   // ====== Utilities ======
   function cacheBust(){ return `?v=${Date.now()}`; }
-  function tryLoad(url){ return new Promise(res => { const i=new Image(); i.onload=()=>res(url); i.onerror=()=>res(null); i.src=url+cacheBust(); }); }
-  async function resolveImageUrl(){ for (const u of IMAGE_CANDIDATES){ const ok = await tryLoad(u); if (ok) return u; } return null; }
+  function tryLoad(url){
+    return new Promise(res => {
+      const i=new Image();
+      i.onload=()=>res(url);
+      i.onerror=()=>res(null);
+      i.src=url+cacheBust();
+    });
+  }
+  async function resolveImageUrl(){
+    for (const u of IMAGE_CANDIDATES){
+      const ok = await tryLoad(u);
+      if (ok) return u;
+    }
+    return null;
+  }
   function isNum(n){ return typeof n==='number' && !isNaN(n); }
-  function makeId(name, booth){ return (String(booth||'')+'_'+String(name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')); }
-  function download(blob, filename){ const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
-  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c])); }
-  function mkBtn(label, on){ const b=document.createElement('button'); b.textContent=label; b.addEventListener('click', on); return b; }
-  function setStatus(msg){ vSummary.textContent = (typeof msg === 'function') ? msg() : msg; }
+  function makeId(name, booth){
+    return (String(booth||'')+'_'+String(name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''));
+  }
+  function download(blob, filename){
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=filename;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'
+    }[c]));
+  }
+  function mkBtn(label, on){
+    const b=document.createElement('button');
+    b.textContent=label;
+    b.addEventListener('click', on);
+    return b;
+  }
+  function setStatus(msg){
+    vSummary.textContent = (typeof msg === 'function') ? msg() : msg;
+  }
   function isMobile(){ return window.matchMedia('(max-width: 900px)').matches; };
 })();
 </script>
