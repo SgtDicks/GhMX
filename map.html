@@ -87,6 +87,34 @@
       .vendor button { padding: .4rem .6rem; }
       #vendorPanel header { position: sticky; top: 0; backdrop-filter: blur(6px); }
     }
+
+    /* ===== IFRAME VIEWER (BACK BUTTON ONLY) ===== */
+    #iframeViewer {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15,17,21,0.96);
+      z-index: 99999;              /* make sure it's above everything */
+      display: none;
+      flex-direction: column;
+      backdrop-filter: blur(6px);
+    }
+    #iframeViewer .topbar {
+      padding: 0.7rem 1rem;
+      background:#161a22;
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      border-bottom:1px solid var(--border);
+      z-index: 100000;             /* ensure bar stays on top of iframe content */
+    }
+    #iframeViewer iframe {
+      flex: 1;
+      width: 100%;
+      border: none;
+      background:#05060a;
+    }
   </style>
 </head>
 <body>
@@ -170,6 +198,14 @@
   </div>
 </div>
 
+<!-- IFRAME WEBSITE VIEWER -->
+<div id="iframeViewer">
+  <div class="topbar">
+    <button id="iframeBackBtn" class="btn">← Back</button>
+  </div>
+  <iframe id="iframeWindow" src=""></iframe>
+</div>
+
 <!-- Leaflet JS -->
 <script
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -223,6 +259,25 @@
   const editVendorWidth = document.getElementById('editVendorWidth');
   const editVendorHeight = document.getElementById('editVendorHeight');
   const editVendorRotation = document.getElementById('editVendorRotation');
+
+  // Iframe viewer DOM
+  const iframeViewer = document.getElementById('iframeViewer');
+  const iframeWindow = document.getElementById('iframeWindow');
+  const iframeBackBtn = document.getElementById('iframeBackBtn');
+
+  // Expose iframe opener globally so inline onclick can use it
+  window.openIframe = function(url) {
+    if (!url) return;
+    iframeWindow.src = url;
+    iframeViewer.style.display = 'flex';
+  };
+
+  function closeIframe() {
+    iframeWindow.src = '';
+    iframeViewer.style.display = 'none';
+  }
+
+  iframeBackBtn.addEventListener('click', closeIframe);
 
   // ====== Boot ======
   preloadAndStart();
@@ -283,7 +338,7 @@
     rebuildVendorMarkers();
   }
 
-  // ====== Map ======
+  // ====== Map ======  
   function initMap(){
     map = L.map('map', { crs: L.CRS.Simple, zoomControl:true, attributionControl:false, wheelPxPerZoomLevel:120 });
     vendorLayer.addTo(map);
@@ -317,7 +372,7 @@
     map.once('moveend', ()=>{ const m = getMarkerFor(id); if (m) m.openPopup(); });
   }
 
-  // ====== Vendors ======
+  // ====== Vendors ======  
   async function autoloadVendors(){
     for (const path of VENDOR_CANDIDATES){
       try {
@@ -373,8 +428,11 @@
       let popupContent = `<div><strong>${escapeHtml(v.name)}</strong><div class="muted">Booth <b>${escapeHtml(v.booth)}</b></div>`;
       if (v.description) popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
       if (v.website) {
-        popupContent += `<a href="${v.website}" target="_blank" rel="noopener noreferrer">${v.website}</a>`;
+        // Encode URL so we don't break the onclick string
+        const encodedUrl = encodeURIComponent(v.website);
+        popupContent += `<a href="#" onclick="openIframe(decodeURIComponent('${encodedUrl}')); return false;">${escapeHtml(v.website)}</a>`;
       }
+      popupContent += `</div>`;
 
       if (isNum(v.width) && isNum(v.height)) {
         const halfW = v.width / 2;
@@ -417,6 +475,9 @@
     vList.innerHTML='';
     if(!total){ vList.innerHTML='<div class="muted">No vendors loaded.</div>'; return; }
     if(!flt.length){ vList.innerHTML='<div class="muted">No vendors match your search.</div>'; return; }
+
+    vCounts.textContent = `${placed}/${total} placed`;
+    vSummary.textContent = `${placed} placed on map out of ${total} vendors.`;
 
     flt.forEach(v => {
       const isPlaced = isNum(v.x) && isNum(v.y);
@@ -511,8 +572,8 @@
   btnExitAdmin.addEventListener('click', () => {
     if (!admin) return;
     if (confirm('Exit Admin Mode?')) {
-    setAdmin(false);
-    window.location.hash = ''; // remove #admin from URL
+      setAdmin(false);
+      window.location.hash = ''; // remove #admin from URL
     }
   });
   vExport.addEventListener('click', ()=>{
