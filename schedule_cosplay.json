@@ -1,0 +1,54 @@
+[
+  {
+    "day": "Saturday",
+    "events": [
+      {
+        "time": "12:00 PM",
+        "title": "Halo Cosplayer Meetup",
+        "stage": "CosplayX Stage",
+        "description": "Presented by Achillies Forge & Designs. Attention all Spartans & Halo universe cosplayers. This is your time to shine and assemble a fire team for some Covenant fragging photo ops!",
+        "image": ""
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Cosplay X Championship - Existing Character",
+        "stage": "CosplayX Stage",
+        "description": "Presented by SMASH! This is the main Cosplay X Showcase & Championship competition!",
+        "image": ""
+      },
+      {
+        "time": "3:30 PM",
+        "title": "D&D Live on stage: Divine Intervention",
+        "stage": "CosplayX Stage",
+        "description": "Presented by Vyxenah. Play live on stage! You the audience get to be the DM in this twisted and fun take on the game, it is DIVINE Intervention@GHMX.",
+        "image": ""
+      }
+    ]
+  },
+  {
+    "day": "Sunday",
+    "events": [
+      {
+        "time": "12:00 PM",
+        "title": "Cosplayer Meetup",
+        "stage": "CosplayX Stage",
+        "description": "Hosted by GhMX. This is the opportunity for all cosplayers in the house to unite on stage for the GhMX group photo opportunity. Be warned, skits & mini performances may follow as a result!",
+        "image": ""
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Cosplay X Championship - Original Character",
+        "stage": "CosplayX Stage",
+        "description": "Hosted by GhMX. Cosplay X Showcase & Championship competition for Original character designs!",
+        "image": ""
+      },
+      {
+        "time": "3:30 PM",
+        "title": "D&D Live on stage: DIVINE Intervention",
+        "stage": "CosplayX Stage",
+        "description": "Presented by Vyxenah. Join us and steer the story in an interactive D&D actual play!",
+        "image": ""
+      }
+    ]
+  }
+]
