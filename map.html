@@ -23,13 +23,45 @@
       --radius: 16px;
       --border: #232a3a;
     }
-    html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
     #app { height: 100%; display: grid; grid-template-rows: auto 1fr; }
-    header { display:flex; align-items:center; gap:.75rem; padding:.75rem 1rem; background: var(--panel); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 600; }
-    header h1 { font-size: 1rem; font-weight: 700; margin: 0; letter-spacing: .3px; }
+    header {
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      padding:.75rem 1rem;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 600;
+    }
+    header h1 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: .3px;
+    }
     header .hint { color: var(--muted); font-size: .85rem; }
     .spacer { flex: 1 1 auto; }
-    .btn { appearance:none; border:1px solid #2a3140; background: #1a2130; color: var(--text); padding:.45rem .75rem; border-radius: 999px; cursor:pointer; box-shadow: var(--shadow); font-weight:600; font-size:.9rem; }
+    .btn {
+      appearance:none;
+      border:1px solid #2a3140;
+      background: #1a2130;
+      color: var(--text);
+      padding:.45rem .75rem;
+      border-radius: 999px;
+      cursor:pointer;
+      box-shadow: var(--shadow);
+      font-weight:600;
+      font-size:.9rem;
+    }
     .btn:hover { filter: brightness(1.15); }
     .btn.danger { background:#28181b; border-color:#4a1f26; color:#ffc9c9; }
 
@@ -37,18 +69,70 @@
     .leaflet-container { background: #0b0e14; outline: none; }
 
     /* Vendor sidebar */
-    #vendorPanel { position:absolute; left:12px; right:auto; top:64px; bottom:12px; width:min(380px, 95vw); z-index:550; display:block; background: rgba(15,17,21,.9); border:1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); backdrop-filter: blur(6px); overflow:auto; }
-    #vendorPanel header { background:transparent; box-shadow:none; padding:.75rem .9rem; border-bottom:1px solid var(--border); }
+    #vendorPanel {
+      position:absolute;
+      left:12px; right:auto;
+      top:64px; bottom:12px;
+      width:min(380px, 95vw);
+      z-index:550;
+      display:block;
+      background: rgba(15,17,21,.9);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      overflow:auto;
+    }
+    #vendorPanel header {
+      background:transparent;
+      box-shadow:none;
+      padding:.75rem .9rem;
+      border-bottom:1px solid var(--border);
+    }
     #vendorPanel .section { padding:.75rem .9rem; }
-    #vendorPanel input[type="search"] { width:100%; padding:.55rem .7rem; border-radius: 12px; border:1px solid var(--border); background:#101625; color:var(--text); }
+    #vendorPanel input[type="search"] {
+      width:100%;
+      padding:.55rem .7rem;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background:#101625;
+      color:var(--text);
+    }
     .counts { color:var(--muted); font-size:.85rem; margin-top:.4rem; }
     .row { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
-    .vendor { display:grid; grid-template-columns: 1fr auto; gap:.5rem; align-items:center; padding:.55rem .6rem; border:1px solid var(--border); background:#0f1522; border-radius:12px; margin-bottom:.5rem; }
+    .vendor {
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:.5rem;
+      align-items:center;
+      padding:.55rem .6rem;
+      border:1px solid var(--border);
+      background:#0f1522;
+      border-radius:12px;
+      margin-bottom:.5rem;
+    }
     .vendor .name { font-weight:700; font-size:.95rem; }
     .vendor .booth { color:var(--muted); font-weight:600; }
     .vendor .description { color: var(--muted); font-size: .85rem; }
-    .vendor button { border:1px solid #2a3140; background:#121826; color:var(--text); padding:.35rem .6rem; border-radius:999px; cursor:pointer; }
-    .badge { display:inline-flex; align-items:center; gap:.3rem; border:1px solid var(--border); background:#111722; padding:.1rem .45rem; border-radius:999px; font-size:.75rem; color:var(--muted); }
+    .vendor button {
+      border:1px solid #2a3140;
+      background:#121826;
+      color:var(--text);
+      padding:.35rem .6rem;
+      border-radius:999px;
+      cursor:pointer;
+    }
+    .badge {
+      display:inline-flex;
+      align-items:center;
+      gap:.3rem;
+      border:1px solid var(--border);
+      background:#111722;
+      padding:.1rem .45rem;
+      border-radius:999px;
+      font-size:.75rem;
+      color:var(--muted);
+    }
     .placed { color:#9af0c7; }
     .unplaced { color:#ffd28a; }
 
@@ -88,14 +172,14 @@
       #vendorPanel header { position: sticky; top: 0; backdrop-filter: blur(6px); }
     }
 
-    /* ===== IFRAME VIEWER (BACK BUTTON ONLY) ===== */
+    /* ===== IFRAME VIEWER (still present, but no longer used by links) ===== */
     #iframeViewer {
       position: fixed;
       inset: 0;
       width: 100vw;
       height: 100vh;
       background: rgba(15,17,21,0.96);
-      z-index: 99999;              /* make sure it's above everything */
+      z-index: 99999;
       display: none;
       flex-direction: column;
       backdrop-filter: blur(6px);
@@ -107,7 +191,7 @@
       align-items:center;
       gap:.75rem;
       border-bottom:1px solid var(--border);
-      z-index: 100000;             /* ensure bar stays on top of iframe content */
+      z-index: 100000;
     }
     #iframeViewer iframe {
       flex: 1;
@@ -132,7 +216,9 @@
   <!-- Vendor sidebar -->
   <aside id="vendorPanel" aria-label="Vendors">
     <header>
-      <h2 style="margin:0;display:flex;align-items:center;gap:.5rem;">Vendors <span id="vCounts" class="badge">—</span></h2>
+      <h2 style="margin:0;display:flex;align-items:center;gap:.5rem;">
+        Vendors <span id="vCounts" class="badge">—</span>
+      </h2>
     </header>
     <div class="section mobileOnly" style="padding:.5rem .9rem; border-bottom:1px solid var(--border);">
       <button id="btnCloseVendors" class="btn" style="width:100%">Close</button>
@@ -143,7 +229,7 @@
       <div class="row" style="margin-top:.5rem;">
         <button id="btnAddVendor" class="btn adminOnly">Add Vendor</button>
         <button id="vExport" class="btn adminOnly">Export Vendors</button>
-		<button id="btnExitAdmin" class="btn danger adminOnly">Exit Admin Mode</button>
+        <button id="btnExitAdmin" class="btn danger adminOnly">Exit Admin Mode</button>
         <label class="btn adminOnly">Import Vendors
           <input id="vImport" type="file" accept="application/json" style="display:none"/>
         </label>
@@ -198,7 +284,7 @@
   </div>
 </div>
 
-<!-- IFRAME WEBSITE VIEWER -->
+<!-- IFRAME WEBSITE VIEWER (no longer used by links but left in place) -->
 <div id="iframeViewer">
   <div class="topbar">
     <button id="iframeBackBtn" class="btn">← Back</button>
@@ -260,23 +346,21 @@
   const editVendorHeight = document.getElementById('editVendorHeight');
   const editVendorRotation = document.getElementById('editVendorRotation');
 
-  // Iframe viewer DOM
+  // Iframe viewer DOM (still present but no longer used by links)
   const iframeViewer = document.getElementById('iframeViewer');
   const iframeWindow = document.getElementById('iframeWindow');
   const iframeBackBtn = document.getElementById('iframeBackBtn');
 
-  // Expose iframe opener globally so inline onclick can use it
+  // Expose iframe opener globally (unused by links now, but kept for minimal change)
   window.openIframe = function(url) {
     if (!url) return;
     iframeWindow.src = url;
     iframeViewer.style.display = 'flex';
   };
-
   function closeIframe() {
     iframeWindow.src = '';
     iframeViewer.style.display = 'none';
   }
-
   iframeBackBtn.addEventListener('click', closeIframe);
 
   // ====== Boot ======
@@ -338,7 +422,7 @@
     rebuildVendorMarkers();
   }
 
-  // ====== Map ======  
+  // ====== Map ======
   function initMap(){
     map = L.map('map', { crs: L.CRS.Simple, zoomControl:true, attributionControl:false, wheelPxPerZoomLevel:120 });
     vendorLayer.addTo(map);
@@ -372,7 +456,7 @@
     map.once('moveend', ()=>{ const m = getMarkerFor(id); if (m) m.openPopup(); });
   }
 
-  // ====== Vendors ======  
+  // ====== Vendors ======
   async function autoloadVendors(){
     for (const path of VENDOR_CANDIDATES){
       try {
@@ -387,7 +471,17 @@
         return;
       } catch (e) { /* try next */ }
     }
-    try { const raw=localStorage.getItem(STORAGE_VENDORS); if(raw){ const arr=coerceVendors(JSON.parse(raw)); if(Array.isArray(arr)){ vendors=normalizeVendors(arr); setStatus(`Loaded ${vendors.length} vendors from local storage`); return; } } } catch {}
+    try {
+      const raw=localStorage.getItem(STORAGE_VENDORS);
+      if(raw){
+        const arr=coerceVendors(JSON.parse(raw));
+        if(Array.isArray(arr)){
+          vendors=normalizeVendors(arr);
+          setStatus(`Loaded ${vendors.length} vendors from local storage`);
+          return;
+        }
+      }
+    } catch {}
     vendors = [];
     setStatus('No vendors JSON found; list is empty.');
   }
@@ -428,9 +522,13 @@
       let popupContent = `<div><strong>${escapeHtml(v.name)}</strong><div class="muted">Booth <b>${escapeHtml(v.booth)}</b></div>`;
       if (v.description) popupContent += `<div class="muted">${escapeHtml(v.description)}</div>`;
       if (v.website) {
-        // Encode URL so we don't break the onclick string
+        // ✅ OPEN IN EXTERNAL BROWSER (KODULAR) USING _system
         const encodedUrl = encodeURIComponent(v.website);
-        popupContent += `<a href="#" onclick="openIframe(decodeURIComponent('${encodedUrl}')); return false;">${escapeHtml(v.website)}</a>`;
+        popupContent += `
+          <a href="#"
+             onclick="window.open(decodeURIComponent('${encodedUrl}'), '_system'); return false;">
+            ${escapeHtml(v.website)}
+          </a>`;
       }
       popupContent += `</div>`;
 
