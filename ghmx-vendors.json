@@ -189,7 +189,7 @@
   {
     "id": "_cosplay-studio",
     "name": "Cosplay Studio",
-    "booth": "106",
+    "booth": "107",
     "description": "Includes Cosplay X Registration, Cosplay Repair, Photo Area & Change Room",
     "website": "",
     "x": 1519.5,
@@ -214,7 +214,7 @@
     "booth": "107",
     "description": "A free & open area to let your imagination go wild with Lego bricks",
     "website": "",
-    "x": 1067,
+    "x": 107,
     "y": 60,
     "width": 100,
     "height": 100
@@ -260,17 +260,6 @@
     "website": "https://www.tradersgalaxy.com.au",
     "x": 509,
     "y": 414,
-    "width": 50,
-    "height": 50
-  },
-  {
-    "id": "_neural-forge",
-    "name": "Neural Forge",
-    "booth": "310",
-    "description": "Neural Forge produces unique strategy games for all levels of gamer. Each set is made in house with high quality materials and is designed to look great on your table even when not in use.",
-    "website": "https://neuralforge.com.au",
-    "x": 1408,
-    "y": 390,
     "width": 50,
     "height": 50
   },
@@ -495,9 +484,9 @@
     "height": 50
   },
   {
-    "id": "106_geofftography-cosplay-photo-booth",
+    "id": "107_geofftography-cosplay-photo-booth",
     "name": "Cassa's Shots Cosplay Photo Booth",
-    "booth": "106",
+    "booth": "107",
     "description": "Official Cosplay Photographer",
     "website": "",
     "x": 1416.5,
@@ -506,9 +495,9 @@
     "height": 100
   },
   {
-    "id": "106_cosplay-repair-guild",
+    "id": "107_cosplay-repair-guild",
     "name": "Cosplay Repair Guild",
-    "booth": "106",
+    "booth": "107",
     "description": "The Cosplay Repair Guild is an alliance of caring and fun cosplayers who wish to provide top notch and professional repair service to any and all in need at GhMX.",
     "website": "https://www.facebook.com/Cosplayrepairguild",
     "x": 1597,
