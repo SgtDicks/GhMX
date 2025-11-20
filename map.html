@@ -461,7 +461,8 @@ function fallbackCopy(text) {
       crs: L.CRS.Simple,
       zoomControl: true,
       attributionControl: false,
-      wheelPxPerZoomLevel: 120
+      wheelPxPerZoomLevel: 120,
+      minZoom: -1
     });
 
     vendorLayer.addTo(map);
