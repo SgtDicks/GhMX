@@ -2,80 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>GHMX – Privacy Policy</title>
+  <title>GhMX – Privacy Policy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Privacy Policy for the GHMX app by SlantedCorp." />
+  <meta name="description" content="Privacy Policy for the GhMX app by SlantedCorp." />
   <style>
     :root {
+      color-scheme: dark;
       --bg: #0f1115;
       --panel: #181b24;
       --accent: #ff005c;
       --text: #e6e7ea;
-      --muted: #9fa3b3;
+      --muted: #aeb2c1;
       --border: #2a2e3a;
-      --link: #4ea8ff;
+      --link: #69b7ff;
       --max-width: 900px;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: radial-gradient(circle at top, #181b24 0, #05060a 45%, #020308 100%);
       color: var(--text);
-      line-height: 1.6;
-      padding: 1.2rem;
+      line-height: 1.65;
+      padding: 1rem;
       display: flex;
       justify-content: center;
     }
-
     .page {
       width: 100%;
       max-width: var(--max-width);
       background: linear-gradient(145deg, #141824, #10121a);
       border-radius: 18px;
-      box-shadow:
-        0 24px 80px rgba(0, 0, 0, 0.7),
-        0 0 0 1px rgba(255, 255, 255, 0.02);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03);
       padding: 1.5rem 1.2rem 2rem;
     }
-
     @media (min-width: 768px) {
-      .page {
-        padding: 2.3rem 2.4rem 2.6rem;
-        margin-top: 1.2rem;
-        margin-bottom: 1.2rem;
-      }
+      .page { padding: 2.3rem 2.4rem 2.6rem; margin: 1.2rem 0; }
     }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .app-name {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 0.4rem;
-    }
-
-    .app-name span {
-      display: inline-block;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+    h1 { font-size: 1.8rem; margin: 0.4rem 0 0; letter-spacing: 0.03em; text-transform: uppercase; }
+    h2 { font-size: 1.2rem; margin: 1.8rem 0 0.4rem; color: #fff; }
+    h3 { font-size: 1rem; margin: 1.2rem 0 0.35rem; color: #fff; }
+    p { margin: 0.35rem 0; font-size: 0.96rem; }
+    ul { margin: 0.4rem 0 0.6rem 1.2rem; padding-left: 1rem; font-size: 0.96rem; }
+    li { margin: 0.25rem 0; }
+    strong { color: #fff; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
     .badge {
+      display: inline-block;
       font-size: 0.75rem;
       padding: 0.15rem 0.55rem;
       border-radius: 999px;
@@ -85,65 +62,15 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
     }
-
-    .subtitle {
-      margin-top: 0.6rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .meta {
-      margin-top: 0.4rem;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      margin-top: 1.8rem;
-      margin-bottom: 0.4rem;
-      color: #ffffff;
-    }
-
-    p {
-      margin-top: 0.35rem;
-      margin-bottom: 0.35rem;
-      font-size: 0.96rem;
-    }
-
-    ul {
-      margin: 0.4rem 0 0.6rem 1.2rem;
-      padding-left: 1rem;
-      font-size: 0.96rem;
-    }
-
-    li {
-      margin: 0.18rem 0;
-    }
-
-    strong {
-      color: #ffffff;
-    }
-
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    a:hover,
-    a:focus {
-      text-decoration: underline;
-    }
-
+    .subtitle { margin-top: 0.6rem; font-size: 0.95rem; color: var(--muted); }
+    .meta { margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted); }
     .highlight {
       border-left: 3px solid var(--accent);
       padding-left: 0.75rem;
-      margin-top: 0.8rem;
-      margin-bottom: 0.9rem;
+      margin: 0.8rem 0 0.9rem;
       color: var(--muted);
       font-size: 0.95rem;
     }
-
     .section-tag {
       text-transform: uppercase;
       font-size: 0.72rem;
@@ -151,16 +78,14 @@
       color: var(--accent);
       margin-bottom: 0.1rem;
     }
-
     .contact-block {
       margin-top: 0.6rem;
       padding: 0.75rem 0.9rem;
       border-radius: 10px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       font-size: 0.95rem;
     }
-
     footer {
       margin-top: 2rem;
       font-size: 0.78rem;
@@ -174,182 +99,137 @@
 <body>
   <main class="page">
     <header>
-      <div class="app-name">
-        <span class="badge">SlantedCorp</span>
-      </div>
-      <h1>GHMX &mdash; Privacy Policy</h1>
-      <p class="subtitle">
-        GHMX is built with a simple rule: we don’t collect your personal data, and we don’t sell it.
-      </p>
-      <p class="meta">
-        Last Updated: <strong>18 November 2025</strong><br />
-        Applicable Frameworks: <strong>Australian Privacy Act 1988 (Cth)</strong> &amp; global privacy best practices
-      </p>
+      <span class="badge">SlantedCorp</span>
+      <h1>GhMX &mdash; Privacy Policy</h1>
+      <p class="subtitle">This policy explains the different privacy practices of the GhMX iOS and Android apps. We do not sell personal information or use it for cross-app advertising.</p>
+      <p class="meta">Last updated: <strong>6 September 2026</strong></p>
     </header>
 
     <section>
       <div class="section-tag">01 · Overview</div>
       <h2>1. Overview</h2>
-      <p>
-        This Privacy Policy explains how the GHMX application (“<strong>the App</strong>”), developed by
-        <strong>SlantedCorp</strong> (“<strong>we</strong>”, “<strong>our</strong>”, “<strong>us</strong>”),
-        handles information about its users in line with the Australian Privacy Act and recognised global privacy standards.
-      </p>
-      <div class="highlight">
-        GHMX does <strong>not</strong> collect, store, transmit, sell, or share any personal information about you.
-        Your data remains on your device and under your control.
-      </div>
+      <p>This Privacy Policy explains how the GhMX applications for iOS and Android (the “<strong>Apps</strong>”), developed by <strong>SlantedCorp</strong> (“we”, “our” or “us”), handle information when you use them.</p>
+      <div class="highlight"><strong>Platform difference:</strong> the iOS app uses Firebase Analytics for limited app-usage and external-link measurements. The Android app does not use analytics and does not provide notifications.</div>
+      <p>Neither App requires a GhMX account. We do not ask for your name, postal address, phone number or payment information.</p>
     </section>
 
     <section>
-      <div class="section-tag">02 · No collection</div>
-      <h2>2. Information We Do Not Collect</h2>
-      <p>The GHMX app is intentionally designed to avoid collecting personal data. Specifically, we do <strong>not</strong> collect:</p>
-      <ul>
-        <li>Names, email addresses, phone numbers, or account details</li>
-        <li>User-generated content, messages, or uploads</li>
-        <li>Analytics or usage tracking data</li>
-        <li>Crash reports or diagnostic logs</li>
-        <li>Device identifiers, hardware details, or IP addresses</li>
-        <li>GPS or other location information</li>
-        <li>Advertising IDs, cookies, or cross-app tracking data</li>
-      </ul>
-      <p>
-        We do not build user profiles, track behaviour, or engage in any data monetisation activities.
-      </p>
-    </section>
+      <div class="section-tag">02 · Information</div>
+      <h2>2. Information We Process</h2>
+      <h3>2.1 iOS app usage and link analytics</h3>
+      <p>The <strong>iOS app only</strong> uses <strong>Google Analytics for Firebase</strong> to measure how the app is used. This includes automatically generated app-usage events and an event when you tap an external website link.</p>
+      <p>For an external-link event, we send the link’s internal identifier, its displayed name and the destination website’s domain. We do not deliberately include your name, email address or the full page you visit.</p>
+      <p>Firebase may also process technical information such as a Firebase installation identifier, app instance information, device and operating-system details, app version, language, time zone, approximate region derived from an IP address, and event timestamps. Google processes this information on our behalf to provide analytics reports.</p>
 
-    <section>
-      <div class="section-tag">03 · On-device data</div>
-      <h2>3. Local Device Storage</h2>
-      <p>
-        To improve performance and loading times, the App may store limited, non-personal information
-        <strong>locally on your device</strong>, such as:
-      </p>
+      <h3>2.2 Android app</h3>
+      <p>The <strong>Android app does not integrate Firebase Analytics, Google Analytics or another analytics platform</strong>. It does not send app-usage or link-click analytics to SlantedCorp.</p>
+
+      <h3>2.3 Information we do not request</h3>
       <ul>
-        <li>Cached content (e.g., map tiles, images)</li>
-        <li>Basic interface preferences or settings</li>
-      </ul>
-      <p>
-        This locally stored data:
-      </p>
-      <ul>
-        <li>Never leaves your device</li>
-        <li>Is not accessible to SlantedCorp</li>
-        <li>Can usually be cleared by uninstalling the app or clearing its storage/cache</li>
+        <li>No GhMX user account, password or profile</li>
+        <li>No precise GPS location</li>
+        <li>No contacts, photos, camera or microphone access</li>
+        <li>No payment or financial information</li>
+        <li>No advertising profile or cross-app tracking by SlantedCorp</li>
       </ul>
     </section>
 
     <section>
-      <div class="section-tag">04 · Third parties</div>
-      <h2>4. Third-Party Services</h2>
-
-      <h3>4.1 Hosting (GitHub)</h3>
-      <p>
-        App content and static assets (for example, images, schedules, or configuration files) may be hosted via
-        <strong>GitHub Pages</strong>.
-      </p>
-      <p>
-        GitHub’s servers may receive standard technical information required to deliver content (such as generic server logs),
-        but GHMX does not access, collect, or store this information, and we do not use it to identify you.
-      </p>
-
-      <h3>4.2 Mapping (Leaflet)</h3>
-      <p>
-        The App uses <strong>Leaflet</strong>, an open-source mapping library, to display map content.
-        Depending on configuration, map tiles may be served by third-party tile providers.
-      </p>
-      <p>
-        Leaflet itself does not collect personal data about you. Any tile provider only receives what is technically necessary
-        to respond to map tile requests (such as standard web request information). GHMX does not receive or store this data.
-      </p>
-
-      <h3>4.3 Embedded Social Media Links</h3>
-      <p>
-        The App may contain external links to social platforms, such as:
-      </p>
+      <div class="section-tag">03 · Purpose</div>
+      <h2>3. Why We Use Analytics</h2>
+      <p>For the <strong>iOS app only</strong>, we use aggregated analytics to:</p>
       <ul>
-        <li>Facebook</li>
-        <li>Instagram</li>
+        <li>Count use of external links and understand which listings are useful</li>
+        <li>Understand general feature usage and app performance</li>
+        <li>Improve event information, navigation and future versions of the App</li>
+        <li>Detect technical problems and protect the reliability of the service</li>
       </ul>
-      <p>
-        When you tap one of these links, it will open in your browser or the relevant social media app. Your use of those
-        services is governed by their own privacy policies, not this one. GHMX does <strong>not</strong> send personal data to
-        these platforms.
-      </p>
+      <p>We do not sell analytics information and do not use it to make decisions about employment, credit, insurance or other eligibility matters.</p>
+    </section>
 
-      <h3>4.4 Services We Do Not Use</h3>
-      <p>GHMX does <strong>not</strong> use:</p>
+    <section>
+      <div class="section-tag">04 · On-device data</div>
+      <h2>4. Information Stored on Your Device</h2>
+      <p>The Apps may store some information locally so their features work correctly. In the iOS app this includes:</p>
       <ul>
-        <li>Push notification services</li>
-        <li>Payment processors</li>
-        <li>Advertising networks or ad trackers</li>
-        <li>Analytics platforms (such as Google Analytics or Firebase Analytics)</li>
-        <li>Social media SDKs or sign-in integrations</li>
+        <li>Your selected light, dark or system appearance preference</li>
+        <li>Your saved or favourite program sessions</li>
+        <li>Cached schedules, exhibitor details and other event content for offline access</li>
+        <li>Local notification requests for reminders you choose to create</li>
       </ul>
+      <p>This local information is not uploaded to SlantedCorp. It can generally be removed by deleting the relevant App. iOS calendar entries and delivered notifications may need to be removed separately from Apple Calendar or Notification Center.</p>
     </section>
 
     <section>
-      <div class="section-tag">05 · Children</div>
-      <h2>5. Children’s Privacy</h2>
-      <p>
-        GHMX does not collect personal information from any users, including children. The App is suitable for general
-        audiences and does not include features that require users to provide personal details.
-      </p>
+      <div class="section-tag">05 · Permissions</div>
+      <h2>5. Calendar and Notifications</h2>
+      <h3>5.1 Apple Calendar in the iOS app</h3>
+      <p>If you choose “Add to Apple Calendar” in the iOS app, it asks for calendar permission and creates the selected event in your default calendar. The app uses this permission only to provide the feature you requested. SlantedCorp does not receive your calendar contents.</p>
+      <h3>5.2 Local reminders in the iOS app</h3>
+      <p>If you choose an event reminder in the iOS app, it asks for notification permission and schedules the reminder locally on your device. The iOS app does not currently use remote push notifications.</p>
+      <h3>5.3 Android app</h3>
+      <p>The Android app does not provide local or remote notifications and does not request notification permission.</p>
+      <p>You can change calendar and notification permissions at any time in iOS Settings.</p>
     </section>
 
     <section>
-      <div class="section-tag">06 · Security</div>
-      <h2>6. Security</h2>
-      <p>
-        Because we do not maintain a database of user personal information, there is no central store of your data for an
-        attacker to target. We nonetheless take reasonable steps to ensure that the App and its hosted content are kept
-        secure and are not tampered with.
-      </p>
+      <div class="section-tag">06 · Services</div>
+      <h2>6. Third-Party Services</h2>
+      <h3>6.1 Firebase and Google Analytics</h3>
+      <p>The iOS app uses Firebase and Google Analytics, which are provided by Google. The Android app does not use these analytics services. Google’s processing for the iOS app is governed by applicable Google and Firebase terms and policies. Learn more at <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Privacy and Security in Firebase</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+
+      <h3>6.2 GitHub</h3>
+      <p>Schedules, exhibitor information, food-vendor images, the venue map and this privacy page may be delivered from GitHub or GitHub Pages. When content is requested, GitHub may receive ordinary web-request information such as an IP address, user agent, requested file and request time. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
+
+      <h3>6.3 External websites</h3>
+      <p>The App contains links to GhMX, exhibitor and other third-party websites. When you open one, that website or its app may collect information under its own privacy policy. SlantedCorp does not control those third parties.</p>
     </section>
 
     <section>
-      <div class="section-tag">07 · International</div>
-      <h2>7. International Considerations</h2>
-      <p>
-        This Privacy Policy is designed in line with the <strong>Australian Privacy Act 1988 (Cth)</strong> and follows
-        broadly recognised global privacy principles.
-      </p>
-      <p>
-        Since GHMX does not collect or store personal information, there is no international transfer of your personal data.
-      </p>
+      <div class="section-tag">07 · Disclosure</div>
+      <h2>7. Sharing and Disclosure</h2>
+      <p>We disclose limited information to service providers described above so they can provide hosting and analytics. We may also disclose information when required by law, or when reasonably necessary to protect users, the App or our legal rights. We do not sell your personal information.</p>
     </section>
 
     <section>
-      <div class="section-tag">08 · Changes</div>
-      <h2>8. Changes to This Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time to reflect changes to the App or applicable laws.
-        When we do, we will update the “Last Updated” date at the top of this page.
-      </p>
-      <p>
-        Your continued use of the App after any update to this Privacy Policy will be taken as acceptance of the revised terms.
-      </p>
+      <div class="section-tag">08 · Retention</div>
+      <h2>8. Retention and International Processing</h2>
+      <p>Analytics information is retained according to the retention settings and policies of Google Analytics and Firebase. Hosting providers may keep technical logs for their own security and operational purposes. These providers may process information in Australia and other countries where they operate, which may have different privacy laws.</p>
     </section>
 
     <section>
-      <div class="section-tag">09 · Contact</div>
-      <h2>9. Contact Us</h2>
-      <p>If you have any questions or concerns about this Privacy Policy or GHMX’s privacy practices, you can contact us:</p>
-      <div class="contact-block">
-        <strong>SlantedCorp</strong><br />
-        Email: <a href="mailto:slantedcorp@gmail.com">slantedcorp@gmail.com</a>
-      </div>
+      <div class="section-tag">09 · Choices</div>
+      <h2>9. Your Choices and Rights</h2>
+      <p>You can decline calendar or notification permission without losing access to the main program, map and exhibitor features. You can contact us to ask a privacy question or exercise rights available under applicable law. Because our analytics reports may not directly identify you, we may not always be able to associate aggregated analytics with an individual request.</p>
     </section>
 
-    <footer>
-      &copy; <span id="year"></span> SlantedCorp. All rights reserved.
-    </footer>
+    <section>
+      <div class="section-tag">10 · Children</div>
+      <h2>10. Children’s Privacy</h2>
+      <p>The App is intended for a general audience and does not knowingly request personal details from children. If you believe a child has provided personal information through the App, please contact us.</p>
+    </section>
+
+    <section>
+      <div class="section-tag">11 · Security</div>
+      <h2>11. Security</h2>
+      <p>We take reasonable technical and organisational measures to protect information. However, no internet transmission or storage system can be guaranteed to be completely secure.</p>
+    </section>
+
+    <section>
+      <div class="section-tag">12 · Changes</div>
+      <h2>12. Changes to This Policy</h2>
+      <p>We may update this policy when the App, our providers or applicable requirements change. We will publish the revised policy and update the date shown above.</p>
+    </section>
+
+    <section>
+      <div class="section-tag">13 · Contact</div>
+      <h2>13. Contact Us</h2>
+      <p>For questions or concerns about this policy or the App’s privacy practices, contact:</p>
+      <div class="contact-block"><strong>SlantedCorp</strong><br />Email: <a href="mailto:slantedcorp@gmail.com">slantedcorp@gmail.com</a></div>
+    </section>
+
+    <footer>&copy; <span id="year">2026</span> SlantedCorp. All rights reserved.</footer>
   </main>
-
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
