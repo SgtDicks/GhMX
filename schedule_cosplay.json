@@ -1,6 +1,7 @@
 [
   {
     "day": "Saturday",
+    "date": "2026-11-21",
     "events": [
       {
         "time": "12:00 PM",
@@ -27,6 +28,7 @@
   },
   {
     "day": "Sunday",
+    "date": "2026-11-22",
     "events": [
       {
         "time": "12:00 PM",
