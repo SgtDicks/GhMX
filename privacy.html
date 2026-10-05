@@ -102,14 +102,14 @@
       <span class="badge">SlantedCorp</span>
       <h1>GhMX &mdash; Privacy Policy</h1>
       <p class="subtitle">This policy explains the different privacy practices of the GhMX iOS and Android apps. We do not sell personal information or use it for cross-app advertising.</p>
-      <p class="meta">Last updated: <strong>6 September 2026</strong></p>
+      <p class="meta">Last updated: <strong>5 October 2026</strong></p>
     </header>
 
     <section>
       <div class="section-tag">01 · Overview</div>
       <h2>1. Overview</h2>
       <p>This Privacy Policy explains how the GhMX applications for iOS and Android (the “<strong>Apps</strong>”), developed by <strong>SlantedCorp</strong> (“we”, “our” or “us”), handle information when you use them.</p>
-      <div class="highlight"><strong>Platform difference:</strong> the iOS app uses Firebase Analytics for limited app-usage and external-link measurements. The Android app does not use analytics and does not provide notifications.</div>
+      <div class="highlight"><strong>Platform difference:</strong> both apps use Firebase Analytics for limited app-usage and vendor-link measurements. Both apps provide on-device reminders. Android also offers optional event-announcement push notifications through Firebase Cloud Messaging.</div>
       <p>Neither App requires a GhMX account. We do not ask for your name, postal address, phone number or payment information.</p>
     </section>
 
@@ -122,9 +122,13 @@
       <p>Firebase may also process technical information such as a Firebase installation identifier, app instance information, device and operating-system details, app version, language, time zone, approximate region derived from an IP address, and event timestamps. Google processes this information on our behalf to provide analytics reports.</p>
 
       <h3>2.2 Android app</h3>
-      <p>The <strong>Android app does not integrate Firebase Analytics, Google Analytics or another analytics platform</strong>. It does not send app-usage or link-click analytics to SlantedCorp.</p>
+      <p>The <strong>Android app</strong> uses <strong>Google Analytics for Firebase</strong> for limited usage measurement. It records the selected tab name when a tab is viewed and the vendor’s internal identifier when you open a vendor’s external website. These custom events do not include the full destination URL or the contents of the page you visit.</p>
+      <p>Google Analytics for Firebase may automatically process an app-instance identifier, the Android Advertising ID where available, app and device information, app interactions and event times, and approximate location inferred from a masked IP address. Google processes this information to provide analytics. The exact collection can depend on SDK settings and device settings; see <a href="https://support.google.com/analytics/answer/11582702?hl=en" rel="noopener noreferrer">Google’s Firebase Analytics data disclosure information</a>.</p>
 
-      <h3>2.3 Information we do not request</h3>
+      <h3>2.3 Android push messaging</h3>
+      <p>If you enable GhMX event announcements, the Android app subscribes to a shared Firebase Cloud Messaging topic. Firebase/Google uses an app-installation identifier or messaging token and related technical message-delivery information to route announcements to opted-in app installations. The app does not send your name, email address, saved vendors, notes or personal schedule to us through this feature. Announcements are general event updates, not private messages.</p>
+
+      <h3>2.4 Information we do not request</h3>
       <ul>
         <li>No GhMX user account, password or profile</li>
         <li>No precise GPS location</li>
@@ -137,27 +141,22 @@
     <section>
       <div class="section-tag">03 · Purpose</div>
       <h2>3. Why We Use Analytics</h2>
-      <p>For the <strong>iOS app only</strong>, we use aggregated analytics to:</p>
-      <ul>
-        <li>Count use of external links and understand which listings are useful</li>
-        <li>Understand general feature usage and app performance</li>
-        <li>Improve event information, navigation and future versions of the App</li>
-        <li>Detect technical problems and protect the reliability of the service</li>
-      </ul>
-      <p>We do not sell analytics information and do not use it to make decisions about employment, credit, insurance or other eligibility matters.</p>
+      <p>On both platforms, we use analytics to understand general feature usage and vendor website-link activity so we can improve the event information and app. Analytics is not used by SlantedCorp for advertising or to make decisions about individuals.</p>
+      <p>We do not sell analytics information or use it to make decisions about employment, credit, insurance or other eligibility matters.</p>
     </section>
 
     <section>
       <div class="section-tag">04 · On-device data</div>
       <h2>4. Information Stored on Your Device</h2>
-      <p>The Apps may store some information locally so their features work correctly. In the iOS app this includes:</p>
+      <p>The Apps may store information locally so their features work correctly. This can include:</p>
       <ul>
         <li>Your selected light, dark or system appearance preference</li>
-        <li>Your saved or favourite program sessions</li>
-        <li>Cached schedules, exhibitor details and other event content for offline access</li>
+        <li>Your saved events, vendors and notes</li>
+        <li>Cached schedules, exhibitor details, images and other event content for offline access</li>
         <li>Local notification requests for reminders you choose to create</li>
+        <li>Your Android announcement opt-in setting</li>
       </ul>
-      <p>This local information is not uploaded to SlantedCorp. It can generally be removed by deleting the relevant App. iOS calendar entries and delivered notifications may need to be removed separately from Apple Calendar or Notification Center.</p>
+      <p>Saved events, vendor notes and local reminder details are stored on your device and are not uploaded to SlantedCorp. The Android announcement opt-in is communicated to Firebase so it can subscribe or unsubscribe this app installation from the announcement topic. Local information can generally be removed by deleting the relevant App. iOS calendar entries and delivered notifications may need to be removed separately from Apple Calendar or Notification Center.</p>
     </section>
 
     <section>
@@ -168,15 +167,15 @@
       <h3>5.2 Local reminders in the iOS app</h3>
       <p>If you choose an event reminder in the iOS app, it asks for notification permission and schedules the reminder locally on your device. The iOS app does not currently use remote push notifications.</p>
       <h3>5.3 Android app</h3>
-      <p>The Android app does not provide local or remote notifications and does not request notification permission.</p>
-      <p>You can change calendar and notification permissions at any time in iOS Settings.</p>
+      <p>The Android app can schedule local reminders for events and saved vendors on your device. It also offers optional remote event announcements through Firebase Cloud Messaging. If you turn on announcements, the app asks for Android notification permission where required and subscribes the app installation to the shared <code>ghmx_announcements</code> topic. You can turn announcements off in the app’s Settings to unsubscribe, or manage notification permission in Android Settings. Denying notification permission does not prevent use of the app’s main features.</p>
+      <p>You can change calendar and notification permissions at any time in your device settings.</p>
     </section>
 
     <section>
       <div class="section-tag">06 · Services</div>
       <h2>6. Third-Party Services</h2>
       <h3>6.1 Firebase and Google Analytics</h3>
-      <p>The iOS app uses Firebase and Google Analytics, which are provided by Google. The Android app does not use these analytics services. Google’s processing for the iOS app is governed by applicable Google and Firebase terms and policies. Learn more at <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Privacy and Security in Firebase</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+      <p>Both apps use Google Analytics for Firebase for the limited analytics described above. The Android app also uses Firebase Cloud Messaging to deliver optional event announcements. Google processes information on our behalf to provide these services under applicable Google and Firebase terms and policies. Learn more at <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Privacy and Security in Firebase</a>, <a href="https://firebase.google.com/docs/android/play-data-disclosure" rel="noopener noreferrer">Firebase for Android data disclosures</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
 
       <h3>6.2 GitHub</h3>
       <p>Schedules, exhibitor information, food-vendor images, the venue map and this privacy page may be delivered from GitHub or GitHub Pages. When content is requested, GitHub may receive ordinary web-request information such as an IP address, user agent, requested file and request time. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
@@ -188,19 +187,19 @@
     <section>
       <div class="section-tag">07 · Disclosure</div>
       <h2>7. Sharing and Disclosure</h2>
-      <p>We disclose limited information to service providers described above so they can provide hosting and analytics. We may also disclose information when required by law, or when reasonably necessary to protect users, the App or our legal rights. We do not sell your personal information.</p>
+      <p>We disclose limited technical and usage information to the service providers described above so they can provide hosting, analytics and (if you opt in on Android) push-message delivery. We may also disclose information when required by law, or when reasonably necessary to protect users, the App or our legal rights. We do not sell your personal information.</p>
     </section>
 
     <section>
       <div class="section-tag">08 · Retention</div>
       <h2>8. Retention and International Processing</h2>
-      <p>Analytics information is retained according to the retention settings and policies of Google Analytics and Firebase. Hosting providers may keep technical logs for their own security and operational purposes. These providers may process information in Australia and other countries where they operate, which may have different privacy laws.</p>
+      <p>Analytics information is retained according to the retention settings and policies of Google Analytics and Firebase. Firebase Cloud Messaging processes installation identifiers and technical message information as needed to manage topic subscriptions and deliver messages. Hosting providers may keep technical logs for their own security and operational purposes. These providers may process information in Australia and other countries where they operate, which may have different privacy laws.</p>
     </section>
 
     <section>
       <div class="section-tag">09 · Choices</div>
       <h2>9. Your Choices and Rights</h2>
-      <p>You can decline calendar or notification permission without losing access to the main program, map and exhibitor features. You can contact us to ask a privacy question or exercise rights available under applicable law. Because our analytics reports may not directly identify you, we may not always be able to associate aggregated analytics with an individual request.</p>
+      <p>You can decline calendar or notification permission without losing access to the main program, map and exhibitor features. On Android, you can turn event announcements off in the app’s Settings or manage notification permission in Android Settings. Analytics is used as described above and does not currently have a separate in-app opt-out switch. You can contact us to ask a privacy question or exercise rights available under applicable law. Because analytics reports may not directly identify you, we may not always be able to associate aggregated analytics with an individual request.</p>
     </section>
 
     <section>
