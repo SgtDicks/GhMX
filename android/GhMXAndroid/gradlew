@@ -1,0 +1,11 @@
+#!/bin/sh
+
+APP_HOME=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P) || exit 1
+JAVA_HOME=${JAVA_HOME:-$(/usr/libexec/java_home 2>/dev/null)}
+if [ -z "$JAVA_HOME" ] || [ ! -x "$JAVA_HOME/bin/java" ]; then
+  echo "Java 17 or newer is required. Install Android Studio or set JAVA_HOME." >&2
+  exit 1
+fi
+exec "$JAVA_HOME/bin/java" ${JAVA_OPTS:-} ${GRADLE_OPTS:-} \
+  -Dorg.gradle.appname=gradlew -classpath "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" \
+  org.gradle.wrapper.GradleWrapperMain "$@"
