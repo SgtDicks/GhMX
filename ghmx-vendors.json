@@ -11,8 +11,8 @@
     "height": 35
   },
   {
-    "id": "102_star-trek-display",
-    "name": "Star Trek Display",
+    "id": "102_star-trek-60th-anniversary-model-display",
+    "name": "Star Trek 60th Anniversary Model Display",
     "booth": "102",
     "description": "Help us celebrate Star Trek's 60th Anniversary by adding YOUR Star Trek builds to our display!",
     "website": "",
@@ -44,8 +44,8 @@
     "height": 35
   },
   {
-    "id": "105_ty-hansen",
-    "name": "Ty Hansen",
+    "id": "105_ty-hanson",
+    "name": "Ty Hanson",
     "booth": "105",
     "description": "Brisbane-based author of Millennium Exile and Gunpla enthusiast.",
     "website": "",
@@ -55,8 +55,8 @@
     "height": 35
   },
   {
-    "id": "107_free-brick-build-area",
-    "name": "Free Brick Build Area",
+    "id": "107_brick-build-play-zone",
+    "name": "Brick Build Play Zone",
     "booth": "107",
     "description": "A free & open area to let your imagination go wild with Lego bricks",
     "website": "",
@@ -330,8 +330,8 @@
     "height": 35
   },
   {
-    "id": "310_miniature-workshop",
-    "name": "Miniature Workshop",
+    "id": "310_miniature-painting-workshop",
+    "name": "Miniature Painting Workshop",
     "booth": "310",
     "description": "The Vallejo Miniature Painting Workshop offers visitors the chance to learn to paint miniature figures from experienced modelers and gamers.",
     "website": "",
@@ -539,7 +539,7 @@
     "height": 35
   },
   {
-    "id": "417_mimic-s-den",
+    "id": "417_the-mimic-s-den",
     "name": "The Mimic's Den",
     "booth": "417",
     "description": "We're The Mimic's Den! A four person D&D Actual Play Podcast from Toowoomba Queensland! We blend the vibe of four friends playing their game with humour, irreverence and a little bit of folk horror! Join Trevor, Vaelok and Mel as they balance running a magical, travelling tavern with the struggles of being an adventuring party!",
@@ -572,20 +572,9 @@
     "height": 35
   },
   {
-    "id": "501_gio-collectables",
-    "name": "Gio Collectables",
-    "booth": "501",
-    "description": "Pokémon TCG raw, slabs and sealed",
-    "website": "https://www.instagram.com/giocollectables?dlrf=MWh0aHp5aXRlZXJyNA==",
-    "x": null,
-    "y": null,
-    "width": 35,
-    "height": 35
-  },
-  {
-    "id": "502_vault-games",
+    "id": "501_vault-games",
     "name": "Vault Games",
-    "booth": "502",
+    "booth": "501",
     "description": "Unlock the Vault! Vault Games is the store that has all your tabletop gaming needs, from board games and miniatures to role-playing and trading card games. Boasting an extensive library of games, you can be sure the Vault team will help you discover new games and also give you an opportunity to pick up anything you've ordered online",
     "website": "",
     "x": null,
@@ -594,9 +583,9 @@
     "height": 35
   },
   {
-    "id": "503_tcg-express",
+    "id": "502_tcg-express",
     "name": "Tcg express",
-    "booth": "503",
+    "booth": "502",
     "description": "We are a new tcg card store supplying a range of single graded and sealed pokemon and magic the gathering products",
     "website": "",
     "x": null,
@@ -605,9 +594,9 @@
     "height": 35
   },
   {
-    "id": "504_manscale-models",
+    "id": "503_manscale-models",
     "name": "Manscale Models",
-    "booth": "504",
+    "booth": "503",
     "description": "Hobby tools and consumables",
     "website": "https://www.manscalemodels.com.au",
     "x": null,
@@ -616,9 +605,9 @@
     "height": 35
   },
   {
-    "id": "505_australian-air-league",
+    "id": "504_australian-air-league",
     "name": "Australian Air League",
-    "booth": "505",
+    "booth": "504",
     "description": "TBC",
     "website": "",
     "x": null,
@@ -627,9 +616,9 @@
     "height": 35
   },
   {
-    "id": "506_the-kyber-order",
+    "id": "505_the-kyber-order",
     "name": "The Kyber Order",
-    "booth": "506",
+    "booth": "505",
     "description": "A lightsaber school dedicated to the lightsaber combat style known as Flowbat. We are an inclusive, diverse-across-the-board school open to anyone who can hold a saber...and if you can't, we'll figure it out. Flowbat is based around the idea of re-creating on-screen saber fights, but not doing choreography or staged combat, rather, utilizing a common language amongst the Forms that allows anyone with even 1 full lesson to reasonably put on a saber fight,",
     "website": "https://www.thekyberorder.com",
     "x": null,
@@ -638,42 +627,31 @@
     "height": 35
   },
   {
-    "id": "601_40k-tutorials",
-    "name": "40K Tutorials",
+    "id": "506_retro-reconnect",
+    "name": "Retro-Reconnect",
+    "booth": "506",
+    "description": "Retro-Reconnect is all about building a safe-space community for video gamers in QLD. We've run 16 gaming events to date, featuring retro/modern consoles and handhelds.  At our ticketed events we run friendly ice-breaker tournaments with prizes and have multiple game stations with an assortment of games for attendees to play",
+    "website": "https://www.retro-reconnect.com.au/",
+    "x": null,
+    "y": null,
+    "width": 35,
+    "height": 35
+  },
+  {
+    "id": "601_gio-collectables",
+    "name": "Gio Collectables",
     "booth": "601",
-    "description": "Let our team teach you to play the most popular tabletop game of all time. NO experience required and all materials provided. Open to all ages.",
-    "website": "",
+    "description": "Pokémon TCG raw, slabs and sealed",
+    "website": "https://www.instagram.com/giocollectables?dlrf=MWh0aHp5aXRlZXJyNA==",
     "x": null,
     "y": null,
     "width": 35,
     "height": 35
   },
   {
-    "id": "602_flodex",
-    "name": "FloDex",
-    "booth": "602",
-    "description": "We selling Pokemon tcg",
-    "website": "",
-    "x": null,
-    "y": null,
-    "width": 35,
-    "height": 35
-  },
-  {
-    "id": "603_groovy-collectables",
-    "name": "Groovy collectables",
-    "booth": "603",
-    "description": "Tcg card store specialising in pokemon",
-    "website": "https://www.groovycollectables.com.au",
-    "x": null,
-    "y": null,
-    "width": 35,
-    "height": 35
-  },
-  {
-    "id": "604_tcg-hunters",
+    "id": "602_tcg-hunters",
     "name": "TCG Hunters",
-    "booth": "604",
+    "booth": "602",
     "description": "Trading Cards and 3d prints\n (one piece & pokemon)",
     "website": "",
     "x": null,
@@ -682,9 +660,42 @@
     "height": 35
   },
   {
-    "id": "605_kiza-collective",
-    "name": "Kiza collective",
+    "id": "603_40k-tutorials",
+    "name": "40K Tutorials",
+    "booth": "603",
+    "description": "Let our team teach you to play the most popular tabletop game of all time. NO experience required and all materials provided. Open to all ages.",
+    "website": "",
+    "x": null,
+    "y": null,
+    "width": 35,
+    "height": 35
+  },
+  {
+    "id": "604_flodex",
+    "name": "FloDex",
+    "booth": "604",
+    "description": "We selling Pokemon tcg",
+    "website": "",
+    "x": null,
+    "y": null,
+    "width": 35,
+    "height": 35
+  },
+  {
+    "id": "605_groovy-collectables",
+    "name": "Groovy collectables",
     "booth": "605",
+    "description": "Tcg card store specialising in pokemon",
+    "website": "https://www.groovycollectables.com.au",
+    "x": null,
+    "y": null,
+    "width": 35,
+    "height": 35
+  },
+  {
+    "id": "606_kiza-collective",
+    "name": "Kiza collective",
+    "booth": "606",
     "description": "Our store offers a range of unique Vintage collectables products Based from the 1990’s and 2000’s Generation that are sure to capture your interest. Browse our shop to discover a large variety of items that cater to different tastes and preferences. \n From 1st Generation Beyblades, Pokemon, Yu-gi-oh & Sport Trading Cards, unopened Figurines & Toys. We have something for everyone. Our satisfied customers have left rave reviews about our excellent service and quality products. Thank you =) we are excited to attended again this year",
     "website": "https://www.whatnot.com/user/kizacollective",
     "x": null,
@@ -693,9 +704,9 @@
     "height": 35
   },
   {
-    "id": "606_qld-esports",
+    "id": "607_qld-esports",
     "name": "QLD Esports",
-    "booth": "606",
+    "booth": "607",
     "description": "TBC",
     "website": "",
     "x": null,
@@ -704,9 +715,9 @@
     "height": 35
   },
   {
-    "id": "607_just-support-pty-ltd",
+    "id": "608_just-support-pty-ltd",
     "name": "Just Support Pty Ltd",
-    "booth": "607",
+    "booth": "608",
     "description": "Just Support are a Support Work service providing support to individuals with varying disabilities. We are a queer-run organisation that values inclusivity, respect, and empowerment. Our values focus on supporting teens and young people, often in vulnerable situations. Our team builds support around what actually interests our participants—gaming, roleplay games, art, social adventures—because growth happens when people feel seen, valued, and excited about learning.\n \n Our Regulation Station is designed to provide support at events where children and adults can come take a break from the event to reset, recharge and relaunch. The goal of this station is to provide a calming space for event goers to regulate their sensory inputs and allow them to then continue to enjoy the event.",
     "website": "https://www.justsupport.com.au",
     "x": null,
@@ -825,11 +836,11 @@
     "height": 35
   },
   {
-    "id": "a11_pastel-while",
-    "name": "Pastel While",
+    "id": "a11_sun-con",
+    "name": "Sun-Con",
     "booth": "A11",
-    "description": "Hi, I'm Pastel! I enjoy making art of the media I am passionate about, for fans like me. These come from a variety of series, from comics, video games, television series', and more. I also have original stories that I enjoy making, inspired by these stories. If you're someone who enjoys fandoms, come take a look here!",
-    "website": "https://pastelwhile.carrd.co/",
+    "description": "",
+    "website": "",
     "x": null,
     "y": null,
     "width": 35,
@@ -913,8 +924,8 @@
     "height": 35
   },
   {
-    "id": "a19_cosplay-consul-1",
-    "name": "Cosplay Consul 1",
+    "id": "a19_kurara-fox",
+    "name": "Kurara_fox",
     "booth": "A19",
     "description": "TBC",
     "website": "",
@@ -924,8 +935,8 @@
     "height": 35
   },
   {
-    "id": "a20_cosplay-consul-2",
-    "name": "Cosplay Consul 2",
+    "id": "a20_plump-n-pretty",
+    "name": "plump_n_pretty",
     "booth": "A20",
     "description": "TBC",
     "website": "",
