@@ -1014,7 +1014,7 @@
   {
     "id": "F01_feature-1",
     "name": "01 - Learn to play Zone WARHAMMER 40,000",
-    "booth": "01 - Learn to play Zone WARHAMMER 40,000",
+    "booth": "Feature 01 - Learn to play Zone WARHAMMER 40,000",
     "description": "Our team will teach you to play one of the most popular tabletop games of them all",
     "website": "",
     "x": null,
@@ -1025,7 +1025,7 @@
   {
     "id": "F02_feature-2",
     "name": "02 - GUNPLA Workshop",
-    "booth": "02 - GUNPLA Workshop",
+    "booth": "Feature 02 - GUNPLA Workshop",
     "description": "Build your free Gundam model and take it home. Help is on hand from the pro’s at Zombster",
     "website": "",
     "x": null,
@@ -1036,7 +1036,7 @@
   {
     "id": "F03_feature-3",
     "name": "03 - Airbrush Workshop",
-    "booth": "03 - Airbrush Workshop",
+    "booth": "Feature 03 - Airbrush Workshop",
     "description": "The Airbrush workshop is where you can get up close & really learn the basics of airbrushing Gundam & other models.",
     "website": "",
     "x": null,
@@ -1047,7 +1047,7 @@
   {
     "id": "F04_feature-4",
     "name": "04 - SMS Scale Model Competition",
-    "booth": "04 - SMS Scale Model Competition",
+    "booth": " Feature 04 - SMS Scale Model Competition",
     "description": "A showcase of some of the best modellers in QLD. Don’t forget to vote for your favourite entry. Admire and take photos but please don’t touch.",
     "website": "",
     "x": null,
@@ -1058,7 +1058,7 @@
   {
     "id": "F05_feature-5",
     "name": "05 - Info Booth & First Aid",
-    "booth": "05 - Info Booth & First Aid",
+    "booth": "Feature 05 - Info Booth & First Aid",
     "description": "Info Booth & First Aid. Register for competitions, redeem prizes & enter the Ultimate Christmas Hamper raffle.",
     "website": "",
     "x": null,
@@ -1069,7 +1069,7 @@
   {
     "id": "F06_feature-6",
     "name": "06 - Star Trek's 60th Anniversary",
-    "booth": "06 - Star Trek's 60th Anniversary",
+    "booth": "Feature 06 - Star Trek's 60th Anniversary",
     "description": "Help us celebrate Star Trek's 60th Anniversary with Star Trek builds from the community! The MakR Gallery is a showcase of non-competition work and builds from the community including all creative mediums.",
     "website": "",
     "x": null,
@@ -1080,7 +1080,7 @@
   {
     "id": "F07_feature-7",
     "name": "07 - Guest Artist Signing",
-    "booth": "07 - Guest Artist Signing",
+    "booth": "Feature 07 - Guest Artist Signing",
     "description": "Guest Artist Signing - Meet Comic & Illustrator creators. Get items signed and see what’s coming next.",
     "website": "",
     "x": null,
@@ -1091,7 +1091,7 @@
   {
     "id": "F08_feature-8",
     "name": "08 - Digital Photobooth!",
-    "booth": "08 - Digital Photobooth!",
+    "booth": "Feature 08 - Digital Photobooth!",
     "description": "Digital Photobooth! Let the AI digitally transport you to another world or convert you into something amazing! Free photos sent directly to your device! Don’t forget to share on socials #ghmxperience",
     "website": "",
     "x": null,
@@ -1102,7 +1102,7 @@
   {
     "id": "F09_feature-9",
     "name": "09 - Brick Build Play Zone",
-    "booth": "09 - Brick Build Play Zone",
+    "booth": "Feature 09 - Brick Build Play Zone",
     "description": "Enjoy 100’s of thousands of brick pieces to create your very own creations.",
     "website": "",
     "x": null,
@@ -1113,7 +1113,7 @@
   {
     "id": "F10_feature-10",
     "name": "10 - Learn to play with Vault Games",
-    "booth": "10 - Learn to play with Vault Games",
+    "booth": "Feature 10 - Learn to play with Vault Games",
     "description": "The team from Vault Games will teach you the basics of various games all weekend. Dungeons & Dragons, Magic the Gathering & Neuroscape. Tables are complete with scenery & everything you need to get started. Make sure you register first using the QR code or at the Vault Games stand. Prizes and giveaways all weekend just for trying it out!",
     "website": "",
     "x": null,
@@ -1124,7 +1124,7 @@
   {
     "id": "F11_feature-11",
     "name": "11 - The Trading Card Zone by Vault Games",
-    "booth": "11 - The Trading Card Zone by Vault Games",
+    "booth": "Feature 11 - The Trading Card Zone by Vault Games",
     "description": "The Trading Card Zone by Vault Games - Make sure you’ve pre-registered online or at the stand. See the full list of tournament games on the app or by scanning the QR code",
     "website": "",
     "x": null,
@@ -1135,7 +1135,7 @@
   {
     "id": "F12_feature-12",
     "name": "12 - Stage Central",
-    "booth": "12 - Stage Central",
+    "booth": "Feature 12 - Stage Central",
     "description": "Stage Central - Our workshop, Q&A and panel hub. Check the full program on the event guide or the App",
     "website": "",
     "x": null,
@@ -1146,7 +1146,7 @@
   {
     "id": "F13_feature-13",
     "name": "13 - Free Make & Take Model Kits from Tweed Valley Modellers",
-    "booth": "13 - Free Make & Take Model Kits from Tweed Valley Modellers",
+    "booth": "Feature 13 - Free Make & Take Model Kits from Tweed Valley Modellers",
     "description": "Free Make & Take Model Kits from Tweed Valley Modellers",
     "website": "",
     "x": null,
@@ -1157,7 +1157,7 @@
   {
     "id": "F14_feature-14",
     "name": "14 - Vallejo Miniature Painting Workshop",
-    "booth": "14 - Vallejo Miniature Painting Workshop",
+    "booth": "Feature 14 - Vallejo Miniature Painting Workshop",
     "description": "Vallejo Miniature Painting Workshop - Learn the basics of painting. All participants get to keep their painted masterpieces! Thanks to YKS Miniatures",
     "website": "",
     "x": null,
@@ -1168,7 +1168,7 @@
   {
     "id": "F15_feature-15",
     "name": "15 - The Ibis Brush",
-    "booth": "15 - The Ibis Brush",
+    "booth": "Feature 15 - The Ibis Brush",
     "description": "The Ibis Brush - Brisbane's Premiere Miniature Display Painting Competion brought to you by the Brisbane Display Painters Guild",
     "website": "",
     "x": null,
@@ -1179,7 +1179,7 @@
   {
     "id": "F16_feature-16",
     "name": "16 - Cartell Boardgame Zone",
-    "booth": "16 - Cartell Boardgame Zone",
+    "booth": "Feature 16 - Cartell Boardgame Zone",
     "description": "Cartell Boardgame Zone - Everyone is welcome and entry is free. Register at the Cartell Games stand to find your ultimate boardgame challenge!",
     "website": "",
     "x": null,
@@ -1190,7 +1190,7 @@
   {
     "id": "F17_feature-17",
     "name": "17 - Regulation Station",
-    "booth": "17 - Regulation Station",
+    "booth": "Feature 17 - Regulation Station",
     "description": "Regulation Station is a designated space designed to help individuals manage and regulate their sensory experiences. Also known as a calm or sensory corner, this space provides a supportive environment to pause, reflect, and engage in activities that promote emotional balance and self-regulation. Trained staff from Just Support will be in attendance to assist attendees with their specific sensory needs.",
     "website": "",
     "x": null,
@@ -1201,7 +1201,7 @@
   {
     "id": "F18_feature-18",
     "name": "18 - Esports Zone",
-    "booth": "18 - Esports Zone",
+    "booth": "Feature 18 - Esports Zone",
     "description": "Esports Zone - Freeplay gaming consoles all weekend and retro tournaments",
     "website": "",
     "x": null,
@@ -1212,7 +1212,7 @@
   {
     "id": "F19_feature-19",
     "name": "19 - The Kyber Order",
-    "booth": "19 - The Kyber Order",
+    "booth": "Feature 19 - The Kyber Order",
     "description": "The Kyber Order - Learn to swing a light sabre just like they do in the movies!",
     "website": "",
     "x": null,
@@ -1223,7 +1223,7 @@
   {
     "id": "F20_feature-20",
     "name": "20 - Beyblades Tournament Zone",
-    "booth": "20 - Beyblades Tournament Zone",
+    "booth": "Feature 20 - Beyblades Tournament Zone",
     "description": "Beyblades Tournament Zone. Register for the official tournament or freeplay. The team will teach you if its your first time battling",
     "website": "",
     "x": null,
@@ -1234,7 +1234,7 @@
   {
     "id": "F21_feature-21",
     "name": "21 - RC Zone",
-    "booth": "21 - RC Zone",
+    "booth": "Feature 21 - RC Zone",
     "description": "Pick up a control and race one of the mini RC Cars on the micro track! See the incredible RC trucks and eqipment on display",
     "website": "",
     "x": null,
@@ -1245,7 +1245,7 @@
   {
     "id": "F22_feature-22",
     "name": "22 - 501st Legion",
-    "booth": "22 - 501st Legion",
+    "booth": "Feature 22 - 501st Legion",
     "description": "501st Legion - Snap a photo opportunity at the ultimate Star Wars fan zone with authentic costumed characters all in the name of charity",
     "website": "",
     "x": null,
@@ -1256,7 +1256,7 @@
   {
     "id": "F23_feature-23",
     "name": "23 - LAN Legacy Lounge",
-    "booth": "23 - LAN Legacy Lounge",
+    "booth": "Feature 23 - LAN Legacy Lounge",
     "description": "Get ready to game like it’s 1999! Dive back into the golden age of PC gaming and LAN vibes with classics like Quake III Arena, Unreal Tournament, Red Alert 2 and more!",
     "website": "",
     "x": null,
@@ -1267,7 +1267,7 @@
   {
     "id": "F24_feature-24",
     "name": "24 - Cosplay Consuls and championship judges",
-    "booth": "24 - Cosplay Consuls and championship judges",
+    "booth": "Feature 24 - Cosplay Consuls and championship judges",
     "description": "Meet our experienced Cosplay Consuls and championship judges. Ask questions and get handy tips for your next cosplay",
     "website": "",
     "x": null,
@@ -1278,7 +1278,7 @@
   {
     "id": "F25_feature-25",
     "name": "25 - Comic Book Heroes Cosplay X Stage",
-    "booth": "25 - Comic Book Heroes Cosplay X Stage",
+    "booth": "Feature 25 - Comic Book Heroes Cosplay X Stage",
     "description": "Comic Book Heroes Cosplay X Stage - Cheer on our cosplayers as they take to the stage and see other cosplay related panels here. Check the full program on the event guide or the App",
     "website": "",
     "x": null,
@@ -1289,7 +1289,7 @@
   {
     "id": "F26_feature-26",
     "name": "26 - Cosplay Studio",
-    "booth": "26 - Cosplay Studio",
+    "booth": "Feature 26 - Cosplay Studio",
     "description": "Cosplay Studio - Includes Cosplay X Registration, Cosplay Repair, Photo Area & Change Room. Free refreshments for all cosplayers.",
     "website": "",
     "x": null,
