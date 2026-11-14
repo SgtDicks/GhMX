@@ -4,18 +4,46 @@
     "date": "2026-11-21",
     "events": [
       {
-        "time": "10:30 AM",
-        "title": "1Schedule to be posted closer to the event",
+        "time": "9:00 AM",
+        "title": "Catan Race",
         "stage": "Boardgame",
-        "description": "Schedule to be posted closer to the event",
+        "description": "The first player in the zone to reach 10 points wins | Duration: 90 Mins | Players: 32",
         "image": ""
       },
       {
-        "time": "10:36 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "10:45 AM",
+        "title": "Magical Athlete Cup",
         "stage": "Boardgame",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Two races per table. Highest total score wins | Duration: 60 Mins | Players: 32",
+        "image": ""
+      },
+      {
+        "time": "12:00 PM",
+        "title": "Team Jigsaw Challenge",
+        "stage": "Boardgame",
+        "description": "8 teams of four racing to finish the same 500-piece puzzle | Duration: 90 Mins | Players: 32",
+        "image": ""
+      },
+      {
+        "time": "1:45 PM",
+        "title": "Flip 7 Cup",
+        "stage": "Boardgame",
+        "description": "Two games per table. Highest total score wins | Duration: 45 Mins | Players: 32",
+        "image": ""
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Catan Race",
+        "stage": "Boardgame",
+        "description": "The first player in the zone to reach 10 points wins | Duration: 90 Mins | Players: 16",
+        "image": ""
+      },
+      {
+        "time": "2:30 PM",
+        "title": "Blood on the Clocktower",
+        "stage": "Boardgame",
+        "description": "The social deduction game, run by an experienced Storyteller | Duration: Up to 180 Mins | Players: Up to 15",
+        "image": ""
       }
     ]
   },
@@ -24,18 +52,46 @@
     "date": "2026-11-22",
     "events": [
       {
-        "time": "10:30 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "9:00 AM",
+        "title": "Flip 7 Cup",
         "stage": "Boardgame",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Two games per table. Highest total score wins. Kids welcome | Duration: 45 Mins | Players: 32",
+        "image": ""
       },
       {
-        "time": "10:36 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "10:00 AM",
+        "title": "Magical Athlete Cup",
         "stage": "Boardgame",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Two races per table. Highest total score wins | Duration: 60 Mins | Players: 32",
+        "image": ""
+      },
+      {
+        "time": "11:15 AM",
+        "title": "Catan Race",
+        "stage": "Boardgame",
+        "description": "The first player in the zone to reach 10 points wins | Duration: 90 Mins | Players: 32",
+        "image": ""
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Tossit Tournament",
+        "stage": "Boardgame",
+        "description": "1 v 1 knockout | Duration: 60 Mins | Players: 16",
+        "image": ""
+      },
+      {
+        "time": "2:15 PM",
+        "title": "Team Jigsaw Challenge",
+        "stage": "Boardgame",
+        "description": "8 teams of four racing to finish the same 500-piece puzzle | Duration: 90 Mins | Players: 32",
+        "image": ""
+      },
+      {
+        "time": "3:45 PM",
+        "title": "Presentation",
+        "stage": "Boardgame",
+        "description": "Winners announced and prize draw",
+        "image": ""
       }
     ]
   }
