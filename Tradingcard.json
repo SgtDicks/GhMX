@@ -4,18 +4,769 @@
     "date": "2026-11-21",
     "events": [
       {
-        "time": "10:30 AM",
-        "title": "1Schedule to be posted closer to the event",
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Disney Lorcana",
         "stage": "Trading Card Zone",
-        "description": "Schedule to be posted closer to the event",
-        "image": ""
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/6abd06a8-2c6a-4bf0-99d1-36e490d3771e"
       },
       {
-        "time": "10:36 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Magic: The Gathering",
         "stage": "Trading Card Zone",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/1f743f27-04de-4dc0-8734-d7479f56b0ef"
+      },
+      {
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/82b6f591-3f4c-44b3-a4f3-4fdda42fcc05"
+      },
+      {
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/00288eff-38a6-4730-8ed0-058651bd399d"
+      },
+      {
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/aeac4091-b2d1-4535-b3b0-215b1a23fd1e"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Cyberpunk RED",
+        "stage": "Vault Games RPG Tables",
+        "description": "Cyberpunk RED tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/e7ade941-64d6-4f0d-a8a1-775cff433d3d"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/f5ee7301-4886-4955-9a3d-14f1d72dccfc"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/13b28f71-7186-461f-b0ee-a770ae936a16"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/e4d65f63-764a-4ccb-90ec-5e5a9e09d0b9"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/d0dbf153-7d37-4fc9-a4be-eab85aa1eba8"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/51f577c6-5f89-4df8-873a-84f072a462a4"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/b1159f14-351c-435f-8191-2051d7bae105"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": "https://aftergame.app/events/7dcbca98-1393-4c44-9ce3-4aed11a2272b"
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Cyberpunk RED",
+        "stage": "Vault Games RPG Tables",
+        "description": "Cyberpunk RED tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Cyberpunk RED",
+        "stage": "Vault Games RPG Tables",
+        "description": "Cyberpunk RED tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
       }
     ]
   },
@@ -24,18 +775,769 @@
     "date": "2026-11-22",
     "events": [
       {
-        "time": "10:30 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Disney Lorcana",
         "stage": "Trading Card Zone",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
       },
       {
-        "time": "10:36 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Magic: The Gathering",
         "stage": "Trading Card Zone",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:00 AM",
+        "endTime": "10:30 AM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Cyberpunk RED",
+        "stage": "Vault Games RPG Tables",
+        "description": "Cyberpunk RED tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "12:30 PM",
+        "title": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "10:30 AM",
+        "endTime": "11:00 AM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:00 AM",
+        "endTime": "11:30 AM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "11:30 AM",
+        "endTime": "12:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:00 PM",
+        "endTime": "12:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Cyberpunk RED",
+        "stage": "Vault Games RPG Tables",
+        "description": "Cyberpunk RED tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "2:30 PM",
+        "title": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "12:30 PM",
+        "endTime": "1:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:00 PM",
+        "endTime": "1:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "1:30 PM",
+        "endTime": "2:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:00 PM",
+        "endTime": "2:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Cyberpunk RED",
+        "stage": "Vault Games RPG Tables",
+        "description": "Cyberpunk RED tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - Icecrown Citadel: The Lower Spire (lvl 16) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Summer Festival in the Oasis Town (lvl 3) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Dungeons & Dragons 5.5e - The Vampire Warrens (lvl 9) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "4:30 PM",
+        "title": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure)",
+        "stage": "Vault Games RPG Tables",
+        "description": "Lancer RPG - Operation: Solstice Rain Mission 1 (Learn-To-Play Adventure) tabletop RPG session at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "2:30 PM",
+        "endTime": "3:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:00 PM",
+        "endTime": "3:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "3:30 PM",
+        "endTime": "4:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:00 PM",
+        "endTime": "4:30 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Disney Lorcana",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Disney Lorcana at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Magic: The Gathering",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Magic: The Gathering at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Neuroscape TCG",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Neuroscape TCG at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Riftbound",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Riftbound at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
+      },
+      {
+        "time": "4:30 PM",
+        "endTime": "5:00 PM",
+        "title": "Learn-to-Play Star Wars: Unlimited",
+        "stage": "Trading Card Zone",
+        "description": "Learn to play Star Wars: Unlimited at GhMX. Free with event admission.",
+        "image": "",
+        "website": ""
       }
     ]
   }
