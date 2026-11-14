@@ -4,53 +4,32 @@
     "date": "2026-11-21",
     "events": [
       {
-        "time": "10:30 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "11:00 AM",
+        "title": "Make-Up & Effects",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: Skye Meredyth. Watch how a professional make-up artists applies special make-up effects to a volunteer live on stage",
+        "image": ""
       },
       {
-        "time": "10:31 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "12:00 PM",
+        "title": "CHARACTER UNLOCKED",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: Sandra Temple. A journey into fantasy, illusion, and transformation. \"What if your costume didn't stop at the edge of your clothing? What if your skin became part of the costume itself?\"",
+        "image": ""
       },
       {
-        "time": "10:32 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "2:00 PM",
+        "title": "Cosplay X Championship - Existing Character",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: GhMX. This is the main Cosplay X Showcase & Championship competition!",
+        "image": ""
       },
       {
-        "time": "10:33 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "3:50 PM",
+        "title": "Harrison Hill - The World of punkcreations",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
-      },
-      {
-        "time": "10:34 AM",
-        "title": "Schedule to be posted closer to the event",
-        "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
-      },
-      {
-        "time": "10:35 AM",
-        "title": "Schedule to be posted closer to the event",
-        "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
-      },
-      {
-        "time": "10:36 AM",
-        "title": "Schedule to be posted closer to the event",
-        "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: punkcreatios. From ballgowns to battle armour this panel will introduce you to many different ways of which you can build a Cosplay give you some insight from professionals leading the charge with those materials and hopefully some other cool tips and tricks along the way! Join us to look at everything from foam, leather, fabric, 3-D print printing and every cool thing in between.",
+        "image": ""
       }
     ]
   },
@@ -59,53 +38,32 @@
     "date": "2026-11-22",
     "events": [
       {
-        "time": "10:30 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "11:00 AM",
+        "title": "My cosplay sucks, and how do I fix it!",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: Zerebin. Cosplay is amazing but mistakes happen, errors compound and things go wrong. So, time to sit down and talk about the failures made by some experienced cosplayers while making their costumes to help make sure you don't make ther same mistakes.",
+        "image": ""
       },
       {
-        "time": "10:31 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "12:00 PM",
+        "title": "THE LUCKWEAVER'S TAVERN - Live Podcast!",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: The Mimic’s Den. Welcome to The Luckweaver's Tavern! A cosy, whimsical and slightly eldritch adventure, bringing the magic of The Mimic's Den podcast to the stage for the very first time.",
+        "image": ""
       },
       {
-        "time": "10:32 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "2:00 PM",
+        "title": "Cosplay X Championship - Original Character",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: GhMX. Cosplay X Showcase & Championship competition for Original character designs!",
+        "image": ""
       },
       {
-        "time": "10:33 AM",
-        "title": "Schedule to be posted closer to the event",
+        "time": "3:20 PM",
+        "title": "Vtubing",
         "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
-      },
-      {
-        "time": "10:34 AM",
-        "title": "Schedule to be posted closer to the event",
-        "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
-      },
-      {
-        "time": "10:35 AM",
-        "title": "Schedule to be posted closer to the event",
-        "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
-      },
-      {
-        "time": "10:36 AM",
-        "title": "Schedule to be posted closer to the event",
-        "stage": "CosplayX Stage",
-        "description": "Schedule to be posted closer to the event",
-        "image": "https://github.com/SgtDicks/GhMX/blob/main/Profile%20Pics/sewing%20intro.jpg?raw=true"
+        "description": "Presenter: kurara_fox. Get an insight on how to be a Vtuber and balance your work & social life around it.",
+        "image": ""
       }
     ]
   }
