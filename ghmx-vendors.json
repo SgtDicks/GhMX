@@ -596,7 +596,7 @@
   {
     "id": "503_manscale-models",
     "name": "Manscale Models",
-    "booth": "503",
+    "booth": "504",
     "description": "Hobby tools and consumables",
     "website": "https://www.manscalemodels.com.au",
     "x": null,
@@ -607,7 +607,7 @@
   {
     "id": "504_australian-air-league",
     "name": "Australian Air League",
-    "booth": "504",
+    "booth": "106",
     "description": "TBC",
     "website": "",
     "x": null,
@@ -651,7 +651,7 @@
   {
     "id": "602_tcg-hunters",
     "name": "TCG Hunters",
-    "booth": "602",
+    "booth": "53",
     "description": "Trading Cards and 3d prints\n (one piece & pokemon)",
     "website": "",
     "x": null,
@@ -962,17 +962,6 @@
     "booth": "A22",
     "description": "Cosplay Consul, Cosplayer, Content Creator, Best know as Brisbane's Batman",
     "website": "https://www.instagram.com/gregtconroy/",
-    "x": null,
-    "y": null,
-    "width": 35,
-    "height": 35
-  },
-  {
-    "id": "pop-attack",
-    "name": "Pop Attack",
-    "booth": "",
-    "description": "Pop Attack is Australia's Premier Trading Card Vending Machine Operator. We work with all the major TCG publishers & distributors to be a conduit directly to the core customer base.",
-    "website": "https://www.popattack.com.au",
     "x": null,
     "y": null,
     "width": 35,
